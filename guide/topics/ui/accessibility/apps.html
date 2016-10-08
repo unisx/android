@@ -87,22 +87,31 @@
 
 
 
-
-
-
-
-
 <html>
 <head>
 
+  
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <meta content="IE=edge" http-equiv="X-UA-Compatible">
-
-<meta name="Description" content="Applications built for Android are more accessible to users with visual, physical or age-related limitations when those users activate accessibility services and features on a device. These services make your application more accessible even if you do…">
 <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico" />
-<title>Making Applications Accessible | Android Developers</title>
+<link rel="alternate" href="http://developer.android.com/guide/topics/ui/accessibility/apps.html" hreflang="en" />
+<link rel="alternate" href="http://developer.android.com/intl/es/guide/topics/ui/accessibility/apps.html" hreflang="es" />
+<link rel="alternate" href="http://developer.android.com/intl/id/guide/topics/ui/accessibility/apps.html" hreflang="id" />
+<link rel="alternate" href="http://developer.android.com/intl/ja/guide/topics/ui/accessibility/apps.html" hreflang="ja" />
+<link rel="alternate" href="http://developer.android.com/intl/ko/guide/topics/ui/accessibility/apps.html" hreflang="ko" />
+<link rel="alternate" href="http://developer.android.com/intl/pt-br/guide/topics/ui/accessibility/apps.html" hreflang="pt-br" />
+<link rel="alternate" href="http://developer.android.com/intl/ru/guide/topics/ui/accessibility/apps.html" hreflang="ru" />
+<link rel="alternate" href="http://developer.android.com/intl/vi/guide/topics/ui/accessibility/apps.html" hreflang="vi" />
+<link rel="alternate" href="http://developer.android.com/intl/zh-cn/guide/topics/ui/accessibility/apps.html" hreflang="zh-cn" />
+<link rel="alternate" href="http://developer.android.com/intl/zh-tw/guide/topics/ui/accessibility/apps.html" hreflang="zh-tw" />
+
+
+<title>Making Applications Accessible | Android Developers
+</title>
+
+<meta name="description" content="Applications built for Android are more accessible to users with visual, physical or age-related limitations when those users activate accessibility services and features on a device. These services make your application more accessible even if you do…">
 
 <!-- STYLESHEETS -->
 <link rel="stylesheet"
@@ -110,9 +119,7 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold"
   title="roboto">
 
-<link href="../../../../assets/css/default.css?v=7" rel="stylesheet" type="text/css">
-
-
+<link href="../../../../assets/css/default.css?v=16" rel="stylesheet" type="text/css">
 
 <!-- JAVASCRIPT -->
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
@@ -121,10 +128,9 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
   var toRoot = "../../../../";
   var metaTags = [];
   var devsite = false;
+  var useUpdatedTemplates = false;
 </script>
-<script src="../../../../assets/js/docs.js?v=6" type="text/javascript"></script>
-
-
+<script src="../../../../assets/js/docs.js?v=17" type="text/javascript"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -144,61 +150,11 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
 
 
 develop guide" itemscope itemtype="http://schema.org/Article">
-<a name="top"></a>
-
-<!-- dialog to prompt lang pref change when loaded from hardcoded URL
-<div id="langMessage" style="display:none">
-  <div>
-    <div class="lang en">
-      <p>You requested a page in English, would you like to proceed with this language setting?</p>
-    </div>
-    <div class="lang es">
-      <p>You requested a page in Spanish (Español), would you like to proceed with this language setting?</p>
-    </div>
-    <div class="lang ja">
-      <p>You requested a page in Japanese (日本語), would you like to proceed with this language setting?</p>
-    </div>
-    <div class="lang ko">
-      <p>You requested a page in Korean (한국어), would you like to proceed with this language setting?</p>
-    </div>
-    <div class="lang ru">
-      <p>You requested a page in Russian (Русский), would you like to proceed with this language setting?</p>
-    </div>
-    <div class="lang zh-cn">
-      <p>You requested a page in Simplified Chinese (简体中文), would you like to proceed with this language setting?</p>
-    </div>
-    <div class="lang zh-tw">
-      <p>You requested a page in Traditional Chinese (繁體中文), would you like to proceed with this language setting?</p>
-    </div>
-    <a href="#" class="button yes" onclick="return false;">
-      <span class="lang en">Yes</span>
-      <span class="lang es">Sí</span>
-      <span class="lang ja">Yes</span>
-      <span class="lang ko">Yes</span>
-      <span class="lang ru">Yes</span>
-      <span class="lang zh-cn">是的</span>
-      <span class="lang zh-tw">没有</span>
-    </a>
-    <a href="#" class="button" onclick="$('#langMessage').hide();return false;">
-      <span class="lang en">No</span>
-      <span class="lang es">No</span>
-      <span class="lang ja">No</span>
-      <span class="lang ko">No</span>
-      <span class="lang ru">No</span>
-      <span class="lang zh-cn">没有</span>
-      <span class="lang zh-tw">没有</span>
-    </a>
-  </div>
-</div> -->
-
-
+  
+  <a name="top"></a>
   <!-- Header -->
   <div id="header-wrapper">
-    <div class="dac-header" id="header">
-
-
-
-
+    <div class="dac-header " id="header">
       <div class="dac-header-inner">
         <a class="dac-nav-toggle" data-dac-toggle-nav href="javascript:;" title="Open navigation">
           <span class="dac-nav-hamburger">
@@ -213,54 +169,35 @@ develop guide" itemscope itemtype="http://schema.org/Article">
               width="32" height="36" alt="Android" /> Developers
           </a>
 
-        <ul class="dac-header-crumbs">
-          
-          <li class="dac-header-crumbs-item"><span class="dac-header-crumbs-link current ">Making Applications Accessible</a></li>
+        <ul class="dac-header-tabs">
+          <li>
+          <a class="dac-header-tab" href="../../../../design/index.html"
+             zh-tw-lang="設計"
+             zh-cn-lang="设计"
+             ru-lang="Проектирование"
+             ko-lang="디자인"
+             ja-lang="設計"
+             es-lang="Diseñar">Design</a>
+          </li>
+          <li>
+          <a class="dac-header-tab" href="../../../../develop/index.html"
+             zh-tw-lang="開發"
+             zh-cn-lang="开发"
+             ru-lang="Разработка"
+             ko-lang="개발"
+             ja-lang="開発"
+             es-lang="Desarrollar">Develop</a>
+          </li>
+          <li>
+          <a class="dac-header-tab" href="../../../../distribute/index.html"
+             zh-tw-lang="發佈"
+             zh-cn-lang="分发"
+             ru-lang="Распространение"
+             ko-lang="배포"
+             ja-lang="配布"
+             es-lang="Distribuir">Distribute</a>
+          </li>
         </ul>
-
-        
-        
-        
-  <div class="dac-header-search" id="search-container">
-    <div class="dac-header-search-inner">
-      <div class="dac-sprite dac-search dac-header-search-btn" id="search-btn"></div>
-      <form class="dac-header-search-form" onsubmit="return submit_search()">
-        <input id="search_autocomplete" type="text" value="" autocomplete="off" name="q"
-          onfocus="search_focus_changed(this, true)" onblur="search_focus_changed(this, false)"
-          onkeydown="return search_changed(event, true, '../../../../')"
-          onkeyup="return search_changed(event, false, '../../../../')"
-          class="dac-header-search-input" placeholder="Search" />
-          <a class="dac-header-search-close hide" id="search-close">close</a>
-      </form>
-    </div><!-- end dac-header-search-inner -->
-  </div><!-- end dac-header-search -->
-
-  <div class="search_filtered_wrapper">
-    <div class="suggest-card reference no-display">
-      <ul class="search_filtered">
-      </ul>
-    </div>
-    <div class="suggest-card develop no-display">
-      <ul class="search_filtered">
-      </ul>
-      <div class="child-card guides no-display">
-      </div>
-      <div class="child-card training no-display">
-      </div>
-      <div class="child-card samples no-display">
-      </div>
-    </div>
-    <div class="suggest-card design no-display">
-      <ul class="search_filtered">
-      </ul>
-    </div>
-    <div class="suggest-card distribute no-display">
-      <ul class="search_filtered">
-      </ul>
-    </div>
-  </div>
-
-        
 
         <a class="dac-header-console-btn" href="https://play.google.com/apps/publish/">
           <span class="dac-sprite dac-google-play"></span>
@@ -268,13 +205,26 @@ develop guide" itemscope itemtype="http://schema.org/Article">
           Console
         </a>
 
+        
+        
+        
+  <form data-search class="dac-header-search">
+    <button class="dac-header-search-close" data-search-close>
+      <i class="dac-sprite dac-back-arrow"></i>
+    </button>
+
+    <div class="dac-header-search-inner">
+      <i class="dac-sprite dac-search-white dac-header-search-icon"></i>
+      <input id="search_autocomplete" type="text" value="" autocomplete="off" name="q" class="dac-header-search-input" placeholder="Search" />
+      <button class="dac-header-search-clear dac-hidden" data-search-clear>
+        <i class="dac-sprite dac-close-black"></i>
+      </button>
+    </div>
+  </form>
+
+        
       </div><!-- end header-wrap.wrap -->
     </div><!-- end header -->
-
-    <div id="searchResults" class="wrap" style="display:none;">
-      <h2 id="searchTitle">Results</h2>
-      <div id="leftSearchControl" class="search-control">Loading...</div>
-    </div>
   </div> <!--end header-wrapper -->
 
   
@@ -282,140 +232,16 @@ develop guide" itemscope itemtype="http://schema.org/Article">
   <nav class="dac-nav">
     <div class="dac-nav-dimmer" data-dac-toggle-nav></div>
 
-    <ul class="dac-nav-list" data-dac-nav>
-      <li class="dac-nav-item dac-nav-head">
-        <a class="dac-nav-link dac-nav-logo" data-dac-toggle-nav href="javascript:;" title="Close navigation">
-          <img class="dac-logo-image" src="../../../../assets/images/android_logo.png"
-               srcset="../../../../assets/images/android_logo@2x.png 2x"
-               width="32" height="36" alt="Android" /> Developers
-        </a>
-      </li>
-      <li class="dac-nav-item home">
-        <a class="dac-nav-link dac-visible-mobile-block" href="../../../../index.html">Home</a>
-        <ul class="dac-nav-secondary about">
-          <li class="dac-nav-item about">
-            <a class="dac-nav-link" href="../../../../about/index.html">Android</a>
-          </li>
-          <li class="dac-nav-item wear">
-            <a class="dac-nav-link" href="../../../../wear/index.html">Wear</a>
-          </li>
-          <li class="dac-nav-item tv">
-            <a class="dac-nav-link" href="../../../../tv/index.html">TV</a>
-          </li>
-          <li class="dac-nav-item auto">
-            <a class="dac-nav-link" href="../../../../auto/index.html">Auto</a>
-          </li>
-        </ul>
-      </li>
-      <li class="dac-nav-item design">
-        <a class="dac-nav-link" href="../../../../design/index.html"
-           zh-tw-lang="設計"
-           zh-cn-lang="设计"
-           ru-lang="Проектирование"
-           ko-lang="디자인"
-           ja-lang="設計"
-           es-lang="Diseñar">Design</a>
-      </li>
-      <li class="dac-nav-item develop">
-        <a class="dac-nav-link" href="../../../../develop/index.html"
-           zh-tw-lang="開發"
-           zh-cn-lang="开发"
-           ru-lang="Разработка"
-           ko-lang="개발"
-           ja-lang="開発"
-           es-lang="Desarrollar">Develop</a>
-        <ul class="dac-nav-secondary develop">
-          <li class="dac-nav-item training">
-            <a class="dac-nav-link" href="../../../../training/index.html"
-               zh-tw-lang="訓練課程"
-               zh-cn-lang="培训"
-               ru-lang="Курсы"
-               ko-lang="교육"
-               ja-lang="トレーニング"
-               es-lang="Capacitación">Training</a>
-          </li>
-          <li class="dac-nav-item guide">
-            <a class="dac-nav-link" href="../../../../guide/index.html"
-               zh-tw-lang="API 指南"
-               zh-cn-lang="API 指南"
-               ru-lang="Руководства по API"
-               ko-lang="API 가이드"
-               ja-lang="API ガイド"
-               es-lang="Guías de la API">API Guides</a>
-          </li>
-          <li class="dac-nav-item reference">
-            <a class="dac-nav-link" href="../../../../reference/packages.html"
-               zh-tw-lang="參考資源"
-               zh-cn-lang="参考"
-               ru-lang="Справочник"
-               ko-lang="참조문서"
-               ja-lang="リファレンス"
-               es-lang="Referencia">Reference</a>
-          </li>
-          <li class="dac-nav-item tools">
-            <a class="dac-nav-link" href="../../../../sdk/index.html"
-               zh-tw-lang="相關工具"
-               zh-cn-lang="工具"
-               ru-lang="Инструменты"
-               ko-lang="도구"
-               ja-lang="ツール"
-               es-lang="Herramientas">Tools</a></li>
-          <li class="dac-nav-item google">
-            <a class="dac-nav-link" href="../../../../google/index.html">Google Services</a>
-          </li>
-          
-          <li class="dac-nav-item preview">
-            <a class="dac-nav-link" href="../../../../preview/index.html">Preview</a>
-          </li>
-        </ul>
-      </li>
-      <li class="dac-nav-item distribute">
-        <a class="dac-nav-link" href="../../../../distribute/googleplay/index.html"
-           zh-tw-lang="發佈"
-           zh-cn-lang="分发"
-           ru-lang="Распространение"
-           ko-lang="배포"
-           ja-lang="配布"
-           es-lang="Distribuir">Distribute</a>
-        <ul class="dac-nav-secondary distribute">
-          <li class="dac-nav-item googleplay">
-            <a class="dac-nav-link" href="../../../../distribute/googleplay/index.html">Google Play</a></li>
-          <li class="dac-nav-item essentials">
-            <a class="dac-nav-link" href="../../../../distribute/essentials/index.html">Essentials</a></li>
-          <li class="dac-nav-item users">
-            <a class="dac-nav-link" href="../../../../distribute/users/index.html">Get Users</a></li>
-          <li class="dac-nav-item engage">
-            <a class="dac-nav-link" href="../../../../distribute/engage/index.html">Engage &amp; Retain</a></li>
-          <li class="dac-nav-item monetize">
-            <a class="dac-nav-link" href="../../../../distribute/monetize/index.html">Earn</a>
-          </li>
-          <li class="dac-nav-item analyze">
-            <a class="dac-nav-link" href="../../../../distribute/analyze/index.html">Analyze</a>
-          </li>
-          <li class="dac-nav-item stories">
-            <a class="dac-nav-link" href="../../../../distribute/stories/index.html">Stories</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-  <!-- end navigation-->
+    <div class="dac-nav-sidebar" data-swap data-dynamic="false" data-transition-speed="300" data-dac-nav>
+      <div data-swap-container>
+        
   
-
-
-
-
-  <div class="wrap clearfix" id="body-content"><div class="cols">
-    <div class="col-4 dac-toggle dac-mobile" id="side-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <a class="dac-nav-back-button dac-swap-section dac-up dac-no-anim" data-swap-button href="javascript:;">
+      <i class="dac-sprite dac-nav-back"></i> <span class="dac-nav-back-title">Back</span>
+    </a>
+    <div class="dac-nav-sub dac-swap-section dac-right dac-active" itemscope itemtype="http://schema.org/SiteNavigationElement">
       
-  <div class="dac-visible-mobile-block" data-toggle="section">
-    <span class="dac-toggle-expand dac-devdoc-toggle"><i class="dac-sprite dac-expand-more-black"></i> Show navigation</span>
-    <span class="dac-toggle-collapse dac-devdoc-toggle" data-toggle-section><i class="dac-sprite dac-expand-less-black"></i> Hide navigation</span>
-  </div>
-
-      <div class="dac-toggle-content" id="devdoc-nav">
-        <div class="scroll-pane">
-
+        
 <ul id="nav">
 
   <li class="nav-section">
@@ -532,7 +358,7 @@ develop guide" itemscope itemtype="http://schema.org/Article">
       <li><a href="../../../../guide/topics/resources/overview.html">
           <span class="en">Overview</span>
         </a></li>
-        <li><a href="../../../../guide/topics/resources/providing-resources.html">
+      <li><a href="../../../../guide/topics/resources/providing-resources.html">
           <span class="en">Providing Resources</span>
         </a></li>
       <li><a href="../../../../guide/topics/resources/accessing-resources.html">
@@ -540,9 +366,12 @@ develop guide" itemscope itemtype="http://schema.org/Article">
         </a></li>
       <li><a href="../../../../guide/topics/resources/runtime-changes.html">
             <span class="en">Handling Runtime Changes</span>
-          </a></li>
+        </a></li>
       <li><a href="../../../../guide/topics/resources/localization.html">
           <span class="en">Localization</span>
+        </a></li>
+      <li><a href="../../../../guide/topics/resources/complex-xml-resources.html">
+          <span class="en">Complex XML Resources</span>
         </a></li>
       <li class="nav-section">
         <div class="nav-section-header"><a href="../../../../guide/topics/resources/available-resources.html">
@@ -594,6 +423,7 @@ develop guide" itemscope itemtype="http://schema.org/Article">
       <li><a href="../../../../guide/topics/manifest/uses-feature-element.html">&lt;uses-feature&gt;</a></li> <!-- ##api level 4## -->
       <li><a href="../../../../guide/topics/manifest/uses-library-element.html">&lt;uses-library&gt;</a></li>
       <li><a href="../../../../guide/topics/manifest/uses-permission-element.html">&lt;uses-permission&gt;</a></li>
+      <li><a href="../../../../guide/topics/manifest/uses-permission-sdk-23-element.html">&lt;uses-permission-sdk-23&gt;</a></li>
       <li><a href="../../../../guide/topics/manifest/uses-sdk-element.html">&lt;uses-sdk&gt;</a></li>
     </ul>
   </li><!-- end of the manifest file -->
@@ -671,9 +501,6 @@ develop guide" itemscope itemtype="http://schema.org/Article">
         </a></li>
       <li><a href="../../../../guide/topics/ui/menus.html">
           <span class="en">Menus</span></span>
-          </a></li>
-      <li><a href="../../../../guide/topics/ui/actionbar.html">
-           <span class="en">Action Bar</span>
           </a></li>
       <li><a href="../../../../guide/topics/ui/settings.html">
             <span class="en">Settings</span>
@@ -1042,6 +869,16 @@ develop guide" itemscope itemtype="http://schema.org/Article">
     </ul>
   </li>
 
+  <li class="nav-section">
+    <div class="nav-section-header"><a href="../../../../guide/topics/security/index.html">
+        <span class="en">Security</span>
+    </a></div>
+    <ul>
+        <li><a href="../../../../guide/topics/security/security-config.html">
+        <span class="en">Network Security Config</span>
+        </a></li>
+    </ul>
+  </li>
 
 </ul>
 
@@ -1053,26 +890,193 @@ develop guide" itemscope itemtype="http://schema.org/Article">
 //-->
 </script>
 
-        </div>
+      
+    </div>
+  
+
+        <ul id="dac-main-navigation" class="dac-nav-list dac-swap-section dac-left dac-no-anim">
+        <li class="dac-nav-item home">
+          <a class="dac-nav-link" href="../../../../index.html">Home</a>
+          <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider"></i>
+          <ul class="dac-nav-secondary about">
+            <li class="dac-nav-item versions">
+              <a class="dac-nav-link" href="../../../../about/versions/marshmallow/index.html">Android</a>
+            </li>
+            <li class="dac-nav-item wear">
+              <a class="dac-nav-link" href="../../../../wear/index.html">Wear</a>
+            </li>
+            <li class="dac-nav-item tv">
+              <a class="dac-nav-link" href="../../../../tv/index.html">TV</a>
+            </li>
+            <li class="dac-nav-item auto">
+              <a class="dac-nav-link" href="../../../../auto/index.html">Auto</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dac-nav-item design">
+          <a class="dac-nav-link" href="../../../../design/index.html"
+             zh-tw-lang="設計"
+             zh-cn-lang="设计"
+             ru-lang="Проектирование"
+             ko-lang="디자인"
+             ja-lang="設計"
+             es-lang="Diseñar">Design</a>
+        </li>
+        <li class="dac-nav-item develop">
+          <a class="dac-nav-link" href="../../../../develop/index.html"
+             zh-tw-lang="開發"
+             zh-cn-lang="开发"
+             ru-lang="Разработка"
+             ko-lang="개발"
+             ja-lang="開発"
+             es-lang="Desarrollar">Develop</a>
+          <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider"></i>
+          <ul class="dac-nav-secondary develop">
+            <li class="dac-nav-item training">
+              <a class="dac-nav-link" href="../../../../training/index.html"
+                 zh-tw-lang="訓練課程"
+                 zh-cn-lang="培训"
+                 ru-lang="Курсы"
+                 ko-lang="교육"
+                 ja-lang="トレーニング"
+                 es-lang="Capacitación">Training</a>
+            </li>
+            <li class="dac-nav-item guide">
+              <a class="dac-nav-link" href="../../../../guide/index.html"
+                 zh-tw-lang="API 指南"
+                 zh-cn-lang="API 指南"
+                 ru-lang="Руководства по API"
+                 ko-lang="API 가이드"
+                 ja-lang="API ガイド"
+                 es-lang="Guías de la API">API Guides</a>
+            </li>
+            <li class="dac-nav-item reference">
+              <a class="dac-nav-link" href="../../../../reference/packages.html"
+                 zh-tw-lang="參考資源"
+                 zh-cn-lang="参考"
+                 ru-lang="Справочник"
+                 ko-lang="참조문서"
+                 ja-lang="リファレンス"
+                 es-lang="Referencia">Reference</a>
+            </li>
+            <li class="dac-nav-item tools">
+              <a class="dac-nav-link" href="../../../../sdk/index.html"
+                 zh-tw-lang="相關工具"
+                 zh-cn-lang="工具"
+                 ru-lang="Инструменты"
+                 ko-lang="도구"
+                 ja-lang="ツール"
+                 es-lang="Herramientas">Tools</a></li>
+            <li class="dac-nav-item google">
+              <a class="dac-nav-link" href="../../../../google/index.html">Google Services</a>
+            </li>
+            
+          </ul>
+        </li>
+        <li class="dac-nav-item distribute">
+          <a class="dac-nav-link" href="../../../../distribute/googleplay/index.html"
+             zh-tw-lang="發佈"
+             zh-cn-lang="分发"
+             ru-lang="Распространение"
+             ko-lang="배포"
+             ja-lang="配布"
+             es-lang="Distribuir">Distribute</a>
+          <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider"></i>
+          <ul class="dac-nav-secondary distribute">
+            <li class="dac-nav-item googleplay">
+              <a class="dac-nav-link" href="../../../../distribute/googleplay/index.html">Google Play</a></li>
+            <li class="dac-nav-item essentials">
+              <a class="dac-nav-link" href="../../../../distribute/essentials/index.html">Essentials</a></li>
+            <li class="dac-nav-item users">
+              <a class="dac-nav-link" href="../../../../distribute/users/index.html">Get Users</a></li>
+            <li class="dac-nav-item engage">
+              <a class="dac-nav-link" href="../../../../distribute/engage/index.html">Engage &amp; Retain</a></li>
+            <li class="dac-nav-item monetize">
+              <a class="dac-nav-link" href="../../../../distribute/monetize/index.html">Earn</a>
+            </li>
+            <li class="dac-nav-item analyze">
+              <a class="dac-nav-link" href="../../../../distribute/analyze/index.html">Analyze</a>
+            </li>
+            <li class="dac-nav-item stories">
+              <a class="dac-nav-link" href="../../../../distribute/stories/index.html">Stories</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dac-nav-item preview">
+          <a class="dac-nav-link" href="../../../../preview/index.html">Preview</a>
+        </li>
+        </ul>
       </div>
-    </div> <!-- end side-nav -->
-    <script>
-      $(document).ready(function() {
-        scrollIntoView("devdoc-nav");
-        });
-    </script>
+    </div>
+  </nav>
+  <!-- end navigation-->
+  
 
+<!-- Nav Setup -->
+<script>$('[data-dac-nav]').dacNav();</script>
 
-
-
-<div class="col-12" id="doc-col" >
 
 
   
+    
+  <div class="wrap clearfix" id="body-content">
+
+  
+
+  
+  <div id="search-results" class="dac-search-results">
+    <div id="dac-search-results-history" class="dac-search-results-history">
+      <div class="wrap dac-search-results-history-wrap">
+        <div class="cols">
+          <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+            <h2>Most visited</h2>
+            <div class="resource-flow-layout" data-history-query="history:most/visited" data-maxresults="3" data-cardsizes="18x2"></div>
+          </div>
+
+          <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+            <h2>Recently visited</h2>
+            <div class="resource-flow-layout cols" data-history-query="history:recent" data-allow-duplicates="true" data-maxresults="3" data-cardsizes="18x2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="dac-search-results-content" class="dac-search-results-content">
+      <div class="dac-search-results-metadata wrap">
+        <div class="dac-search-results-for">
+          <h2>Results for <span id="search-results-for"></span></h2>
+        </div>
+
+        <div id="dac-search-results-hero"></div>
+
+        <div class="dac-search-results-hero cols">
+          <div id="dac-search-results-reference" class="col-3of6 col-tablet-1of2 col-mobile-1of1">
+            <div class="suggest-card reference no-display">
+              <ul class="dac-search-results-reference">
+              </ul>
+            </div>
+          </div>
+          <div id="dac-custom-search-results"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
 
   
     
       
+        <ul class="dac-header-crumbs">
+          
+        </ul>
+
+        <!-- Breadcrumb Setup -->
+        <p><script>$('.dac-nav-list').dacCurrentPage().dacCrumbs();</script></p>
+
         <h1 itemprop="name" >Making Applications Accessible</h1>
       
     
@@ -1080,10 +1084,12 @@ develop guide" itemscope itemtype="http://schema.org/Article">
 
 
   
+
+  
   <div id="jd-content">
-
-
     <div class="jd-descr" itemprop="articleBody">
+    
+
     <div id="qv-wrapper">
 <div id="qv">
 
@@ -1240,7 +1246,7 @@ focus navigation</a>.</p>
 <code>android:focusable</code></a> attribute is set to <code>true</code>. This setting allows users to focus
 on the element using the directional controls and then interact with it. The user interface controls
 provided by the Android framework are focusable by default and visually indicate focus by changing
-the control’s appearance.</p>
+the control's appearance.</p>
 
 <p>Android provides several APIs that let you control whether a user interface control is focusable
 and even request that a control be given focus:</p>
@@ -1487,7 +1493,7 @@ public boolean onKeyUp (int keyCode, KeyEvent event) {
 <h3 id="populate-events">Populating accessibility events</h3>
 
 <p>Each <code><a href="../../../../reference/android/view/accessibility/AccessibilityEvent.html">AccessibilityEvent</a></code> has a set of required properties that
-describe the current state of the view. These properties include things such as the view’s class
+describe the current state of the view. These properties include things such as the view's class
 name, content description and checked state. The specific properties required for each event type
 are described in the <code><a href="../../../../reference/android/view/accessibility/AccessibilityEvent.html">AccessibilityEvent</a></code> reference documentation.
 The <code><a href="../../../../reference/android/view/View.html">View</a></code> implementation provides default values for these properties. Many of
@@ -1504,10 +1510,10 @@ following example code demonstrates a basic implementation of this method.</p>
 
 <pre>
 &#64;Override
-public void dispatchPopulateAccessibilityEvent(AccessibilityEvent event) {
-    super.dispatchPopulateAccessibilityEvent(event);
+public boolean dispatchPopulateAccessibilityEvent(AccessibilityEvent event) {
     // Call the super implementation to populate its text to the event, which
     // calls onPopulateAccessibilityEvent() on API Level 14 and up.
+    boolean completed = super.dispatchPopulateAccessibilityEvent(event);
 
     // In case this is running on a API revision earlier that 14, check
     // the text content of the event and add an appropriate text
@@ -1515,7 +1521,9 @@ public void dispatchPopulateAccessibilityEvent(AccessibilityEvent event) {
     CharSequence text = getText();
     if (!TextUtils.isEmpty(text)) {
         event.getText().add(text);
+        return true;
     }
+    return completed;
 }
 </pre>
 
@@ -1579,20 +1587,11 @@ ViewCompat.setAccessibilityDelegate(new AccessibilityDelegateCompat() {
 }
 </pre>
 
-<p>In applications targeting Android 4.0 (API Level 14) and higher, you can implement these methods
+<p>You can implement these methods
 directly in your custom view class. For another example of this approach, see the Android
 <a href="../../../../tools/support-library/index.html">Support Library</a> (revision 5 or higher)
 sample <code>AccessibilityDelegateSupportActivity</code> in
 (<code>&lt;sdk&gt;/extras/android/support/v4/samples/Support4Demos/</code>).</p>
-
-<p class="note"><strong>Note:</strong> You may find information on implementing accessibility for
-custom views written prior to Android 4.0 that describes the use of the
-<code><a href="../../../../reference/android/view/View.html#dispatchPopulateAccessibilityEvent(android.view.accessibility.AccessibilityEvent)">dispatchPopulateAccessibilityEvent()</a></code>
-method for populating AccessibilityEvents. As of the Android 4.0 release, however, the recommended
-approach is to use the
-<code><a href="../../../../reference/android/view/View.html#onPopulateAccessibilityEvent(android.view.accessibility.AccessibilityEvent)">onPopulateAccessibilityEvent()</a></code> and
-<code><a href="../../../../reference/android/view/View.html#onInitializeAccessibilityEvent(android.view.accessibility.AccessibilityEvent)">onInitializeAccessibilityEvent()</a></code>
-methods.</p>
 
 
 <h3 id="virtual-hierarchy">Providing a customized accessibility context</h3>
@@ -1738,11 +1737,13 @@ controls. For more information on testing accessibility in your application, see
 
   </div> <!-- end jd-content -->
 
+
+
 <div class="wrap">
   <div class="dac-footer">
     <div class="cols dac-footer-main">
       <div class="col-1of2">
-        <a class="dac-footer-getnews" data-modal-toggle="newsletter" href="javascript:;">Get news &amp; tips <span
+        <a class="dac-footer-getnews" id="newsletter" data-modal-toggle="newsletter" href="javascript:;">Get news &amp; tips <span
           class="dac-fab dac-primary"><i class="dac-sprite dac-mail"></i></span></a>
       </div>
       <div class="col-1of2 dac-footer-reachout">
@@ -1751,9 +1752,9 @@ controls. For more information on testing accessibility in your application, see
           <a class="dac-footer-contact-link" href="/support.html">Support</a>
         </div>
         <div class="dac-footer-social">
-          <a class="dac-fab dac-footer-social-link" href="https://www.youtube.com/user/androiddevelopers"><i class="dac-sprite dac-youtube"></i></a>
-          <a class="dac-fab dac-footer-social-link" href="https://plus.google.com/+AndroidDevelopers"><i class="dac-sprite dac-gplus"></i></a>
-          <a class="dac-fab dac-footer-social-link" href="https://twitter.com/AndroidDev"><i class="dac-sprite dac-twitter"></i></a>
+          <a class="dac-button-social dac-youtube dac-footer-social-link" href="https://www.youtube.com/user/androiddevelopers"><i class="dac-sprite dac-youtube"></i></a>
+          <a class="dac-button-social dac-gplus dac-footer-social-link" href="https://plus.google.com/+AndroidDevelopers"><i class="dac-sprite dac-gplus"></i></a>
+          <a class="dac-button-social dac-twitter dac-footer-social-link" href="https://twitter.com/AndroidDev"><i class="dac-sprite dac-twitter"></i></a>
         </div>
       </div>
     </div>
@@ -1768,11 +1769,12 @@ controls. For more information on testing accessibility in your application, see
   Creative Commons Attribution 2.5</a>. For details and
   restrictions, see the <a href="../../../../license.html">Content
   License</a>.
+
       </p>
     
 
     <p class="dac-footer-links">
-      <a href="/about/index.html">About Android</a>
+      <a href="/about/android.html">About Android</a>
       <a href="/auto/index.html">Auto</a>
       <a href="/tv/index.html">TV</a>
       <a href="/wear/index.html">Wear</a>
@@ -1782,58 +1784,70 @@ controls. For more information on testing accessibility in your application, see
         <select name="language" onchange="changeLangPref(this.value, true)">
           <option value="en" selected="selected">English</option>
           <option value="es">Español</option>
+          <option value="in">Bahasa Indonesia</option>
           <option value="ja">日本語</option>
           <option value="ko">한국어</option>
           <option value="pt-br">Português Brasileiro</option>
           <option value="ru">Русский</option>
+          <option value="vi">tiếng Việt</option>
           <option value="zh-cn">中文（简体)</option>
           <option value="zh-tw">中文（繁體)</option>
         </select>
       </span>
     </p>
   </div>
-</div> <!-- end footer -->
+</div>
+<!-- end footer -->
+
+
+
+  
+
+
 
 <div data-modal="newsletter" data-newsletter data-swap class="dac-modal newsletter">
   <div class="dac-modal-container">
     <div class="dac-modal-window">
       <header class="dac-modal-header">
-        <button class="dac-modal-header-close" data-modal-toggle><i class="dac-sprite dac-close"></i></button>
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
         <div class="dac-swap" data-swap-container>
           <section class="dac-swap-section dac-active dac-down">
-            <h2 class="norule dac-modal-header-title">Get the latest Android developer news and tips that will help you find success on Google Play.</h2>
-            <p class="dac-modal-header-subtitle">&#42; Required Fields</p>
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.title"></h2>
+            <p class="dac-modal-header-subtitle" data-t="newsletter.requiredHint"></p>
           </section>
           <section class="dac-swap-section dac-up">
-            <h2 class="norule dac-modal-header-title">Hooray!</h2>
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.successTitle">Hooray!</h2>
           </section>
         </div>
       </header>
       <div class="dac-swap" data-swap-container>
         <section class="dac-swap-section dac-active dac-left">
           <form action="https://docs.google.com/forms/d/1QgnkzbEJIDu9lMEea0mxqWrXUJu0oBCLD7ar23V0Yys/formResponse" class="dac-form" method="post" target="dac-newsletter-iframe">
+            <input type="hidden" name="entry.935454734" data-newsletter-language>
             <section class="dac-modal-content">
               <fieldset class="dac-form-fieldset">
                 <div class="cols">
                   <div class="col-1of2 newsletter-leftCol">
                     <div class="dac-form-input-group">
-                      <label for="newsletter-full-name" class="dac-form-floatlabel">Full name</label>
+                      <label for="newsletter-full-name" class="dac-form-floatlabel" data-t="newsletter.name">Full name</label>
                       <input type="text" class="dac-form-input" name="entry.1357890476" id="newsletter-full-name" required>
                       <span class="dac-form-required">*</span>
                     </div>
                     <div class="dac-form-input-group">
-                      <label for="newsletter-email" class="dac-form-floatlabel">Email address</label>
+                      <label for="newsletter-email" class="dac-form-floatlabel" data-t="newsletter.email">Email address</label>
                       <input type="email" class="dac-form-input" name="entry.472100832" id="newsletter-email" required>
                       <span class="dac-form-required">*</span>
                     </div>
                   </div>
                   <div class="col-1of2 newsletter-rightCol">
                     <div class="dac-form-input-group">
-                      <label for="newsletter-company" class="dac-form-floatlabel">Company / developer name</label>
+                      <label for="newsletter-company" class="dac-form-floatlabel" data-t="newsletter.company">Company / developer name</label>
                       <input type="text" class="dac-form-input" name="entry.1664780309" id="newsletter-company">
                     </div>
                     <div class="dac-form-input-group">
-                      <label for="newsletter-play-store" class="dac-form-floatlabel">One of your Play Store app URLs</label>
+                      <label for="newsletter-play-store" class="dac-form-floatlabel" data-t="newsletter.appUrl">One of your Play Store app URLs</label>
                       <input type="url" class="dac-form-input" name="entry.47013838" id="newsletter-play-store" required>
                       <span class="dac-form-required">*</span>
                     </div>
@@ -1843,22 +1857,22 @@ controls. For more information on testing accessibility in your application, see
               <fieldset class="dac-form-fieldset">
                 <div class="cols">
                   <div class="col-1of2 newsletter-leftCol">
-                    <legend class="dac-form-legend">Which best describes your business:<span class="dac-form-required">*</span>
+                    <legend class="dac-form-legend"><span data-t="newsletter.business.label">Which best describes your business:</span><span class="dac-form-required">*</span>
                     </legend>
                     <div class="dac-form-radio-group">
                       <input type="radio" value="Apps" class="dac-form-radio" name="entry.1796324055" id="newsletter-business-type-app" required>
                       <label for="newsletter-business-type-app" class="dac-form-radio-button"></label>
-                      <label for="newsletter-business-type-app" class="dac-form-label">Apps</label>
+                      <label for="newsletter-business-type-app" class="dac-form-label" data-t="newsletter.business.apps">Apps</label>
                     </div>
                     <div class="dac-form-radio-group">
                       <input type="radio" value="Games" class="dac-form-radio" name="entry.1796324055" id="newsletter-business-type-games" required>
                       <label for="newsletter-business-type-games" class="dac-form-radio-button"></label>
-                      <label for="newsletter-business-type-games" class="dac-form-label">Games</label>
+                      <label for="newsletter-business-type-games" class="dac-form-label" data-t="newsletter.business.games">Games</label>
                     </div>
                     <div class="dac-form-radio-group">
                       <input type="radio" value="Apps and Games" class="dac-form-radio" name="entry.1796324055" id="newsletter-business-type-appsgames" required>
                       <label for="newsletter-business-type-appsgames" class="dac-form-radio-button"></label>
-                      <label for="newsletter-business-type-appsgames" class="dac-form-label">Apps &amp; Games</label>
+                      <label for="newsletter-business-type-appsgames" class="dac-form-label" data-t="newsletter.business.both">Apps &amp; Games</label>
                     </div>
                   </div>
                   <div class="col-1of2 newsletter-rightCol newsletter-checkboxes">
@@ -1869,7 +1883,7 @@ controls. For more information on testing accessibility in your application, see
                           <label for="newsletter-add" class="dac-form-checkbox-button"></label>
                         </div>
                         <div class="dac-media-body">
-                          <label for="newsletter-add" class="dac-form-label dac-form-aside">Add me to the mailing list for the monthly newsletter and occasional emails about development and Google Play opportunities.<span class="dac-form-required">*</span></label>
+                          <label for="newsletter-add" class="dac-form-label dac-form-aside"><span data-t="newsletter.confirmMailingList"></span><span class="dac-form-required">*</span></label>
                         </div>
                       </div>
                     </div>
@@ -1880,7 +1894,7 @@ controls. For more information on testing accessibility in your application, see
                           <label for="newsletter-terms" class="dac-form-checkbox-button"></label>
                         </div>
                         <div class="dac-media-body">
-                          <label for="newsletter-terms" class="dac-form-label dac-form-aside">I acknowledge that the information provided in this form will be subject to <a href="https://www.google.com/policies/privacy/">Google's privacy policy</a>.<span class="dac-form-required">*</span></label>
+                          <label for="newsletter-terms" class="dac-form-label dac-form-aside"><span data-t="newsletter.privacyPolicy" data-t-html></span><span class="dac-form-required">*</span></label>
                         </div>
                       </div>
                     </div>
@@ -1899,30 +1913,75 @@ controls. For more information on testing accessibility in your application, see
         </section>
         <section class="dac-swap-section dac-right">
           <div class="dac-modal-content">
-            <p class="newsletter-success-message">
-              You have successfully signed up for the latest Android developer news and tips.
-            </p>
+            <p class="newsletter-success-message" data-t="newsletter.successDetails"></p>
           </div>
         </section>
       </div>
     </div>
   </div>
-</div> <!-- end footer -->
+</div>
+<!-- end newsletter modal -->
 
-</div><!-- end doc-content -->
+<!-- start reset language header modal -->
+<div data-modal="langform" class="dac-modal" id="langform">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title"></h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <fieldset class="dac-form-fieldset">
+              <div class="cols">
+                <div class="col-2of2 langform-leftCol">
+                  <p id="resetLangText"></p>
+                  <p id="resetLangCta"></p>
+                </div>
+              </div>
+            </fieldset>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+              <button class="button dac-primary dac-modal-action lang yes" data-t="newsletter.resetLangButtonYes" data-modal-toggle></button>
+              <button class="button dac-primary dac-modal-action lang no" data-t="newsletter.resetLangButtonNo" data-modal-toggle></button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div>
+<!-- end langreset modal -->
 
-</div> <!-- end .cols --> 
+
 </div> <!-- end body-content --> 
 
 
 
 
+<script src="https://developer.android.com/ytblogger_lists_unified.js" defer></script>
+<script src="/jd_lists_unified_en.js?v=17" defer></script>
+<script src="/reference/lists.js?v=17" defer></script>
+<script src="/reference/gcm_lists.js?v=17" defer></script>
+<script src="/reference/gms_lists.js?v=17" defer></script>
+<script>
+  // Load localized metadata.
+  (function(lang) {
+    if (lang === 'en') { return; }
 
-  <script src="https://developer.android.com/ytblogger_lists_unified.js" type="text/javascript"></script>
-  <script src="../../../../jd_lists_unified.js?v=15" type="text/javascript"></script>
-  <script src="../../../../jd_extras.js?v=15" type="text/javascript"></script>
-  <script src="../../../../jd_collections.js?v=15" type="text/javascript"></script>
-  <script src="../../../../jd_tag_helpers.js?v=15" type="text/javascript"></script>
+    // Write it to the document so it gets evaluated before DOMContentReady.
+    document.write('<script src="/jd_lists_unified_' + lang + '.js?v=14" defer></' + 'script>');
+  })(getLangPref())
+</script>
+
 
 </body>
 </html>

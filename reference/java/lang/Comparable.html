@@ -1,115 +1,146 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <html>
 <head>
 
+  
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <meta content="IE=edge" http-equiv="X-UA-Compatible">
-
 <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.ico" />
-<title>Comparable - Android SDK | Android Developers</title>
+<link rel="alternate" href="http://developer.android.com/" hreflang="en" />
+<link rel="alternate" href="http://developer.android.com/intl/es/" hreflang="es" />
+<link rel="alternate" href="http://developer.android.com/intl/id/" hreflang="id" />
+<link rel="alternate" href="http://developer.android.com/intl/ja/" hreflang="ja" />
+<link rel="alternate" href="http://developer.android.com/intl/ko/" hreflang="ko" />
+<link rel="alternate" href="http://developer.android.com/intl/pt-br/" hreflang="pt-br" />
+<link rel="alternate" href="http://developer.android.com/intl/ru/" hreflang="ru" />
+<link rel="alternate" href="http://developer.android.com/intl/vi/" hreflang="vi" />
+<link rel="alternate" href="http://developer.android.com/intl/zh-cn/" hreflang="zh-cn" />
+<link rel="alternate" href="http://developer.android.com/intl/zh-tw/" hreflang="zh-tw" />
+
+
+<title>Comparable - Android SDK | Android Developers
+</title>
+
 
 <!-- STYLESHEETS -->
 <link rel="stylesheet"
@@ -117,13 +148,7 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold"
   title="roboto">
 
-<link href="../../../assets/css/default.css?v=7" rel="stylesheet" type="text/css">
-
-
-<!-- FULLSCREEN STYLESHEET -->
-<link href="../../../assets/css/fullscreen.css" rel="stylesheet" class="fullscreen"
-type="text/css">
-
+<link href="../../../assets/css/default.css?v=16" rel="stylesheet" type="text/css">
 
 <!-- JAVASCRIPT -->
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
@@ -132,10 +157,9 @@ type="text/css">
   var toRoot = "../../../";
   var metaTags = [];
   var devsite = false;
+  var useUpdatedTemplates = false;
 </script>
-<script src="../../../assets/js/docs.js?v=6" type="text/javascript"></script>
-
-
+<script src="../../../assets/js/docs.js?v=17" type="text/javascript"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -151,66 +175,15 @@ type="text/css">
 
 </head>
 
-<body class="gc-documentation 
-  develop reference" itemscope itemtype="http://schema.org/Article">
-  <div id="doc-api-level" class="1" style="display:none"></div>
+<body class="gc-documentation develop reference api apilevel-1">
+<div id="doc-api-level" class="1" style="display:none"></div>
+
+
+  
   <a name="top"></a>
-
-<a name="top"></a>
-
-<!-- dialog to prompt lang pref change when loaded from hardcoded URL
-<div id="langMessage" style="display:none">
-  <div>
-    <div class="lang en">
-      <p>You requested a page in English, would you like to proceed with this language setting?</p>
-    </div>
-    <div class="lang es">
-      <p>You requested a page in Spanish (Español), would you like to proceed with this language setting?</p>
-    </div>
-    <div class="lang ja">
-      <p>You requested a page in Japanese (日本語), would you like to proceed with this language setting?</p>
-    </div>
-    <div class="lang ko">
-      <p>You requested a page in Korean (한국어), would you like to proceed with this language setting?</p>
-    </div>
-    <div class="lang ru">
-      <p>You requested a page in Russian (Русский), would you like to proceed with this language setting?</p>
-    </div>
-    <div class="lang zh-cn">
-      <p>You requested a page in Simplified Chinese (简体中文), would you like to proceed with this language setting?</p>
-    </div>
-    <div class="lang zh-tw">
-      <p>You requested a page in Traditional Chinese (繁體中文), would you like to proceed with this language setting?</p>
-    </div>
-    <a href="#" class="button yes" onclick="return false;">
-      <span class="lang en">Yes</span>
-      <span class="lang es">Sí</span>
-      <span class="lang ja">Yes</span>
-      <span class="lang ko">Yes</span>
-      <span class="lang ru">Yes</span>
-      <span class="lang zh-cn">是的</span>
-      <span class="lang zh-tw">没有</span>
-    </a>
-    <a href="#" class="button" onclick="$('#langMessage').hide();return false;">
-      <span class="lang en">No</span>
-      <span class="lang es">No</span>
-      <span class="lang ja">No</span>
-      <span class="lang ko">No</span>
-      <span class="lang ru">No</span>
-      <span class="lang zh-cn">没有</span>
-      <span class="lang zh-tw">没有</span>
-    </a>
-  </div>
-</div> -->
-
-
   <!-- Header -->
   <div id="header-wrapper">
-    <div class="dac-header" id="header">
-
-
-
-
+    <div class="dac-header " id="header">
       <div class="dac-header-inner">
         <a class="dac-nav-toggle" data-dac-toggle-nav href="javascript:;" title="Open navigation">
           <span class="dac-nav-hamburger">
@@ -225,54 +198,35 @@ type="text/css">
               width="32" height="36" alt="Android" /> Developers
           </a>
 
-        <ul class="dac-header-crumbs">
-          
-          <li class="dac-header-crumbs-item"><span class="dac-header-crumbs-link current ">Comparable - Android SDK</a></li>
+        <ul class="dac-header-tabs">
+          <li>
+          <a class="dac-header-tab" href="../../../design/index.html"
+             zh-tw-lang="設計"
+             zh-cn-lang="设计"
+             ru-lang="Проектирование"
+             ko-lang="디자인"
+             ja-lang="設計"
+             es-lang="Diseñar">Design</a>
+          </li>
+          <li>
+          <a class="dac-header-tab" href="../../../develop/index.html"
+             zh-tw-lang="開發"
+             zh-cn-lang="开发"
+             ru-lang="Разработка"
+             ko-lang="개발"
+             ja-lang="開発"
+             es-lang="Desarrollar">Develop</a>
+          </li>
+          <li>
+          <a class="dac-header-tab" href="../../../distribute/index.html"
+             zh-tw-lang="發佈"
+             zh-cn-lang="分发"
+             ru-lang="Распространение"
+             ko-lang="배포"
+             ja-lang="配布"
+             es-lang="Distribuir">Distribute</a>
+          </li>
         </ul>
-
-        
-        
-        
-  <div class="dac-header-search" id="search-container">
-    <div class="dac-header-search-inner">
-      <div class="dac-sprite dac-search dac-header-search-btn" id="search-btn"></div>
-      <form class="dac-header-search-form" onsubmit="return submit_search()">
-        <input id="search_autocomplete" type="text" value="" autocomplete="off" name="q"
-          onfocus="search_focus_changed(this, true)" onblur="search_focus_changed(this, false)"
-          onkeydown="return search_changed(event, true, '../../../')"
-          onkeyup="return search_changed(event, false, '../../../')"
-          class="dac-header-search-input" placeholder="Search" />
-          <a class="dac-header-search-close hide" id="search-close">close</a>
-      </form>
-    </div><!-- end dac-header-search-inner -->
-  </div><!-- end dac-header-search -->
-
-  <div class="search_filtered_wrapper">
-    <div class="suggest-card reference no-display">
-      <ul class="search_filtered">
-      </ul>
-    </div>
-    <div class="suggest-card develop no-display">
-      <ul class="search_filtered">
-      </ul>
-      <div class="child-card guides no-display">
-      </div>
-      <div class="child-card training no-display">
-      </div>
-      <div class="child-card samples no-display">
-      </div>
-    </div>
-    <div class="suggest-card design no-display">
-      <ul class="search_filtered">
-      </ul>
-    </div>
-    <div class="suggest-card distribute no-display">
-      <ul class="search_filtered">
-      </ul>
-    </div>
-  </div>
-
-        
 
         <a class="dac-header-console-btn" href="https://play.google.com/apps/publish/">
           <span class="dac-sprite dac-google-play"></span>
@@ -280,13 +234,26 @@ type="text/css">
           Console
         </a>
 
+        
+        
+        
+  <form data-search class="dac-header-search">
+    <button class="dac-header-search-close" data-search-close>
+      <i class="dac-sprite dac-back-arrow"></i>
+    </button>
+
+    <div class="dac-header-search-inner">
+      <i class="dac-sprite dac-search-white dac-header-search-icon"></i>
+      <input id="search_autocomplete" type="text" value="" autocomplete="off" name="q" class="dac-header-search-input" placeholder="Search" />
+      <button class="dac-header-search-clear dac-hidden" data-search-clear>
+        <i class="dac-sprite dac-close-black"></i>
+      </button>
+    </div>
+  </form>
+
+        
       </div><!-- end header-wrap.wrap -->
     </div><!-- end header -->
-
-    <div id="searchResults" class="wrap" style="display:none;">
-      <h2 id="searchTitle">Results</h2>
-      <div id="leftSearchControl" class="search-control">Loading...</div>
-    </div>
   </div> <!--end header-wrapper -->
 
   
@@ -294,137 +261,30 @@ type="text/css">
   <nav class="dac-nav">
     <div class="dac-nav-dimmer" data-dac-toggle-nav></div>
 
-    <ul class="dac-nav-list" data-dac-nav>
-      <li class="dac-nav-item dac-nav-head">
-        <a class="dac-nav-link dac-nav-logo" data-dac-toggle-nav href="javascript:;" title="Close navigation">
-          <img class="dac-logo-image" src="../../../assets/images/android_logo.png"
-               srcset="../../../assets/images/android_logo@2x.png 2x"
-               width="32" height="36" alt="Android" /> Developers
-        </a>
-      </li>
-      <li class="dac-nav-item home">
-        <a class="dac-nav-link dac-visible-mobile-block" href="../../../index.html">Home</a>
-        <ul class="dac-nav-secondary about">
-          <li class="dac-nav-item about">
-            <a class="dac-nav-link" href="../../../about/index.html">Android</a>
-          </li>
-          <li class="dac-nav-item wear">
-            <a class="dac-nav-link" href="../../../wear/index.html">Wear</a>
-          </li>
-          <li class="dac-nav-item tv">
-            <a class="dac-nav-link" href="../../../tv/index.html">TV</a>
-          </li>
-          <li class="dac-nav-item auto">
-            <a class="dac-nav-link" href="../../../auto/index.html">Auto</a>
-          </li>
-        </ul>
-      </li>
-      <li class="dac-nav-item design">
-        <a class="dac-nav-link" href="../../../design/index.html"
-           zh-tw-lang="設計"
-           zh-cn-lang="设计"
-           ru-lang="Проектирование"
-           ko-lang="디자인"
-           ja-lang="設計"
-           es-lang="Diseñar">Design</a>
-      </li>
-      <li class="dac-nav-item develop">
-        <a class="dac-nav-link" href="../../../develop/index.html"
-           zh-tw-lang="開發"
-           zh-cn-lang="开发"
-           ru-lang="Разработка"
-           ko-lang="개발"
-           ja-lang="開発"
-           es-lang="Desarrollar">Develop</a>
-        <ul class="dac-nav-secondary develop">
-          <li class="dac-nav-item training">
-            <a class="dac-nav-link" href="../../../training/index.html"
-               zh-tw-lang="訓練課程"
-               zh-cn-lang="培训"
-               ru-lang="Курсы"
-               ko-lang="교육"
-               ja-lang="トレーニング"
-               es-lang="Capacitación">Training</a>
-          </li>
-          <li class="dac-nav-item guide">
-            <a class="dac-nav-link" href="../../../guide/index.html"
-               zh-tw-lang="API 指南"
-               zh-cn-lang="API 指南"
-               ru-lang="Руководства по API"
-               ko-lang="API 가이드"
-               ja-lang="API ガイド"
-               es-lang="Guías de la API">API Guides</a>
-          </li>
-          <li class="dac-nav-item reference">
-            <a class="dac-nav-link" href="../../../reference/packages.html"
-               zh-tw-lang="參考資源"
-               zh-cn-lang="参考"
-               ru-lang="Справочник"
-               ko-lang="참조문서"
-               ja-lang="リファレンス"
-               es-lang="Referencia">Reference</a>
-          </li>
-          <li class="dac-nav-item tools">
-            <a class="dac-nav-link" href="../../../sdk/index.html"
-               zh-tw-lang="相關工具"
-               zh-cn-lang="工具"
-               ru-lang="Инструменты"
-               ko-lang="도구"
-               ja-lang="ツール"
-               es-lang="Herramientas">Tools</a></li>
-          <li class="dac-nav-item google">
-            <a class="dac-nav-link" href="../../../google/index.html">Google Services</a>
-          </li>
-          
-          <li class="dac-nav-item preview">
-            <a class="dac-nav-link" href="../../../preview/index.html">Preview</a>
-          </li>
-        </ul>
-      </li>
-      <li class="dac-nav-item distribute">
-        <a class="dac-nav-link" href="../../../distribute/googleplay/index.html"
-           zh-tw-lang="發佈"
-           zh-cn-lang="分发"
-           ru-lang="Распространение"
-           ko-lang="배포"
-           ja-lang="配布"
-           es-lang="Distribuir">Distribute</a>
-        <ul class="dac-nav-secondary distribute">
-          <li class="dac-nav-item googleplay">
-            <a class="dac-nav-link" href="../../../distribute/googleplay/index.html">Google Play</a></li>
-          <li class="dac-nav-item essentials">
-            <a class="dac-nav-link" href="../../../distribute/essentials/index.html">Essentials</a></li>
-          <li class="dac-nav-item users">
-            <a class="dac-nav-link" href="../../../distribute/users/index.html">Get Users</a></li>
-          <li class="dac-nav-item engage">
-            <a class="dac-nav-link" href="../../../distribute/engage/index.html">Engage &amp; Retain</a></li>
-          <li class="dac-nav-item monetize">
-            <a class="dac-nav-link" href="../../../distribute/monetize/index.html">Earn</a>
-          </li>
-          <li class="dac-nav-item analyze">
-            <a class="dac-nav-link" href="../../../distribute/analyze/index.html">Analyze</a>
-          </li>
-          <li class="dac-nav-item stories">
-            <a class="dac-nav-link" href="../../../distribute/stories/index.html">Stories</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-  <!-- end navigation-->
+    <div class="dac-nav-sidebar" data-swap data-dynamic="false" data-transition-speed="300" data-dac-nav>
+      <div data-swap-container>
+        
   
+    <a class="dac-nav-back-button dac-swap-section dac-up dac-no-anim" data-swap-button href="javascript:;">
+      <i class="dac-sprite dac-nav-back"></i> <span class="dac-nav-back-title">Back</span>
+    </a>
+    <div class="dac-nav-sub dac-swap-section dac-right dac-active" itemscope itemtype="http://schema.org/SiteNavigationElement">
+      
+        
+  <!-- Fullscreen toggler -->
+  <button data-fullscreen class="dac-nav-fullscreen">
+    <i class="dac-sprite dac-fullscreen"></i>
+  </button>
 
+  <script>$('[data-fullscreen]').dacFullscreen();</script>
+  <!-- End: Fullscreen toggler -->
 
-
-
-
-  <div class="wrap clearfix" id="body-content"><div class="cols">
-    <div class="col-4 dac-hidden-mobile" id="side-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
-      <div id="devdoc-nav">
+  
+    <div id="devdoc-nav">
       <div id="api-nav-header">
         <div id="api-level-toggle">
           <label for="apiLevelCheckbox" class="disabled"
-            title="Select your target API level to dim unavailable APIs">API level: </label>
+                 title="Select your target API level to dim unavailable APIs">API level: </label>
           <div class="select-wrapper">
             <select id="apiLevelSelector">
               <!-- option elements added by buildApiLevelSelector() -->
@@ -432,19 +292,15 @@ type="text/css">
           </div>
         </div><!-- end toggle -->
         <div id="api-nav-title">Android APIs</div>
-        </div><!-- end nav header -->
+      </div><!-- end nav header -->
       <script>
-        var SINCE_DATA = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23' ];
+        var SINCE_DATA = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24' ];
         buildApiLevelSelector();
       </script>
 
-      <div id="swapper">
-        <div id="nav-panels">
-          <div id="resize-packages-nav">
-            <div id="packages-nav" class="scroll-pane">
-
-              <ul>
-                
+      <div class="dac-reference-nav" data-reference-tree>
+        <ul class="dac-reference-nav-list" data-reference-namespaces>
+          
     <li class="api apilevel-1">
   <a href="../../../reference/android/package-summary.html">android</a></li>
     <li class="api apilevel-4">
@@ -511,6 +367,14 @@ type="text/css">
   <a href="../../../reference/android/hardware/input/package-summary.html">android.hardware.input</a></li>
     <li class="api apilevel-12">
   <a href="../../../reference/android/hardware/usb/package-summary.html">android.hardware.usb</a></li>
+    <li class="api apilevel-24">
+  <a href="../../../reference/android/icu/lang/package-summary.html">android.icu.lang</a></li>
+    <li class="api apilevel-24">
+  <a href="../../../reference/android/icu/math/package-summary.html">android.icu.math</a></li>
+    <li class="api apilevel-24">
+  <a href="../../../reference/android/icu/text/package-summary.html">android.icu.text</a></li>
+    <li class="api apilevel-24">
+  <a href="../../../reference/android/icu/util/package-summary.html">android.icu.util</a></li>
     <li class="api apilevel-3">
   <a href="../../../reference/android/inputmethodservice/package-summary.html">android.inputmethodservice</a></li>
     <li class="api apilevel-1">
@@ -559,6 +423,8 @@ type="text/css">
   <a href="../../../reference/android/opengl/package-summary.html">android.opengl</a></li>
     <li class="api apilevel-1">
   <a href="../../../reference/android/os/package-summary.html">android.os</a></li>
+    <li class="api apilevel-24">
+  <a href="../../../reference/android/os/health/package-summary.html">android.os.health</a></li>
     <li class="api apilevel-9">
   <a href="../../../reference/android/os/storage/package-summary.html">android.os.storage</a></li>
     <li class="api apilevel-1">
@@ -589,12 +455,16 @@ type="text/css">
   <a href="../../../reference/android/service/media/package-summary.html">android.service.media</a></li>
     <li class="api apilevel-18">
   <a href="../../../reference/android/service/notification/package-summary.html">android.service.notification</a></li>
+    <li class="api apilevel-24">
+  <a href="../../../reference/android/service/quicksettings/package-summary.html">android.service.quicksettings</a></li>
     <li class="api apilevel-21">
   <a href="../../../reference/android/service/restrictions/package-summary.html">android.service.restrictions</a></li>
     <li class="api apilevel-14">
   <a href="../../../reference/android/service/textservice/package-summary.html">android.service.textservice</a></li>
     <li class="api apilevel-21">
   <a href="../../../reference/android/service/voice/package-summary.html">android.service.voice</a></li>
+    <li class="api apilevel-24">
+  <a href="../../../reference/android/service/vr/package-summary.html">android.service.vr</a></li>
     <li class="api apilevel-7">
   <a href="../../../reference/android/service/wallpaper/package-summary.html">android.service.wallpaper</a></li>
     <li class="api apilevel-3">
@@ -604,6 +474,8 @@ type="text/css">
     <li class="api apilevel-">
   <a href="../../../reference/android/support/annotation/package-summary.html">android.support.annotation</a></li>
     <li class="api apilevel-">
+  <a href="../../../reference/android/support/annotations/package-summary.html">android.support.annotations</a></li>
+    <li class="api apilevel-">
   <a href="../../../reference/android/support/app/recommendation/package-summary.html">android.support.app.recommendation</a></li>
     <li class="api apilevel-">
   <a href="../../../reference/android/support/customtabs/package-summary.html">android.support.customtabs</a></li>
@@ -612,11 +484,17 @@ type="text/css">
     <li class="api apilevel-">
   <a href="../../../reference/android/support/design/widget/package-summary.html">android.support.design.widget</a></li>
     <li class="api apilevel-">
+  <a href="../../../reference/android/support/graphics/drawable/package-summary.html">android.support.graphics.drawable</a></li>
+    <li class="api apilevel-">
   <a href="../../../reference/android/support/multidex/package-summary.html">android.support.multidex</a></li>
     <li class="api apilevel-">
   <a href="../../../reference/android/support/percent/package-summary.html">android.support.percent</a></li>
     <li class="api apilevel-">
+  <a href="../../../reference/android/support/provider/package-summary.html">android.support.provider</a></li>
+    <li class="api apilevel-">
   <a href="../../../reference/android/support/v13/app/package-summary.html">android.support.v13.app</a></li>
+    <li class="api apilevel-">
+  <a href="../../../reference/android/support/v13/view/package-summary.html">android.support.v13.view</a></li>
     <li class="api apilevel-">
   <a href="../../../reference/android/support/v14/preference/package-summary.html">android.support.v14.preference</a></li>
     <li class="api apilevel-">
@@ -632,11 +510,13 @@ type="text/css">
     <li class="api apilevel-">
   <a href="../../../reference/android/support/v17/leanback/widget/package-summary.html">android.support.v17.leanback.widget</a></li>
     <li class="api apilevel-">
+  <a href="../../../reference/android/support/v17/leanback/widget/picker/package-summary.html">android.support.v17.leanback.widget.picker</a></li>
+    <li class="api apilevel-">
   <a href="../../../reference/android/support/v17/preference/package-summary.html">android.support.v17.preference</a></li>
     <li class="api apilevel-">
-  <a href="../../../reference/android/support/v4/accessibilityservice/package-summary.html">android.support.v4.accessibilityservice</a></li>
+  <a href="../../../reference/android/support/v4/package-summary.html">android.support.v4</a></li>
     <li class="api apilevel-">
-  <a href="../../../reference/android/support/v4/animation/package-summary.html">android.support.v4.animation</a></li>
+  <a href="../../../reference/android/support/v4/accessibilityservice/package-summary.html">android.support.v4.accessibilityservice</a></li>
     <li class="api apilevel-">
   <a href="../../../reference/android/support/v4/app/package-summary.html">android.support.v4.app</a></li>
     <li class="api apilevel-">
@@ -686,6 +566,8 @@ type="text/css">
     <li class="api apilevel-">
   <a href="../../../reference/android/support/v7/cardview/package-summary.html">android.support.v7.cardview</a></li>
     <li class="api apilevel-">
+  <a href="../../../reference/android/support/v7/content/res/package-summary.html">android.support.v7.content.res</a></li>
+    <li class="api apilevel-">
   <a href="../../../reference/android/support/v7/graphics/package-summary.html">android.support.v7.graphics</a></li>
     <li class="api apilevel-">
   <a href="../../../reference/android/support/v7/graphics/drawable/package-summary.html">android.support.v7.graphics.drawable</a></li>
@@ -695,6 +577,8 @@ type="text/css">
   <a href="../../../reference/android/support/v7/media/package-summary.html">android.support.v7.media</a></li>
     <li class="api apilevel-">
   <a href="../../../reference/android/support/v7/mediarouter/package-summary.html">android.support.v7.mediarouter</a></li>
+    <li class="api apilevel-">
+  <a href="../../../reference/android/support/v7/palette/package-summary.html">android.support.v7.palette</a></li>
     <li class="api apilevel-">
   <a href="../../../reference/android/support/v7/preference/package-summary.html">android.support.v7.preference</a></li>
     <li class="api apilevel-">
@@ -825,6 +709,8 @@ type="text/css">
   <a href="../../../reference/java/util/concurrent/atomic/package-summary.html">java.util.concurrent.atomic</a></li>
     <li class="api apilevel-1">
   <a href="../../../reference/java/util/concurrent/locks/package-summary.html">java.util.concurrent.locks</a></li>
+    <li class="api apilevel-24">
+  <a href="../../../reference/java/util/function/package-summary.html">java.util.function</a></li>
     <li class="api apilevel-1">
   <a href="../../../reference/java/util/jar/package-summary.html">java.util.jar</a></li>
     <li class="api apilevel-1">
@@ -833,6 +719,8 @@ type="text/css">
   <a href="../../../reference/java/util/prefs/package-summary.html">java.util.prefs</a></li>
     <li class="api apilevel-1">
   <a href="../../../reference/java/util/regex/package-summary.html">java.util.regex</a></li>
+    <li class="api apilevel-24">
+  <a href="../../../reference/java/util/stream/package-summary.html">java.util.stream</a></li>
     <li class="api apilevel-1">
   <a href="../../../reference/java/util/zip/package-summary.html">java.util.zip</a></li>
     <li class="api apilevel-1">
@@ -909,25 +797,21 @@ type="text/css">
   <a href="../../../reference/org/xmlpull/v1/package-summary.html">org.xmlpull.v1</a></li>
     <li class="api apilevel-1">
   <a href="../../../reference/org/xmlpull/v1/sax2/package-summary.html">org.xmlpull.v1.sax2</a></li>
-              </ul><br/>
+        </ul>
 
-            </div> <!-- end packages-nav -->
-          </div> <!-- end resize-packages -->
-          <div id="classes-nav" class="scroll-pane">
-
-
-
-            <ul>
-              
+        
+        <ul data-reference-resources>
+          
     <li><h2>Annotations</h2>
       <ul>
           <li class="api apilevel-1"><a href="../../../reference/java/lang/Deprecated.html">Deprecated</a></li>
+          <li class="api apilevel-24"><a href="../../../reference/java/lang/FunctionalInterface.html">FunctionalInterface</a></li>
           <li class="api apilevel-1"><a href="../../../reference/java/lang/Override.html">Override</a></li>
           <li class="api apilevel-19"><a href="../../../reference/java/lang/SafeVarargs.html">SafeVarargs</a></li>
           <li class="api apilevel-1"><a href="../../../reference/java/lang/SuppressWarnings.html">SuppressWarnings</a></li>
       </ul>
     </li>
-              
+          
     <li><h2>Interfaces</h2>
       <ul>
           <li class="api apilevel-1"><a href="../../../reference/java/lang/Appendable.html">Appendable</a></li>
@@ -941,7 +825,7 @@ type="text/css">
           <li class="api apilevel-1"><a href="../../../reference/java/lang/Thread.UncaughtExceptionHandler.html">Thread.UncaughtExceptionHandler</a></li>
       </ul>
     </li>
-              
+          
     <li><h2>Classes</h2>
       <ul>
           <li class="api apilevel-1"><a href="../../../reference/java/lang/Boolean.html">Boolean</a></li>
@@ -981,13 +865,14 @@ type="text/css">
           <li class="api apilevel-1"><a href="../../../reference/java/lang/Void.html">Void</a></li>
       </ul>
     </li>
-              
+          
     <li><h2>Enums</h2>
       <ul>
+          <li class="api apilevel-24"><a href="../../../reference/java/lang/Character.UnicodeScript.html">Character.UnicodeScript</a></li>
           <li class="api apilevel-1"><a href="../../../reference/java/lang/Thread.State.html">Thread.State</a></li>
       </ul>
     </li>
-              
+          
     <li><h2>Exceptions</h2>
       <ul>
           <li class="api apilevel-1"><a href="../../../reference/java/lang/ArithmeticException.html">ArithmeticException</a></li>
@@ -1019,7 +904,7 @@ type="text/css">
           <li class="api apilevel-1"><a href="../../../reference/java/lang/UnsupportedOperationException.html">UnsupportedOperationException</a></li>
       </ul>
     </li>
-              
+          
     <li><h2>Errors</h2>
       <ul>
           <li class="api apilevel-1"><a href="../../../reference/java/lang/AbstractMethodError.html">AbstractMethodError</a></li>
@@ -1046,55 +931,198 @@ type="text/css">
           <li class="api apilevel-1"><a href="../../../reference/java/lang/VirtualMachineError.html">VirtualMachineError</a></li>
       </ul>
     </li>
-            </ul><br/>
-
-
-          </div><!-- end classes -->
-        </div><!-- end nav-panels -->
-        <div id="nav-tree" style="display:none" class="scroll-pane">
-          <div id="tree-list"></div>
-        </div><!-- end nav-tree -->
-      </div><!-- end swapper -->
-      <div id="nav-swap">
-      <a class="fullscreen">fullscreen</a>
-      <a href='#' onclick='swapNav();return false;'><span id='tree-link'>Use Tree Navigation</span><span id='panel-link' style='display:none'>Use Panel Navigation</span></a>
+        </ul>
+        
       </div>
-    </div> <!-- end devdoc-nav -->
-    </div> <!-- end side-nav -->
-    <script type="text/javascript">
-      // init fullscreen based on user pref
-      var fullscreen = readCookie("fullscreen");
-      if (fullscreen != 0) {
-        if (fullscreen == "false") {
-          toggleFullscreen(false);
-        } else {
-          toggleFullscreen(true);
-        }
-      }
-      // init nav version for mobile
-      if (isMobile) {
-        swapNav(); // tree view should be used on mobile
-        $('#nav-swap').hide();
-      } else {
-        chooseDefaultNav();
-        if ($("#nav-tree").is(':visible')) {
-          init_default_navtree("../../../");
-        }
-      }
-      // scroll the selected page into view
-      $(document).ready(function() {
-        scrollIntoView("packages-nav");
-        scrollIntoView("classes-nav");
-        });
-    </script>
+    </div>
+  
 
-     
+      
+    </div>
+  
+
+        <ul id="dac-main-navigation" class="dac-nav-list dac-swap-section dac-left dac-no-anim">
+        <li class="dac-nav-item home">
+          <a class="dac-nav-link" href="../../../index.html">Home</a>
+          <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider"></i>
+          <ul class="dac-nav-secondary about">
+            <li class="dac-nav-item versions">
+              <a class="dac-nav-link" href="../../../about/versions/marshmallow/index.html">Android</a>
+            </li>
+            <li class="dac-nav-item wear">
+              <a class="dac-nav-link" href="../../../wear/index.html">Wear</a>
+            </li>
+            <li class="dac-nav-item tv">
+              <a class="dac-nav-link" href="../../../tv/index.html">TV</a>
+            </li>
+            <li class="dac-nav-item auto">
+              <a class="dac-nav-link" href="../../../auto/index.html">Auto</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dac-nav-item design">
+          <a class="dac-nav-link" href="../../../design/index.html"
+             zh-tw-lang="設計"
+             zh-cn-lang="设计"
+             ru-lang="Проектирование"
+             ko-lang="디자인"
+             ja-lang="設計"
+             es-lang="Diseñar">Design</a>
+        </li>
+        <li class="dac-nav-item develop">
+          <a class="dac-nav-link" href="../../../develop/index.html"
+             zh-tw-lang="開發"
+             zh-cn-lang="开发"
+             ru-lang="Разработка"
+             ko-lang="개발"
+             ja-lang="開発"
+             es-lang="Desarrollar">Develop</a>
+          <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider"></i>
+          <ul class="dac-nav-secondary develop">
+            <li class="dac-nav-item training">
+              <a class="dac-nav-link" href="../../../training/index.html"
+                 zh-tw-lang="訓練課程"
+                 zh-cn-lang="培训"
+                 ru-lang="Курсы"
+                 ko-lang="교육"
+                 ja-lang="トレーニング"
+                 es-lang="Capacitación">Training</a>
+            </li>
+            <li class="dac-nav-item guide">
+              <a class="dac-nav-link" href="../../../guide/index.html"
+                 zh-tw-lang="API 指南"
+                 zh-cn-lang="API 指南"
+                 ru-lang="Руководства по API"
+                 ko-lang="API 가이드"
+                 ja-lang="API ガイド"
+                 es-lang="Guías de la API">API Guides</a>
+            </li>
+            <li class="dac-nav-item reference">
+              <a class="dac-nav-link" href="../../../reference/packages.html"
+                 zh-tw-lang="參考資源"
+                 zh-cn-lang="参考"
+                 ru-lang="Справочник"
+                 ko-lang="참조문서"
+                 ja-lang="リファレンス"
+                 es-lang="Referencia">Reference</a>
+            </li>
+            <li class="dac-nav-item tools">
+              <a class="dac-nav-link" href="../../../sdk/index.html"
+                 zh-tw-lang="相關工具"
+                 zh-cn-lang="工具"
+                 ru-lang="Инструменты"
+                 ko-lang="도구"
+                 ja-lang="ツール"
+                 es-lang="Herramientas">Tools</a></li>
+            <li class="dac-nav-item google">
+              <a class="dac-nav-link" href="../../../google/index.html">Google Services</a>
+            </li>
+            
+          </ul>
+        </li>
+        <li class="dac-nav-item distribute">
+          <a class="dac-nav-link" href="../../../distribute/googleplay/index.html"
+             zh-tw-lang="發佈"
+             zh-cn-lang="分发"
+             ru-lang="Распространение"
+             ko-lang="배포"
+             ja-lang="配布"
+             es-lang="Distribuir">Distribute</a>
+          <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider"></i>
+          <ul class="dac-nav-secondary distribute">
+            <li class="dac-nav-item googleplay">
+              <a class="dac-nav-link" href="../../../distribute/googleplay/index.html">Google Play</a></li>
+            <li class="dac-nav-item essentials">
+              <a class="dac-nav-link" href="../../../distribute/essentials/index.html">Essentials</a></li>
+            <li class="dac-nav-item users">
+              <a class="dac-nav-link" href="../../../distribute/users/index.html">Get Users</a></li>
+            <li class="dac-nav-item engage">
+              <a class="dac-nav-link" href="../../../distribute/engage/index.html">Engage &amp; Retain</a></li>
+            <li class="dac-nav-item monetize">
+              <a class="dac-nav-link" href="../../../distribute/monetize/index.html">Earn</a>
+            </li>
+            <li class="dac-nav-item analyze">
+              <a class="dac-nav-link" href="../../../distribute/analyze/index.html">Analyze</a>
+            </li>
+            <li class="dac-nav-item stories">
+              <a class="dac-nav-link" href="../../../distribute/stories/index.html">Stories</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dac-nav-item preview">
+          <a class="dac-nav-link" href="../../../preview/index.html">Preview</a>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end navigation-->
+  
+
+<!-- Nav Setup -->
+<script>$('[data-dac-nav]').dacNav();</script>
 
 
 
-<div class="col-12"  id="doc-col">
+  
+    
+  <div class="wrap clearfix" id="body-content">
+
+  
+
+  
+  <div id="search-results" class="dac-search-results">
+    <div id="dac-search-results-history" class="dac-search-results-history">
+      <div class="wrap dac-search-results-history-wrap">
+        <div class="cols">
+          <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+            <h2>Most visited</h2>
+            <div class="resource-flow-layout" data-history-query="history:most/visited" data-maxresults="3" data-cardsizes="18x2"></div>
+          </div>
+
+          <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+            <h2>Recently visited</h2>
+            <div class="resource-flow-layout cols" data-history-query="history:recent" data-allow-duplicates="true" data-maxresults="3" data-cardsizes="18x2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="dac-search-results-content" class="dac-search-results-content">
+      <div class="dac-search-results-metadata wrap">
+        <div class="dac-search-results-for">
+          <h2>Results for <span id="search-results-for"></span></h2>
+        </div>
+
+        <div id="dac-search-results-hero"></div>
+
+        <div class="dac-search-results-hero cols">
+          <div id="dac-search-results-reference" class="col-3of6 col-tablet-1of2 col-mobile-1of1">
+            <div class="suggest-card reference no-display">
+              <ul class="dac-search-results-reference">
+              </ul>
+            </div>
+          </div>
+          <div id="dac-custom-search-results"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+<div id="naMessage"></div>
 
 <div id="api-info-block">
+<div class="api-level">
+  
+  Added in <a href="../../../guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a>
+  
+  
+
+</div>
 
 
 
@@ -1121,64 +1149,50 @@ Summary:
 &#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
 
 </div><!-- end sum-details-links -->
-<div class="api-level">
-  
-  Added in <a href="../../../guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a>
-  
-  
-
-</div>
 </div><!-- end api-info-block -->
 
+<div class="api apilevel-1" id="jd-content">
 
 <!-- ======== START OF CLASS DATA ======== -->
 
-<div id="jd-header">
-    public
-     
-     
-    
-    interface
-<h1 itemprop="name">Comparable</h1>
-
-
-
+<h1 class="api-title">Comparable</h1>
+<p>
+<code class="api-signature">
+  public
   
   
   
+  interface
+  Comparable
+</code>
+<br>
 
 
+<code class="api-signature">
+  
+  
+  
+</code>
+
+</p><table class="jd-inheritance-table">
+
+
+  <tr>
     
-
-
-</div><!-- end header -->
-
-<div id="naMessage"></div>
-
-<div id="jd-content" class="api apilevel-1">
-<table class="jd-inheritance-table">
-
-
-    <tr>
-         	
-        <td colspan="1" class="jd-inheritance-class-cell">java.lang.Comparable&lt;T&gt;</td>
-    </tr>
-    
+    <td colspan="1" class="jd-inheritance-class-cell">java.lang.Comparable&lt;T&gt;
+    </td>
+  </tr>
+  
 
 </table>
-
-
-
-
-
-
-<table class="jd-sumtable jd-sumtable-subclasses"><tr><td colspan="12" style="border:none;margin:0;padding:0;">
-
+  
+  <table class="jd-sumtable jd-sumtable-subclasses"><tr><td colspan="2" style="border:none;margin:0;padding:0;">
+  
   <a href="#" onclick="return toggleInherited(this, null)" id="subclasses-indirect" class="jd-expando-trigger closed"
-          ><img id="subclasses-indirect-trigger"
-          src="../../../assets/images/triangle-closed.png"
+          ><img height="34" id="subclasses-indirect-trigger"
+          src="../../../assets/images/styles/disclosure_down.png"
           class="jd-expando-trigger-img" /></a>Known Indirect Subclasses
-
+  
   <div id="subclasses-indirect">
       <div id="subclasses-indirect-list"
               class="jd-inheritedlinks"
@@ -1191,7 +1205,12 @@ Summary:
               
             
               
-                <a href="../../../reference/android/support/v8/renderscript/Allocation.MipmapControl.html">Allocation.MipmapControl</a>,
+                <a href="../../../reference/android/renderscript/Allocation.MipmapControl.html">Allocation.MipmapControl</a>,
+              
+              
+            
+              
+                <a href="../../../reference/android/icu/text/AlphabeticIndex.Bucket.LabelType.html">AlphabeticIndex.Bucket.LabelType</a>,
               
               
             
@@ -1209,12 +1228,10 @@ Summary:
               
             
               
-                <a href="../../../reference/android/graphics/AvoidXfermode.Mode.html">AvoidXfermode.Mode</a>,
-              
               
             
               
-                <a href="../../../reference/java/math/BigDecimal.html">BigDecimal</a>,
+                <a href="../../../reference/android/icu/math/BigDecimal.html">BigDecimal</a>,
               
               
             
@@ -1244,18 +1261,15 @@ Summary:
               
             
               
+                <a href="../../../reference/android/icu/util/BuddhistCalendar.html">BuddhistCalendar</a>,
+              
+              
+            
+              
                 <a href="../../../reference/java/lang/Byte.html">Byte</a>,
               
-              
-            
-              
-                <a href="../../../reference/java/nio/ByteBuffer.html">ByteBuffer</a>,
-              
-              
-            
-              
               and
-                <a href="#" onclick="return toggleInherited(document.getElementById('subclasses-indirect', null))">99 others.</a>
+                <a href="#" onclick="return toggleInherited(document.getElementById('subclasses-indirect', null))">152 others.</a>
               
             
           
@@ -1266,8 +1280,8 @@ Summary:
   
   <table class="jd-sumtable-expando">
     
-      <tr class="alt-color api apilevel-" >
-        <td class="jd-linkcol"><a href="../../../reference/android/support/v8/renderscript/Allocation.MipmapControl.html">Allocation.MipmapControl</a></td>
+      <tr class="alt-color api apilevel-11" >
+        <td class="jd-linkcol"><a href="../../../reference/android/renderscript/Allocation.MipmapControl.html">Allocation.MipmapControl</a></td>
         <td class="jd-descrcol" width="100%">
           Controls mipmap behavior when using the bitmap creation and update
  functions.&nbsp;
@@ -1278,7 +1292,19 @@ Summary:
       </tr>
       
     
-      <tr class=" api apilevel-3" >
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/AlphabeticIndex.Bucket.LabelType.html">AlphabeticIndex.Bucket.LabelType</a></td>
+        <td class="jd-descrcol" width="100%">
+          Type of the label
+&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-3" >
         <td class="jd-linkcol"><a href="../../../reference/android/os/AsyncTask.Status.html">AsyncTask.Status</a></td>
         <td class="jd-descrcol" width="100%">
           Indicates the current status of the task.&nbsp;
@@ -1289,10 +1315,10 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-1" >
+      <tr class=" api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/net/Authenticator.RequestorType.html">Authenticator.RequestorType</a></td>
         <td class="jd-descrcol" width="100%">
-          Enumeration class for the origin of the authentication request.&nbsp;
+          The type of the entity requesting authentication.&nbsp;
           
     
 
@@ -1300,21 +1326,10 @@ Summary:
       </tr>
       
     
-      <tr class=" api apilevel-1" >
-        <td class="jd-linkcol"><a href="../../../reference/android/graphics/AvoidXfermode.Mode.html">AvoidXfermode.Mode</a></td>
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/math/BigDecimal.html">BigDecimal</a></td>
         <td class="jd-descrcol" width="100%">
-          &nbsp;
-          
-    
-
-        </td>
-      </tr>
-      
-    
-      <tr class="alt-color api apilevel-1" >
-        <td class="jd-linkcol"><a href="../../../reference/java/math/BigDecimal.html">BigDecimal</a></td>
-        <td class="jd-descrcol" width="100%">
-          An immutable arbitrary-precision signed decimal.&nbsp;
+          The <code>BigDecimal</code> class implements immutable arbitrary-precision decimal numbers.&nbsp;
           
     
 
@@ -1370,7 +1385,8 @@ Summary:
       <tr class=" api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/lang/Boolean.html">Boolean</a></td>
         <td class="jd-descrcol" width="100%">
-          The wrapper for the primitive type <code>boolean</code>.&nbsp;
+          The Boolean class wraps a value of the primitive type
+ <code>boolean</code> in an object.&nbsp;
           
     
 
@@ -1378,10 +1394,11 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-1" >
-        <td class="jd-linkcol"><a href="../../../reference/java/lang/Byte.html">Byte</a></td>
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/util/BuddhistCalendar.html">BuddhistCalendar</a></td>
         <td class="jd-descrcol" width="100%">
-          The wrapper for the primitive type <code>byte</code>.&nbsp;
+          <code>BuddhistCalendar</code> is a subclass of <code>GregorianCalendar</code>
+ that numbers years since the birth of the Buddha.&nbsp;
           
     
 
@@ -1390,9 +1407,10 @@ Summary:
       
     
       <tr class=" api apilevel-1" >
-        <td class="jd-linkcol"><a href="../../../reference/java/nio/ByteBuffer.html">ByteBuffer</a></td>
+        <td class="jd-linkcol"><a href="../../../reference/java/lang/Byte.html">Byte</a></td>
         <td class="jd-descrcol" width="100%">
-          A buffer for bytes.&nbsp;
+          The <code>Byte</code> class wraps a value of primitive type <code>byte</code>
+ in an object.&nbsp;
           
     
 
@@ -1401,12 +1419,34 @@ Summary:
       
     
       <tr class="alt-color api apilevel-1" >
-        <td class="jd-linkcol"><a href="../../../reference/java/util/Calendar.html">Calendar</a></td>
+        <td class="jd-linkcol"><a href="../../../reference/java/nio/ByteBuffer.html">ByteBuffer</a></td>
         <td class="jd-descrcol" width="100%">
-          <code>Calendar</code> is an abstract base class for converting between a
- <code>Date</code> object and a set of integer fields such as
- <code>YEAR</code>, <code>MONTH</code>, <code>DAY</code>,
- <code>HOUR</code>, and so on.&nbsp;
+          A byte buffer.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/java/security/cert/CRLReason.html">CRLReason</a></td>
+        <td class="jd-descrcol" width="100%">
+          The CRLReason enumeration specifies the reason that a certificate
+ is revoked, as defined in <a href="http://www.ietf.org/rfc/rfc3280.txt">
+ RFC 3280: Internet X.509 Public Key Infrastructure Certificate and CRL
+ Profile</a>.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/util/Calendar.html">Calendar</a></td>
+        <td class="jd-descrcol" width="100%">
+          <strong>[icu enhancement]</strong> ICU's replacement for <code><a href="../../../reference/java/util/Calendar.html">Calendar</a></code>.&nbsp;Methods, fields, and other functionality specific to ICU are labeled '<strong>[icu]</strong>'.&nbsp;
           
     
 
@@ -1436,10 +1476,11 @@ Summary:
       </tr>
       
     
-      <tr class=" api apilevel-1" >
-        <td class="jd-linkcol"><a href="../../../reference/java/nio/CharBuffer.html">CharBuffer</a></td>
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/java/security/cert/CertPathValidatorException.BasicReason.html">CertPathValidatorException.BasicReason</a></td>
         <td class="jd-descrcol" width="100%">
-          A buffer of chars.&nbsp;
+          The BasicReason enumerates the potential reasons that a certification
+ path of any type may be invalid.&nbsp;
           
     
 
@@ -1448,9 +1489,34 @@ Summary:
       
     
       <tr class="alt-color api apilevel-1" >
+        <td class="jd-linkcol"><a href="../../../reference/java/nio/CharBuffer.html">CharBuffer</a></td>
+        <td class="jd-descrcol" width="100%">
+          A char buffer.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/lang/Character.html">Character</a></td>
         <td class="jd-descrcol" width="100%">
-          The wrapper for the primitive type <code>char</code>.&nbsp;
+          The <code>Character</code> class wraps a value of the primitive
+ type <code>char</code> in an object.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/java/lang/Character.UnicodeScript.html">Character.UnicodeScript</a></td>
+        <td class="jd-descrcol" width="100%">
+          A family of character subsets representing the character scripts
+ defined in the <a href="http://www.unicode.org/reports/tr24/">
+ <i>Unicode Standard Annex #24: Script Names</i></a>.&nbsp;
           
     
 
@@ -1461,31 +1527,9 @@ Summary:
       <tr class=" api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/nio/charset/Charset.html">Charset</a></td>
         <td class="jd-descrcol" width="100%">
-          A charset is a named mapping between Unicode characters and byte sequences.&nbsp;
-          
-    
-
-        </td>
-      </tr>
-      
-    
-      <tr class="alt-color api apilevel-" >
-        <td class="jd-linkcol"><a href="../../../reference/android/support/v7/preference/CheckBoxPreference.html">CheckBoxPreference</a></td>
-        <td class="jd-descrcol" width="100%">
-          A <code><a href="../../../reference/android/support/v7/preference/Preference.html">Preference</a></code> that provides checkbox widget
- functionality.&nbsp;
-          
-    
-
-        </td>
-      </tr>
-      
-    
-      <tr class=" api apilevel-9" >
-        <td class="jd-linkcol"><a href="../../../reference/java/sql/ClientInfoStatus.html">ClientInfoStatus</a></td>
-        <td class="jd-descrcol" width="100%">
-          An enumeration to describe the reason why a property cannot be set by calling
- Connection.setClientInfo.&nbsp;
+          A named mapping between sequences of sixteen-bit Unicode <a
+ href="../../lang/Character.html#unicode">code units</a> and sequences of
+ bytes.&nbsp;
           
     
 
@@ -1494,9 +1538,10 @@ Summary:
       
     
       <tr class="alt-color api apilevel-1" >
-        <td class="jd-linkcol"><a href="../../../reference/java/text/CollationKey.html">CollationKey</a></td>
+        <td class="jd-linkcol"><a href="../../../reference/android/preference/CheckBoxPreference.html">CheckBoxPreference</a></td>
         <td class="jd-descrcol" width="100%">
-          Represents a string under the rules of a specific <code>Collator</code> object.&nbsp;
+          A <code><a href="../../../reference/android/preference/Preference.html">Preference</a></code> that provides checkbox widget
+ functionality.&nbsp;
           
     
 
@@ -1504,7 +1549,67 @@ Summary:
       </tr>
       
     
-      <tr class=" api apilevel-1" >
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/util/ChineseCalendar.html">ChineseCalendar</a></td>
+        <td class="jd-descrcol" width="100%">
+          <code>ChineseCalendar</code> is a concrete subclass of <code><a href="../../../reference/android/icu/util/Calendar.html">Calendar</a></code>
+ that implements a traditional Chinese calendar.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-9" >
+        <td class="jd-linkcol"><a href="../../../reference/java/sql/ClientInfoStatus.html">ClientInfoStatus</a></td>
+        <td class="jd-descrcol" width="100%">
+          Enumeration for status of the reason that a property could not be set
+ via a call to <code>Connection.setClientInfo</code>&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/CollationKey.html">CollationKey</a></td>
+        <td class="jd-descrcol" width="100%">
+          A <code>CollationKey</code> represents a <code>String</code>
+ under the rules of a specific <code>Collator</code>
+ object.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/java/util/stream/Collector.Characteristics.html">Collector.Characteristics</a></td>
+        <td class="jd-descrcol" width="100%">
+          Characteristics indicating properties of a <code>Collector</code>, which can
+ be used to optimize reduction implementations.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/CompactDecimalFormat.CompactStyle.html">CompactDecimalFormat.CompactStyle</a></td>
+        <td class="jd-descrcol" width="100%">
+          Style parameter for CompactDecimalFormat.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/android/content/ComponentName.html">ComponentName</a></td>
         <td class="jd-descrcol" width="100%">
           Identifier for a specific application component
@@ -1518,7 +1623,7 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-1" >
+      <tr class=" api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/android/content/res/Configuration.html">Configuration</a></td>
         <td class="jd-descrcol" width="100%">
           This class describes all device configuration information that can
@@ -1530,10 +1635,44 @@ Summary:
       </tr>
       
     
-      <tr class=" api apilevel-8" >
+      <tr class="alt-color api apilevel-8" >
         <td class="jd-linkcol"><a href="../../../reference/android/webkit/ConsoleMessage.MessageLevel.html">ConsoleMessage.MessageLevel</a></td>
         <td class="jd-descrcol" width="100%">
           &nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/util/CopticCalendar.html">CopticCalendar</a></td>
+        <td class="jd-descrcol" width="100%">
+          Implement the Coptic calendar system.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/java/security/CryptoPrimitive.html">CryptoPrimitive</a></td>
+        <td class="jd-descrcol" width="100%">
+          An enumeration of cryptographic primitives.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/util/Currency.CurrencyUsage.html">Currency.CurrencyUsage</a></td>
+        <td class="jd-descrcol" width="100%">
+          Currency Usage used for Decimal Format
+&nbsp;
           
     
 
@@ -1555,7 +1694,8 @@ Summary:
       <tr class=" api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/util/Date.html">Date</a></td>
         <td class="jd-descrcol" width="100%">
-          A specific moment in time, with millisecond precision.&nbsp;
+          The class <code>Date</code> represents a specific instant
+ in time, with millisecond precision.&nbsp;
           
     
 
@@ -1563,7 +1703,19 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-1" >
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/DateFormat.BooleanAttribute.html">DateFormat.BooleanAttribute</a></td>
+        <td class="jd-descrcol" width="100%">
+          boolean attributes
+&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/util/concurrent/Delayed.html">Delayed</a></td>
         <td class="jd-descrcol" width="100%">
           A mix-in style interface for marking objects that should be
@@ -1575,10 +1727,10 @@ Summary:
       </tr>
       
     
-      <tr class=" api apilevel-" >
-        <td class="jd-linkcol"><a href="../../../reference/android/support/v7/preference/DialogPreference.html">DialogPreference</a></td>
+      <tr class="alt-color api apilevel-1" >
+        <td class="jd-linkcol"><a href="../../../reference/android/preference/DialogPreference.html">DialogPreference</a></td>
         <td class="jd-descrcol" width="100%">
-          A base class for <code><a href="../../../reference/android/support/v7/preference/Preference.html">Preference</a></code> objects that are
+          A base class for <code><a href="../../../reference/android/preference/Preference.html">Preference</a></code> objects that are
  dialog-based.&nbsp;
           
     
@@ -1587,10 +1739,22 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-1" >
-        <td class="jd-linkcol"><a href="../../../reference/java/lang/Double.html">Double</a></td>
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/DisplayContext.html">DisplayContext</a></td>
         <td class="jd-descrcol" width="100%">
-          The wrapper for the primitive type <code>double</code>.&nbsp;
+          Display context settings.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/DisplayContext.Type.html">DisplayContext.Type</a></td>
+        <td class="jd-descrcol" width="100%">
+          Type values for DisplayContext
+&nbsp;
           
     
 
@@ -1599,9 +1763,10 @@ Summary:
       
     
       <tr class=" api apilevel-1" >
-        <td class="jd-linkcol"><a href="../../../reference/java/nio/DoubleBuffer.html">DoubleBuffer</a></td>
+        <td class="jd-linkcol"><a href="../../../reference/java/lang/Double.html">Double</a></td>
         <td class="jd-descrcol" width="100%">
-          A buffer of doubles.&nbsp;
+          The <code>Double</code> class wraps a value of the primitive type
+ <code>double</code> in an object.&nbsp;
           
     
 
@@ -1609,11 +1774,10 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-" >
-        <td class="jd-linkcol"><a href="../../../reference/android/support/v7/preference/EditTextPreference.html">EditTextPreference</a></td>
+      <tr class="alt-color api apilevel-1" >
+        <td class="jd-linkcol"><a href="../../../reference/java/nio/DoubleBuffer.html">DoubleBuffer</a></td>
         <td class="jd-descrcol" width="100%">
-          A <code><a href="../../../reference/android/support/v7/preference/Preference.html">Preference</a></code> that allows for string
- input.&nbsp;
+          A double buffer.&nbsp;
           
     
 
@@ -1622,7 +1786,31 @@ Summary:
       
     
       <tr class=" api apilevel-" >
-        <td class="jd-linkcol"><a href="../../../reference/android/support/v8/renderscript/Element.DataKind.html">Element.DataKind</a></td>
+        <td class="jd-linkcol"><a href="../../../reference/android/support/v7/preference/DropDownPreference.html">DropDownPreference</a></td>
+        <td class="jd-descrcol" width="100%">
+          A version of <code><a href="../../../reference/android/support/v7/preference/ListPreference.html">ListPreference</a></code> that presents the options in a
+ drop down menu rather than a dialog.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-1" >
+        <td class="jd-linkcol"><a href="../../../reference/android/preference/EditTextPreference.html">EditTextPreference</a></td>
+        <td class="jd-descrcol" width="100%">
+          A <code><a href="../../../reference/android/preference/Preference.html">Preference</a></code> that allows for string
+ input.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-11" >
+        <td class="jd-linkcol"><a href="../../../reference/android/renderscript/Element.DataKind.html">Element.DataKind</a></td>
         <td class="jd-descrcol" width="100%">
           The special interpretation of the data if required.&nbsp;
           
@@ -1632,8 +1820,8 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-" >
-        <td class="jd-linkcol"><a href="../../../reference/android/support/v8/renderscript/Element.DataType.html">Element.DataType</a></td>
+      <tr class="alt-color api apilevel-11" >
+        <td class="jd-linkcol"><a href="../../../reference/android/renderscript/Element.DataType.html">Element.DataType</a></td>
         <td class="jd-descrcol" width="100%">
           DataType represents the basic type information for a basic element.&nbsp;
           
@@ -1646,7 +1834,7 @@ Summary:
       <tr class=" api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/lang/annotation/ElementType.html">ElementType</a></td>
         <td class="jd-descrcol" width="100%">
-          Defines an enumeration for Java program elements.&nbsp;
+          A program element type.&nbsp;
           
     
 
@@ -1657,7 +1845,7 @@ Summary:
       <tr class="alt-color api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/lang/Enum.html">Enum</a>&lt;E&nbsp;extends&nbsp;<a href="../../../reference/java/lang/Enum.html">Enum</a>&lt;E&gt;&gt;</td>
         <td class="jd-descrcol" width="100%">
-          The superclass of all enumerated types.&nbsp;
+          This is the common base class of all Java language enumeration types.&nbsp;
           
     
 
@@ -1668,8 +1856,7 @@ Summary:
       <tr class=" api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/io/File.html">File</a></td>
         <td class="jd-descrcol" width="100%">
-          An "abstract" representation of a file system entity identified by a
- pathname.&nbsp;
+          An abstract representation of file and directory pathnames.&nbsp;
           
     
 
@@ -1680,7 +1867,8 @@ Summary:
       <tr class="alt-color api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/lang/Float.html">Float</a></td>
         <td class="jd-descrcol" width="100%">
-          The wrapper for the primitive type <code>float</code>.&nbsp;
+          The <code>Float</code> class wraps a value of primitive type
+ <code>float</code> in an object.&nbsp;
           
     
 
@@ -1691,7 +1879,7 @@ Summary:
       <tr class=" api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/nio/FloatBuffer.html">FloatBuffer</a></td>
         <td class="jd-descrcol" width="100%">
-          A buffer of floats.&nbsp;
+          A float buffer.&nbsp;
           
     
 
@@ -1702,8 +1890,7 @@ Summary:
       <tr class="alt-color api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/util/Formatter.BigDecimalLayoutForm.html">Formatter.BigDecimalLayoutForm</a></td>
         <td class="jd-descrcol" width="100%">
-          The enumeration giving the available styles for formatting very large
- decimal numbers.&nbsp;
+          &nbsp;
           
     
 
@@ -1723,11 +1910,33 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-1" >
-        <td class="jd-linkcol"><a href="../../../reference/java/util/GregorianCalendar.html">GregorianCalendar</a></td>
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/util/GregorianCalendar.html">GregorianCalendar</a></td>
         <td class="jd-descrcol" width="100%">
-          <code>GregorianCalendar</code> is a concrete subclass of <code><a href="../../../reference/java/util/Calendar.html">Calendar</a></code>
- and provides the standard calendar used by most of the world.&nbsp;
+          <strong>[icu enhancement]</strong> ICU's replacement for <code><a href="../../../reference/java/util/GregorianCalendar.html">GregorianCalendar</a></code>.&nbsp;Methods, fields, and other functionality specific to ICU are labeled '<strong>[icu]</strong>'.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/util/HebrewCalendar.html">HebrewCalendar</a></td>
+        <td class="jd-descrcol" width="100%">
+          <code>HebrewCalendar</code> is a subclass of <code>Calendar</code>
+ that that implements the traditional Hebrew calendar.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/IDNA.Error.html">IDNA.Error</a></td>
+        <td class="jd-descrcol" width="100%">
+          IDNA error bit set values.&nbsp;
           
     
 
@@ -1746,10 +1955,11 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-1" >
-        <td class="jd-linkcol"><a href="../../../reference/java/nio/IntBuffer.html">IntBuffer</a></td>
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/util/IndianCalendar.html">IndianCalendar</a></td>
         <td class="jd-descrcol" width="100%">
-          A buffer of ints.&nbsp;
+          <code>IndianCalendar</code> is a subclass of <code>GregorianCalendar</code>
+ that numbers years since the birth of the Buddha.&nbsp;
           
     
 
@@ -1758,9 +1968,9 @@ Summary:
       
     
       <tr class=" api apilevel-1" >
-        <td class="jd-linkcol"><a href="../../../reference/java/lang/Integer.html">Integer</a></td>
+        <td class="jd-linkcol"><a href="../../../reference/java/nio/IntBuffer.html">IntBuffer</a></td>
         <td class="jd-descrcol" width="100%">
-          The wrapper for the primitive type <code>int</code>.&nbsp;
+          An int buffer.&nbsp;
           
     
 
@@ -1769,9 +1979,57 @@ Summary:
       
     
       <tr class="alt-color api apilevel-1" >
+        <td class="jd-linkcol"><a href="../../../reference/java/lang/Integer.html">Integer</a></td>
+        <td class="jd-descrcol" width="100%">
+          The <code>Integer</code> class wraps a value of the primitive type
+ <code>int</code> in an object.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/android/graphics/Interpolator.Result.html">Interpolator.Result</a></td>
         <td class="jd-descrcol" width="100%">
           &nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/util/IslamicCalendar.html">IslamicCalendar</a></td>
+        <td class="jd-descrcol" width="100%">
+          <code>IslamicCalendar</code> is a subclass of <code>Calendar</code>
+ that that implements the Islamic civil and religious calendars.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/util/IslamicCalendar.CalculationType.html">IslamicCalendar.CalculationType</a></td>
+        <td class="jd-descrcol" width="100%">
+          enumeration of available calendar calculation types
+&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/util/JapaneseCalendar.html">JapaneseCalendar</a></td>
+        <td class="jd-descrcol" width="100%">
+          <code>JapaneseCalendar</code> is a subclass of <code>GregorianCalendar</code>
+ that numbers years and eras based on the reigns of the Japanese emperors.&nbsp;
           
     
 
@@ -1793,7 +2051,7 @@ Summary:
       <tr class="alt-color api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/security/KeyRep.Type.html">KeyRep.Type</a></td>
         <td class="jd-descrcol" width="100%">
-          <code>Type</code> enumerates the supported key types.&nbsp;
+          Key type.&nbsp;
           
     
 
@@ -1812,10 +2070,10 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-" >
-        <td class="jd-linkcol"><a href="../../../reference/android/support/v7/preference/ListPreference.html">ListPreference</a></td>
+      <tr class="alt-color api apilevel-1" >
+        <td class="jd-linkcol"><a href="../../../reference/android/preference/ListPreference.html">ListPreference</a></td>
         <td class="jd-descrcol" width="100%">
-          A <code><a href="../../../reference/android/support/v7/preference/Preference.html">Preference</a></code> that displays a list of entries as
+          A <code><a href="../../../reference/android/preference/Preference.html">Preference</a></code> that displays a list of entries as
  a dialog.&nbsp;
           
     
@@ -1835,10 +2093,32 @@ Summary:
       </tr>
       
     
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/java/util/Locale.Category.html">Locale.Category</a></td>
+        <td class="jd-descrcol" width="100%">
+          Enum for locale categories.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/LocaleDisplayNames.DialectHandling.html">LocaleDisplayNames.DialectHandling</a></td>
+        <td class="jd-descrcol" width="100%">
+          Enum used in <code><a href="../../../reference/android/icu/text/LocaleDisplayNames.html#getInstance(android.icu.util.ULocale, android.icu.text.LocaleDisplayNames.DialectHandling)">getInstance(ULocale, DialectHandling)</a></code>.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
       <tr class="alt-color api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/lang/Long.html">Long</a></td>
         <td class="jd-descrcol" width="100%">
-          The wrapper for the primitive type <code>long</code>.&nbsp;
+          The <code>Long</code> class wraps a value of the primitive type <code>long</code> in an object.&nbsp;
           
     
 
@@ -1849,7 +2129,7 @@ Summary:
       <tr class=" api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/nio/LongBuffer.html">LongBuffer</a></td>
         <td class="jd-descrcol" width="100%">
-          A buffer of longs.&nbsp;
+          A long buffer.&nbsp;
           
     
 
@@ -1860,8 +2140,7 @@ Summary:
       <tr class="alt-color api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/nio/MappedByteBuffer.html">MappedByteBuffer</a></td>
         <td class="jd-descrcol" width="100%">
-          <code>MappedByteBuffer</code> is a special kind of direct byte buffer which maps a
- region of file to memory.&nbsp;
+          A direct byte buffer whose content is a memory-mapped region of a file.&nbsp;
           
     
 
@@ -1881,10 +2160,54 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-" >
-        <td class="jd-linkcol"><a href="../../../reference/android/support/v14/preference/MultiSelectListPreference.html">MultiSelectListPreference</a></td>
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/MeasureFormat.FormatWidth.html">MeasureFormat.FormatWidth</a></td>
         <td class="jd-descrcol" width="100%">
-          A <code><a href="../../../reference/android/support/v7/preference/Preference.html">Preference</a></code> that displays a list of entries as
+          Formatting width enum.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/MessagePattern.ApostropheMode.html">MessagePattern.ApostropheMode</a></td>
+        <td class="jd-descrcol" width="100%">
+          Mode for when an apostrophe starts quoted literal text for MessageFormat output.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/MessagePattern.ArgType.html">MessagePattern.ArgType</a></td>
+        <td class="jd-descrcol" width="100%">
+          Argument type constants.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/MessagePattern.Part.Type.html">MessagePattern.Part.Type</a></td>
+        <td class="jd-descrcol" width="100%">
+          Part type constants.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-11" >
+        <td class="jd-linkcol"><a href="../../../reference/android/preference/MultiSelectListPreference.html">MultiSelectListPreference</a></td>
+        <td class="jd-descrcol" width="100%">
+          A <code><a href="../../../reference/android/preference/Preference.html">Preference</a></code> that displays a list of entries as
  a dialog.&nbsp;
           
     
@@ -1918,7 +2241,34 @@ Summary:
       <tr class=" api apilevel-9" >
         <td class="jd-linkcol"><a href="../../../reference/java/text/Normalizer.Form.html">Normalizer.Form</a></td>
         <td class="jd-descrcol" width="100%">
-          The normalization forms supported by the Normalizer.&nbsp;
+          This enum provides constants of the four Unicode normalization forms
+ that are described in
+ <a href="http://www.unicode.org/unicode/reports/tr15/tr15-23.html">
+ Unicode Standard Annex #15 &mdash; Unicode Normalization Forms</a>
+ and two methods to access them.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/Normalizer2.Mode.html">Normalizer2.Mode</a></td>
+        <td class="jd-descrcol" width="100%">
+          Constants for normalization modes.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/java/awt/font/NumericShaper.Range.html">NumericShaper.Range</a></td>
+        <td class="jd-descrcol" width="100%">
+          A <code>NumericShaper.Range</code> represents a Unicode range of a
+ script having its own decimal digits.&nbsp;
           
     
 
@@ -1929,7 +2279,32 @@ Summary:
       <tr class="alt-color api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/io/ObjectStreamField.html">ObjectStreamField</a></td>
         <td class="jd-descrcol" width="100%">
-          Describes a field for the purpose of serialization.&nbsp;
+          A description of a Serializable field from a Serializable class.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/java/security/cert/PKIXReason.html">PKIXReason</a></td>
+        <td class="jd-descrcol" width="100%">
+          The <code>PKIXReason</code> enumerates the potential PKIX-specific reasons
+ that an X.509 certification path may be invalid according to the PKIX
+ (RFC 3280) standard.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/java/security/cert/PKIXRevocationChecker.Option.html">PKIXRevocationChecker.Option</a></td>
+        <td class="jd-descrcol" width="100%">
+          Various revocation options that can be specified for the revocation
+ checking mechanism.&nbsp;
           
     
 
@@ -2029,7 +2404,18 @@ Summary:
       </tr>
       
     
-      <tr class=" api apilevel-1" >
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/PluralRules.PluralType.html">PluralRules.PluralType</a></td>
+        <td class="jd-descrcol" width="100%">
+          Type of plurals and PluralRules.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/android/graphics/PorterDuff.Mode.html">PorterDuff.Mode</a></td>
         <td class="jd-descrcol" width="100%">
           &nbsp;
@@ -2040,12 +2426,12 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-" >
-        <td class="jd-linkcol"><a href="../../../reference/android/support/v7/preference/Preference.html">Preference</a></td>
+      <tr class=" api apilevel-1" >
+        <td class="jd-linkcol"><a href="../../../reference/android/preference/Preference.html">Preference</a></td>
         <td class="jd-descrcol" width="100%">
           Represents the basic Preference UI building
- block displayed by a <code><a href="../../../reference/android/support/v7/preference/PreferenceFragmentCompat.html">PreferenceFragmentCompat</a></code> in the form of a
- <code><a href="../../../reference/android/support/v7/widget/RecyclerView.html">RecyclerView</a></code>.&nbsp;
+ block displayed by a <code><a href="../../../reference/android/preference/PreferenceActivity.html">PreferenceActivity</a></code> in the form of a
+ <code><a href="../../../reference/android/widget/ListView.html">ListView</a></code>.&nbsp;
           
     
 
@@ -2053,8 +2439,8 @@ Summary:
       </tr>
       
     
-      <tr class=" api apilevel-" >
-        <td class="jd-linkcol"><a href="../../../reference/android/support/v7/preference/PreferenceCategory.html">PreferenceCategory</a></td>
+      <tr class="alt-color api apilevel-1" >
+        <td class="jd-linkcol"><a href="../../../reference/android/preference/PreferenceCategory.html">PreferenceCategory</a></td>
         <td class="jd-descrcol" width="100%">
           Used to group <code><a href="../../../reference/android/preference/Preference.html">Preference</a></code> objects
  and provide a disabled title above the group.&nbsp;
@@ -2065,23 +2451,11 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-" >
-        <td class="jd-linkcol"><a href="../../../reference/android/support/v7/preference/PreferenceGroup.html">PreferenceGroup</a></td>
+      <tr class=" api apilevel-1" >
+        <td class="jd-linkcol"><a href="../../../reference/android/preference/PreferenceGroup.html">PreferenceGroup</a></td>
         <td class="jd-descrcol" width="100%">
           A container for multiple
- <code><a href="../../../reference/android/support/v7/preference/Preference.html">Preference</a></code> objects.&nbsp;
-          
-    
-
-        </td>
-      </tr>
-      
-    
-      <tr class=" api apilevel-" >
-        <td class="jd-linkcol"><a href="../../../reference/android/support/v7/preference/PreferenceScreen.html">PreferenceScreen</a></td>
-        <td class="jd-descrcol" width="100%">
-          Represents a top-level <code><a href="../../../reference/android/support/v7/preference/Preference.html">Preference</a></code> that
- is the root of a Preference hierarchy.&nbsp;
+ <code><a href="../../../reference/android/preference/Preference.html">Preference</a></code> objects.&nbsp;
           
     
 
@@ -2090,9 +2464,10 @@ Summary:
       
     
       <tr class="alt-color api apilevel-1" >
-        <td class="jd-linkcol"><a href="../../../reference/java/net/Proxy.Type.html">Proxy.Type</a></td>
+        <td class="jd-linkcol"><a href="../../../reference/android/preference/PreferenceScreen.html">PreferenceScreen</a></td>
         <td class="jd-descrcol" width="100%">
-          <code>Enum</code> class for the proxy type.&nbsp;
+          Represents a top-level <code><a href="../../../reference/android/preference/Preference.html">Preference</a></code> that
+ is the root of a Preference hierarchy.&nbsp;
           
     
 
@@ -2100,7 +2475,18 @@ Summary:
       </tr>
       
     
-      <tr class=" api apilevel-21" >
+      <tr class=" api apilevel-1" >
+        <td class="jd-linkcol"><a href="../../../reference/java/net/Proxy.Type.html">Proxy.Type</a></td>
+        <td class="jd-descrcol" width="100%">
+          Represents the proxy type.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-21" >
         <td class="jd-linkcol"><a href="../../../reference/android/util/Rational.html">Rational</a></td>
         <td class="jd-descrcol" width="100%">
           <p>An immutable data type representation a rational number.&nbsp;
@@ -2111,7 +2497,7 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-1" >
+      <tr class=" api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/android/graphics/Region.Op.html">Region.Op</a></td>
         <td class="jd-descrcol" width="100%">
           &nbsp;
@@ -2122,8 +2508,56 @@ Summary:
       </tr>
       
     
-      <tr class=" api apilevel-" >
-        <td class="jd-linkcol"><a href="../../../reference/android/support/v8/renderscript/RenderScript.ContextType.html">RenderScript.ContextType</a></td>
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/RelativeDateTimeFormatter.AbsoluteUnit.html">RelativeDateTimeFormatter.AbsoluteUnit</a></td>
+        <td class="jd-descrcol" width="100%">
+          Represents an absolute unit.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/RelativeDateTimeFormatter.Direction.html">RelativeDateTimeFormatter.Direction</a></td>
+        <td class="jd-descrcol" width="100%">
+          Represents a direction for an absolute unit e.g "Next Tuesday"
+ or "Last Tuesday"
+&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/RelativeDateTimeFormatter.RelativeUnit.html">RelativeDateTimeFormatter.RelativeUnit</a></td>
+        <td class="jd-descrcol" width="100%">
+          Represents the unit for formatting a relative date.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/RelativeDateTimeFormatter.Style.html">RelativeDateTimeFormatter.Style</a></td>
+        <td class="jd-descrcol" width="100%">
+          The formatting style
+
+&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-18" >
+        <td class="jd-linkcol"><a href="../../../reference/android/renderscript/RenderScript.ContextType.html">RenderScript.ContextType</a></td>
         <td class="jd-descrcol" width="100%">
           ContextType specifies the specific type of context to be created.&nbsp;
           
@@ -2133,8 +2567,8 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-" >
-        <td class="jd-linkcol"><a href="../../../reference/android/support/v8/renderscript/RenderScript.Priority.html">RenderScript.Priority</a></td>
+      <tr class=" api apilevel-11" >
+        <td class="jd-linkcol"><a href="../../../reference/android/renderscript/RenderScript.Priority.html">RenderScript.Priority</a></td>
         <td class="jd-descrcol" width="100%">
           RenderScript worker thread priority enumeration.&nbsp;
           
@@ -2144,10 +2578,10 @@ Summary:
       </tr>
       
     
-      <tr class=" api apilevel-1" >
+      <tr class="alt-color api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/lang/annotation/RetentionPolicy.html">RetentionPolicy</a></td>
         <td class="jd-descrcol" width="100%">
-          Defines an enumeration for annotation retention policies.&nbsp;
+          Annotation retention policy.&nbsp;
           
     
 
@@ -2155,7 +2589,7 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-1" >
+      <tr class=" api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/android/preference/RingtonePreference.html">RingtonePreference</a></td>
         <td class="jd-descrcol" width="100%">
           A <code><a href="../../../reference/android/preference/Preference.html">Preference</a></code> that allows the user to choose a ringtone from those on the device.&nbsp;
@@ -2166,7 +2600,7 @@ Summary:
       </tr>
       
     
-      <tr class=" api apilevel-1" >
+      <tr class="alt-color api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/math/RoundingMode.html">RoundingMode</a></td>
         <td class="jd-descrcol" width="100%">
           Specifies the rounding behavior for operations whose results cannot be
@@ -2178,10 +2612,10 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-9" >
+      <tr class=" api apilevel-9" >
         <td class="jd-linkcol"><a href="../../../reference/java/sql/RowIdLifetime.html">RowIdLifetime</a></td>
         <td class="jd-descrcol" width="100%">
-          An enumeration to describe the life-time of RowID.&nbsp;
+          Enumeration for RowId life-time values.&nbsp;
           
     
 
@@ -2189,7 +2623,7 @@ Summary:
       </tr>
       
     
-      <tr class=" api apilevel-9" >
+      <tr class="alt-color api apilevel-9" >
         <td class="jd-linkcol"><a href="../../../reference/java/util/concurrent/RunnableScheduledFuture.html">RunnableScheduledFuture</a>&lt;V&gt;</td>
         <td class="jd-descrcol" width="100%">
           A <code><a href="../../../reference/java/util/concurrent/ScheduledFuture.html">ScheduledFuture</a></code> that is <code><a href="../../../reference/java/lang/Runnable.html">Runnable</a></code>.&nbsp;
@@ -2200,10 +2634,11 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-1" >
+      <tr class=" api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/javax/net/ssl/SSLEngineResult.HandshakeStatus.html">SSLEngineResult.HandshakeStatus</a></td>
         <td class="jd-descrcol" width="100%">
-          The <code>enum</code> describing the state of the current handshake.&nbsp;
+          An <code>SSLEngineResult</code> enum describing the current
+ handshaking state of this <code>SSLEngine</code>.&nbsp;
           
     
 
@@ -2211,11 +2646,11 @@ Summary:
       </tr>
       
     
-      <tr class=" api apilevel-1" >
+      <tr class="alt-color api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/javax/net/ssl/SSLEngineResult.Status.html">SSLEngineResult.Status</a></td>
         <td class="jd-descrcol" width="100%">
-          The <code>enum</code> describing the result of the <code>SSLEngine</code>
- operation.&nbsp;
+          An <code>SSLEngineResult</code> enum describing the overall result
+ of the <code>SSLEngine</code> operation.&nbsp;
           
     
 
@@ -2223,8 +2658,8 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-" >
-        <td class="jd-linkcol"><a href="../../../reference/android/support/v8/renderscript/Sampler.Value.html">Sampler.Value</a></td>
+      <tr class=" api apilevel-11" >
+        <td class="jd-linkcol"><a href="../../../reference/android/renderscript/Sampler.Value.html">Sampler.Value</a></td>
         <td class="jd-descrcol" width="100%">
           &nbsp;
           
@@ -2234,10 +2669,21 @@ Summary:
       </tr>
       
     
-      <tr class=" api apilevel-1" >
+      <tr class="alt-color api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/util/concurrent/ScheduledFuture.html">ScheduledFuture</a>&lt;V&gt;</td>
         <td class="jd-descrcol" width="100%">
           A delayed result-bearing action that can be cancelled.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/SearchIterator.ElementComparisonType.html">SearchIterator.ElementComparisonType</a></td>
+        <td class="jd-descrcol" width="100%">
+          Option to control how collation elements are compared.&nbsp;
           
     
 
@@ -2259,7 +2705,7 @@ Summary:
       <tr class=" api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/lang/Short.html">Short</a></td>
         <td class="jd-descrcol" width="100%">
-          The wrapper for the primitive type <code>short</code>.&nbsp;
+          The <code>Short</code> class wraps a value of primitive type <code>short</code> in an object.&nbsp;
           
     
 
@@ -2270,7 +2716,7 @@ Summary:
       <tr class="alt-color api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/nio/ShortBuffer.html">ShortBuffer</a></td>
         <td class="jd-descrcol" width="100%">
-          A buffer of shorts.&nbsp;
+          A short buffer.&nbsp;
           
     
 
@@ -2293,10 +2739,10 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-1" >
-        <td class="jd-linkcol"><a href="../../../reference/java/lang/String.html">String</a></td>
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/java/net/StandardProtocolFamily.html">StandardProtocolFamily</a></td>
         <td class="jd-descrcol" width="100%">
-          An immutable sequence of UTF-16 <code>char</code>s.&nbsp;
+          Defines the standard families of communication protocols.&nbsp;
           
     
 
@@ -2305,6 +2751,17 @@ Summary:
       
     
       <tr class=" api apilevel-1" >
+        <td class="jd-linkcol"><a href="../../../reference/java/lang/String.html">String</a></td>
+        <td class="jd-descrcol" width="100%">
+          The <code>String</code> class represents character strings.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/android/net/wifi/SupplicantState.html">SupplicantState</a></td>
         <td class="jd-descrcol" width="100%">
           From <code>defs.h</code> in <code>wpa_supplicant</code>.&nbsp;
@@ -2315,8 +2772,19 @@ Summary:
       </tr>
       
     
+      <tr class=" api apilevel-14" >
+        <td class="jd-linkcol"><a href="../../../reference/android/preference/SwitchPreference.html">SwitchPreference</a></td>
+        <td class="jd-descrcol" width="100%">
+          A <code><a href="../../../reference/android/preference/Preference.html">Preference</a></code> that provides a two-state toggleable option.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
       <tr class="alt-color api apilevel-" >
-        <td class="jd-linkcol"><a href="../../../reference/android/support/v14/preference/SwitchPreference.html">SwitchPreference</a></td>
+        <td class="jd-linkcol"><a href="../../../reference/android/support/v7/preference/SwitchPreferenceCompat.html">SwitchPreferenceCompat</a></td>
         <td class="jd-descrcol" width="100%">
           A <code><a href="../../../reference/android/support/v7/preference/Preference.html">Preference</a></code> that provides a two-state toggleable option.&nbsp;
           
@@ -2326,10 +2794,11 @@ Summary:
       </tr>
       
     
-      <tr class=" api apilevel-" >
-        <td class="jd-linkcol"><a href="../../../reference/android/support/v7/preference/SwitchPreferenceCompat.html">SwitchPreferenceCompat</a></td>
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/util/TaiwanCalendar.html">TaiwanCalendar</a></td>
         <td class="jd-descrcol" width="100%">
-          A <code><a href="../../../reference/android/support/v7/preference/Preference.html">Preference</a></code> that provides a two-state toggleable option.&nbsp;
+          <code>TaiwanCalendar</code> is a subclass of <code>GregorianCalendar</code>
+ that numbers years since 1912.&nbsp;
           
     
 
@@ -2373,7 +2842,7 @@ Summary:
       <tr class=" api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/lang/Thread.State.html">Thread.State</a></td>
         <td class="jd-descrcol" width="100%">
-          A representation of a thread's state.&nbsp;
+          A thread state.&nbsp;
           
     
 
@@ -2384,7 +2853,8 @@ Summary:
       <tr class="alt-color api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/sql/Time.html">Time</a></td>
         <td class="jd-descrcol" width="100%">
-          Java representation of an SQL <code>TIME</code> value.&nbsp;
+          <P>A thin wrapper around the <code>java.util.Date</code> class that allows the JDBC
+ API to identify this as an SQL <code>TIME</code> value.&nbsp;
           
     
 
@@ -2405,10 +2875,12 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-1" >
-        <td class="jd-linkcol"><a href="../../../reference/java/sql/Timestamp.html">Timestamp</a></td>
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/util/TimeZone.SystemTimeZoneType.html">TimeZone.SystemTimeZoneType</a></td>
         <td class="jd-descrcol" width="100%">
-          A Java representation of the SQL <code>TIMESTAMP</code> type.&nbsp;
+          <strong>[icu]</strong> System time zone type constants used by filtering zones in
+ <code><a href="../../../reference/android/icu/util/TimeZone.html#getAvailableIDs(android.icu.util.TimeZone.SystemTimeZoneType, java.lang.String, java.lang.Integer)">getAvailableIDs(SystemTimeZoneType, String, Integer)</a></code>
+&nbsp;
           
     
 
@@ -2416,8 +2888,77 @@ Summary:
       </tr>
       
     
-      <tr class=" api apilevel-" >
-        <td class="jd-linkcol"><a href="../../../reference/android/support/v7/preference/TwoStatePreference.html">TwoStatePreference</a></td>
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/TimeZoneFormat.GMTOffsetPatternType.html">TimeZoneFormat.GMTOffsetPatternType</a></td>
+        <td class="jd-descrcol" width="100%">
+          Offset pattern type enum.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/TimeZoneFormat.ParseOption.html">TimeZoneFormat.ParseOption</a></td>
+        <td class="jd-descrcol" width="100%">
+          Parse option enum, used for specifying optional parse behavior.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/TimeZoneFormat.Style.html">TimeZoneFormat.Style</a></td>
+        <td class="jd-descrcol" width="100%">
+          Time zone display format style enum used by format/parse APIs in <code>TimeZoneFormat</code>.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/TimeZoneFormat.TimeType.html">TimeZoneFormat.TimeType</a></td>
+        <td class="jd-descrcol" width="100%">
+          Time type enum used for receiving time type (standard time, daylight time or unknown)
+ in <code>TimeZoneFormat</code> APIs.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/TimeZoneNames.NameType.html">TimeZoneNames.NameType</a></td>
+        <td class="jd-descrcol" width="100%">
+          Time zone display name types
+&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-1" >
+        <td class="jd-linkcol"><a href="../../../reference/java/sql/Timestamp.html">Timestamp</a></td>
+        <td class="jd-descrcol" width="100%">
+          <P>A thin wrapper around <code>java.util.Date</code> that allows
+ the JDBC API to identify this as an SQL <code>TIMESTAMP</code> value.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-14" >
+        <td class="jd-linkcol"><a href="../../../reference/android/preference/TwoStatePreference.html">TwoStatePreference</a></td>
         <td class="jd-descrcol" width="100%">
           Common base class for preferences that have two selectable states, persist a
  boolean value in SharedPreferences, and may have dependent preferences that are
@@ -2429,10 +2970,32 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-" >
-        <td class="jd-linkcol"><a href="../../../reference/android/support/v8/renderscript/Type.CubemapFace.html">Type.CubemapFace</a></td>
+      <tr class="alt-color api apilevel-11" >
+        <td class="jd-linkcol"><a href="../../../reference/android/renderscript/Type.CubemapFace.html">Type.CubemapFace</a></td>
         <td class="jd-descrcol" width="100%">
           &nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/util/ULocale.html">ULocale</a></td>
+        <td class="jd-descrcol" width="100%">
+          <strong>[icu enhancement]</strong> ICU's replacement for <code><a href="../../../reference/java/util/Locale.html">Locale</a></code>.&nbsp;Methods, fields, and other functionality specific to ICU are labeled '<strong>[icu]</strong>'.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/util/ULocale.Category.html">ULocale.Category</a></td>
+        <td class="jd-descrcol" width="100%">
+          Enum for locale categories.&nbsp;
           
     
 
@@ -2443,9 +3006,7 @@ Summary:
       <tr class=" api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/net/URI.html">URI</a></td>
         <td class="jd-descrcol" width="100%">
-          A Uniform Resource Identifier that identifies an abstract or physical
- resource, as specified by <a href="http://www.ietf.org/rfc/rfc2396.txt">RFC
- 2396</a>.&nbsp;
+          Represents a Uniform Resource Identifier (URI) reference.&nbsp;
           
     
 
@@ -2453,11 +3014,77 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-1" >
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/lang/UScript.ScriptUsage.html">UScript.ScriptUsage</a></td>
+        <td class="jd-descrcol" width="100%">
+          Script usage constants.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/java/util/UUID.html">UUID</a></td>
         <td class="jd-descrcol" width="100%">
-          UUID is an immutable representation of a 128-bit universally unique
- identifier (UUID).&nbsp;
+          A class that represents an immutable universally unique identifier (UUID).&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/UnicodeSet.html">UnicodeSet</a></td>
+        <td class="jd-descrcol" width="100%">
+          A mutable set of Unicode characters and multicharacter strings.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/UnicodeSet.ComparisonStyle.html">UnicodeSet.ComparisonStyle</a></td>
+        <td class="jd-descrcol" width="100%">
+          Comparison style enums used by <code><a href="../../../reference/android/icu/text/UnicodeSet.html#compareTo(android.icu.text.UnicodeSet, android.icu.text.UnicodeSet.ComparisonStyle)">compareTo(UnicodeSet, ComparisonStyle)</a></code>.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/UnicodeSet.SpanCondition.html">UnicodeSet.SpanCondition</a></td>
+        <td class="jd-descrcol" width="100%">
+          Argument values for whether span() and similar functions continue while the current character is contained vs.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/UnicodeSetSpanner.CountMethod.html">UnicodeSetSpanner.CountMethod</a></td>
+        <td class="jd-descrcol" width="100%">
+          Options for replaceFrom and countIn to control how to treat each matched span.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/text/UnicodeSetSpanner.TrimOption.html">UnicodeSetSpanner.TrimOption</a></td>
+        <td class="jd-descrcol" width="100%">
+          Options for the trim() method
+&nbsp;
           
     
 
@@ -2476,7 +3103,18 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-1" >
+      <tr class="alt-color api apilevel-24" >
+        <td class="jd-linkcol"><a href="../../../reference/android/icu/util/VersionInfo.html">VersionInfo</a></td>
+        <td class="jd-descrcol" width="100%">
+          Class to store version numbers of the form major.minor.milli.micro.&nbsp;
+          
+    
+
+        </td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/android/view/ViewDebug.HierarchyTraceType.html">ViewDebug.HierarchyTraceType</a></td>
         <td class="jd-descrcol" width="100%">
           <em>
@@ -2491,7 +3129,7 @@ Summary:
       </tr>
       
     
-      <tr class=" api apilevel-1" >
+      <tr class="alt-color api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/android/view/ViewDebug.RecyclerTraceType.html">ViewDebug.RecyclerTraceType</a></td>
         <td class="jd-descrcol" width="100%">
           <em>
@@ -2506,7 +3144,7 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-1" >
+      <tr class=" api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/android/webkit/WebSettings.LayoutAlgorithm.html">WebSettings.LayoutAlgorithm</a></td>
         <td class="jd-descrcol" width="100%">
           Enum for controlling the layout of html.&nbsp;
@@ -2517,7 +3155,7 @@ Summary:
       </tr>
       
     
-      <tr class=" api apilevel-8" >
+      <tr class="alt-color api apilevel-8" >
         <td class="jd-linkcol"><a href="../../../reference/android/webkit/WebSettings.PluginState.html">WebSettings.PluginState</a></td>
         <td class="jd-descrcol" width="100%">
           The plugin state effects how plugins are treated on a page.&nbsp;
@@ -2528,7 +3166,7 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-1" >
+      <tr class=" api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/android/webkit/WebSettings.RenderPriority.html">WebSettings.RenderPriority</a></td>
         <td class="jd-descrcol" width="100%">
           &nbsp;
@@ -2539,7 +3177,7 @@ Summary:
       </tr>
       
     
-      <tr class=" api apilevel-1" >
+      <tr class="alt-color api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/android/webkit/WebSettings.TextSize.html">WebSettings.TextSize</a></td>
         <td class="jd-descrcol" width="100%">
           <em>
@@ -2554,7 +3192,7 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-7" >
+      <tr class=" api apilevel-7" >
         <td class="jd-linkcol"><a href="../../../reference/android/webkit/WebSettings.ZoomDensity.html">WebSettings.ZoomDensity</a></td>
         <td class="jd-descrcol" width="100%">
           Enum for specifying the WebView's desired density.&nbsp;
@@ -2565,7 +3203,7 @@ Summary:
       </tr>
       
     
-      <tr class=" api apilevel-1" >
+      <tr class="alt-color api apilevel-1" >
         <td class="jd-linkcol"><a href="../../../reference/android/util/Xml.Encoding.html">Xml.Encoding</a></td>
         <td class="jd-descrcol" width="100%">
           Supported character encodings.&nbsp;
@@ -2580,54 +3218,85 @@ Summary:
 
       </div>
   </div>
-</td></tr></table>
+  </td></tr></table>
+
+    
+
+<br><hr>
 
 
-<div class="jd-descr">
+  <p>This interface imposes a total ordering on the objects of each class that
+ implements it.  This ordering is referred to as the class's <i>natural
+ ordering</i>, and the class's <tt>compareTo</tt> method is referred to as
+ its <i>natural comparison method</i>.<p>
+
+ Lists (and arrays) of objects that implement this interface can be sorted
+ automatically by <code><a href="../../../reference/java/util/Collections.html#sort(java.util.List<T>)">Collections.sort</a></code> (and
+ <code><a href="../../../reference/java/util/Arrays.html#sort(java.lang.Object[])">Arrays.sort</a></code>).  Objects that implement this
+ interface can be used as keys in a <a href="../../../reference/java/util/SortedMap.html">sorted map</a></a> or as
+ elements in a <a href="../../../reference/java/util/SortedSet.html">sorted set</a></a>, without the need to
+ specify a <a href="../../../reference/java/util/Comparator.html">comparator</a></a>.<p>
+
+ The natural ordering for a class <tt>C</tt> is said to be <i>consistent
+ with equals</i> if and only if <tt>e1.compareTo(e2) == 0</tt> has
+ the same boolean value as <tt>e1.equals(e2)</tt> for every
+ <tt>e1</tt> and <tt>e2</tt> of class <tt>C</tt>.  Note that <tt>null</tt>
+ is not an instance of any class, and <tt>e.compareTo(null)</tt> should
+ throw a <tt>NullPointerException</tt> even though <tt>e.equals(null)</tt>
+ returns <tt>false</tt>.<p>
+
+ It is strongly recommended (though not required) that natural orderings be
+ consistent with equals.  This is so because sorted sets (and sorted maps)
+ without explicit comparators behave "strangely" when they are used with
+ elements (or keys) whose natural ordering is inconsistent with equals.  In
+ particular, such a sorted set (or sorted map) violates the general contract
+ for set (or map), which is defined in terms of the <tt>equals</tt>
+ method.<p>
+
+ For example, if one adds two keys <tt>a</tt> and <tt>b</tt> such that
+ <tt>(!a.equals(b) && a.compareTo(b) == 0)</tt> to a sorted
+ set that does not use an explicit comparator, the second <tt>add</tt>
+ operation returns false (and the size of the sorted set does not increase)
+ because <tt>a</tt> and <tt>b</tt> are equivalent from the sorted set's
+ perspective.<p>
+
+ Virtually all Java core classes that implement <tt>Comparable</tt> have natural
+ orderings that are consistent with equals.  One exception is
+ <tt>java.math.BigDecimal</tt>, whose natural ordering equates
+ <tt>BigDecimal</tt> objects with equal values and different precisions
+ (such as 4.0 and 4.00).<p>
+
+ For the mathematically inclined, the <i>relation</i> that defines
+ the natural ordering on a given class C is:<pre>
+       {(x, y) such that x.compareTo(y) &lt;= 0}.
+ </pre> The <i>quotient</i> for this total order is: <pre>
+       {(x, y) such that x.compareTo(y) == 0}.
+ </pre>
+
+ It follows immediately from the contract for <tt>compareTo</tt> that the
+ quotient is an <i>equivalence relation</i> on <tt>C</tt>, and that the
+ natural ordering is a <i>total order</i> on <tt>C</tt>.  When we say that a
+ class's natural ordering is <i>consistent with equals</i>, we mean that the
+ quotient for the natural ordering is the equivalence relation defined by
+ the class's <code><a href="../../../reference/java/lang/Object.html#equals(java.lang.Object)">equals(Object)</a></code> method:<pre>
+     {(x, y) such that x.equals(y)}. </pre><p>
+
+ This interface is a member of the
+ <a href="../../../openjdk-redirect.html?v=8&path=/technotes/guides/collections/index.html">
+ Java Collections Framework</a>.</p>
 
 
-<h2>Class Overview</h2>
-<p itemprop="articleBody">This interface should be implemented by all classes that wish to define a
- <em>natural order</em> of their instances.
- <code><a href="../../../reference/java/util/Collections.html#sort(java.util.List<T>)">sort(List<T>)</a></code> and <code>java.util.Arrays#sort</code> can then
- be used to automatically sort lists of classes that implement this interface.
- <p>
- The order rule must be both transitive (if <code>x.compareTo(y) < 0</code> and
- <code>y.compareTo(z) < 0</code>, then <code>x.compareTo(z) < 0</code> must hold) and
- invertible (the sign of the result of x.compareTo(y) must be equal to the
- negation of the sign of the result of y.compareTo(x) for all combinations of
- x and y).
- <p>
- In addition, it is recommended (but not required) that if and only if the
- result of x.compareTo(y) is zero, then the result of x.equals(y) should be
- <code>true</code>.
-</p>
+
+  <div>
+      <p><b>See also:</b></p>
+      <ul class="nolist"><li><code><a href="../../../reference/java/util/Comparator.html">Comparator</a></code></li>
+      </ul>
+  </div>
 
 
 
 
-
-</div><!-- jd-descr -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="jd-descr">
-
-
-<h2>Summary</h2>
+<h2 class="api-section">Summary</h2>
 
 
 
@@ -2656,46 +3325,40 @@ Summary:
 
 
 <!-- ========== METHOD SUMMARY =========== -->
-<table id="pubmethods" class="jd-sumtable"><tr><th colspan="12">Public Methods</th></tr>
+<table id="pubmethods" class="responsive methods">
+<tr><th colspan="2"><h3>Public methods</h3></th></tr>
 
 
 
-	 
-    <tr class="alt-color api apilevel-1" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            int</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../reference/java/lang/Comparable.html#compareTo(T)">compareTo</a></span>(T another)</nobr>
-        
-        <div class="jd-descrdiv">
-          Compares this object to the specified object to determine their relative
- order.
-          
-    
-
-        </div>
   
-  </td></tr>
-
+  <tr class="api apilevel-1" >
+  
+  
+    <td><code>
+        abstract
+        
+        
+        
+        
+        int</code>
+    </td>
+  
+    <td width="100%">
+      <code>
+      <a href="../../../reference/java/lang/Comparable.html#compareTo(T)">compareTo</a>(T o)
+      </code>
+      
+        <p>Compares this object with the specified object for order.
+        
+    
+</p>
+      
+    </td>
+  </tr>
+  
 
 
 </table>
-
-
-
-
-
-
-
-</div><!-- jd-descr (summary) -->
-
-<!-- Details -->
 
 
 
@@ -2728,68 +3391,88 @@ Summary:
 <!-- ========= METHOD DETAIL ======== -->
 <!-- Public methdos -->
 
-<h2>Public Methods</h2>
+<h2 class="api-section">Public methods</h2>
 
 
 
 <A NAME="compareTo(T)"></A>
 
-<div class="jd-details api apilevel-1"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-        abstract 
-         
-        int
-      </span>
-      <span class="sympad">compareTo</span>
-      <span class="normal">(T another)</span>
-    </h4>
-      <div class="api-level">
-        <div>
+<div class="api apilevel-1">
+    <h3 class="api-name">compareTo</h3>
+    <div class="api-level">
+      <div>
   Added in <a href="../../../guide/topics/manifest/uses-sdk-element.html#ApiLevels">API level 1</a></div>
-        
+      
   
 
-      </div>
-    <div class="jd-details-descr">
-      
+    </div>
+<pre class="api-signature no-pretty-print">
+int compareTo (T o)</pre>
+    
     
 
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Compares this object to the specified object to determine their relative
- order.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
+    
+  <p>Compares this object with the specified object for order.  Returns a
+ negative integer, zero, or a positive integer as this object is less
+ than, equal to, or greater than the specified object.
+
+ <p>The implementor must ensure <tt>sgn(x.compareTo(y)) ==
+ -sgn(y.compareTo(x))</tt> for all <tt>x</tt> and <tt>y</tt>.  (This
+ implies that <tt>x.compareTo(y)</tt> must throw an exception iff
+ <tt>y.compareTo(x)</tt> throws an exception.)
+
+ <p>The implementor must also ensure that the relation is transitive:
+ <tt>(x.compareTo(y)&gt;0 &amp;&amp; y.compareTo(z)&gt;0)</tt> implies
+ <tt>x.compareTo(z)&gt;0</tt>.
+
+ <p>Finally, the implementor must ensure that <tt>x.compareTo(y)==0</tt>
+ implies that <tt>sgn(x.compareTo(z)) == sgn(y.compareTo(z))</tt>, for
+ all <tt>z</tt>.
+
+ <p>It is strongly recommended, but <i>not</i> strictly required that
+ <tt>(x.compareTo(y)==0) == (x.equals(y))</tt>.  Generally speaking, any
+ class that implements the <tt>Comparable</tt> interface and violates
+ this condition should clearly indicate this fact.  The recommended
+ language is "Note: this class has a natural ordering that is
+ inconsistent with equals."
+
+ <p>In the foregoing description, the notation
+ <tt>sgn(</tt><i>expression</i><tt>)</tt> designates the mathematical
+ <i>signum</i> function, which is defined to return one of <tt>-1</tt>,
+ <tt>0</tt>, or <tt>1</tt> according to whether the value of
+ <i>expression</i> is negative, zero or positive.</p>
+    <table class="responsive">
+    <tr><th colspan=2>Parameters</th></tr>
+      <tr>
+        <td><code>o</code></td>
+        <td width="100%">
+          <code>T</code>:
+          the object to be compared.</td>
+      </tr>
+    </table>
+    <table class="responsive">
+      <tr><th colspan=2>Returns</th></tr>
+      <tr>
+        <td><code>int</code></td>
+        <td width="100%">a negative integer, zero, or a positive integer as this object
+          is less than, equal to, or greater than the specified object.</td>
+      </tr>
+    </table>
+      <table class="responsive">
+      <tr><th colspan=2>Throws</th></tr>
         <tr>
-          <th>another</td>
-          <td>the object to compare to this instance.</td>
+          <td><code><a href="../../../reference/java/lang/NullPointerException.html">NullPointerException</a></code></td>
+          <td width="100%">if the specified object is null</td>
         </tr>
-      </table>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>a negative integer if this instance is less than <code>another</code>;
-         a positive integer if this instance is greater than
-         <code>another</code>; 0 if this instance has the same order as
-         <code>another</code>.</li></ul>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Throws</h5>
-      <table class="jd-tagtable">  
         <tr>
-            <th><a href="../../../reference/java/lang/ClassCastException.html">ClassCastException</a></td>
-            <td>if <code>another</code> cannot be converted into something
-             comparable to <code>this</code> instance.
+          <td><code><a href="../../../reference/java/lang/ClassCastException.html">ClassCastException</a></code></td>
+          <td width="100%">if the specified object's type prevents it
+         from being compared to this object.
 </td>
         </tr>
       </table>
-  </div>
+  
 
-    </div>
 </div>
 
 
@@ -2801,14 +3484,18 @@ Summary:
 
 
 <!-- ========= END OF CLASS DATA ========= -->
-<A NAME="navbar_top"></A>
-</div> <!-- jd-content -->
+
+</div><!-- end jd-content -->
+
+
+
+
 
 <div class="wrap">
   <div class="dac-footer">
     <div class="cols dac-footer-main">
       <div class="col-1of2">
-        <a class="dac-footer-getnews" data-modal-toggle="newsletter" href="javascript:;">Get news &amp; tips <span
+        <a class="dac-footer-getnews" id="newsletter" data-modal-toggle="newsletter" href="javascript:;">Get news &amp; tips <span
           class="dac-fab dac-primary"><i class="dac-sprite dac-mail"></i></span></a>
       </div>
       <div class="col-1of2 dac-footer-reachout">
@@ -2817,9 +3504,9 @@ Summary:
           <a class="dac-footer-contact-link" href="/support.html">Support</a>
         </div>
         <div class="dac-footer-social">
-          <a class="dac-fab dac-footer-social-link" href="https://www.youtube.com/user/androiddevelopers"><i class="dac-sprite dac-youtube"></i></a>
-          <a class="dac-fab dac-footer-social-link" href="https://plus.google.com/+AndroidDevelopers"><i class="dac-sprite dac-gplus"></i></a>
-          <a class="dac-fab dac-footer-social-link" href="https://twitter.com/AndroidDev"><i class="dac-sprite dac-twitter"></i></a>
+          <a class="dac-button-social dac-youtube dac-footer-social-link" href="https://www.youtube.com/user/androiddevelopers"><i class="dac-sprite dac-youtube"></i></a>
+          <a class="dac-button-social dac-gplus dac-footer-social-link" href="https://plus.google.com/+AndroidDevelopers"><i class="dac-sprite dac-gplus"></i></a>
+          <a class="dac-button-social dac-twitter dac-footer-social-link" href="https://twitter.com/AndroidDev"><i class="dac-sprite dac-twitter"></i></a>
         </div>
       </div>
     </div>
@@ -2833,18 +3520,21 @@ Summary:
   href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a>.
   For details and restrictions, see the <a href="../../../license.html">
   Content License</a>.
+
       </p>
       <p class="dac-footer-build">
         
-    Android 6.0&nbsp;r1 &mdash; 
-<script src="../../../timestamp.js" type="text/javascript"></script>
-<script>document.write(BUILD_TIMESTAMP)</script>
+  
+    Android 6.0&nbsp;r1 &mdash;
+  
+  <script src="../../../timestamp.js" type="text/javascript"></script>
+  <script>document.write(BUILD_TIMESTAMP)</script>
 
       </p>
     
 
     <p class="dac-footer-links">
-      <a href="/about/index.html">About Android</a>
+      <a href="/about/android.html">About Android</a>
       <a href="/auto/index.html">Auto</a>
       <a href="/tv/index.html">TV</a>
       <a href="/wear/index.html">Wear</a>
@@ -2854,58 +3544,70 @@ Summary:
         <select name="language" onchange="changeLangPref(this.value, true)">
           <option value="en" selected="selected">English</option>
           <option value="es">Español</option>
+          <option value="in">Bahasa Indonesia</option>
           <option value="ja">日本語</option>
           <option value="ko">한국어</option>
           <option value="pt-br">Português Brasileiro</option>
           <option value="ru">Русский</option>
+          <option value="vi">tiếng Việt</option>
           <option value="zh-cn">中文（简体)</option>
           <option value="zh-tw">中文（繁體)</option>
         </select>
       </span>
     </p>
   </div>
-</div> <!-- end footer -->
+</div>
+<!-- end footer -->
+
+
+
+  
+
+
 
 <div data-modal="newsletter" data-newsletter data-swap class="dac-modal newsletter">
   <div class="dac-modal-container">
     <div class="dac-modal-window">
       <header class="dac-modal-header">
-        <button class="dac-modal-header-close" data-modal-toggle><i class="dac-sprite dac-close"></i></button>
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
         <div class="dac-swap" data-swap-container>
           <section class="dac-swap-section dac-active dac-down">
-            <h2 class="norule dac-modal-header-title">Get the latest Android developer news and tips that will help you find success on Google Play.</h2>
-            <p class="dac-modal-header-subtitle">&#42; Required Fields</p>
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.title"></h2>
+            <p class="dac-modal-header-subtitle" data-t="newsletter.requiredHint"></p>
           </section>
           <section class="dac-swap-section dac-up">
-            <h2 class="norule dac-modal-header-title">Hooray!</h2>
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.successTitle">Hooray!</h2>
           </section>
         </div>
       </header>
       <div class="dac-swap" data-swap-container>
         <section class="dac-swap-section dac-active dac-left">
           <form action="https://docs.google.com/forms/d/1QgnkzbEJIDu9lMEea0mxqWrXUJu0oBCLD7ar23V0Yys/formResponse" class="dac-form" method="post" target="dac-newsletter-iframe">
+            <input type="hidden" name="entry.935454734" data-newsletter-language>
             <section class="dac-modal-content">
               <fieldset class="dac-form-fieldset">
                 <div class="cols">
                   <div class="col-1of2 newsletter-leftCol">
                     <div class="dac-form-input-group">
-                      <label for="newsletter-full-name" class="dac-form-floatlabel">Full name</label>
+                      <label for="newsletter-full-name" class="dac-form-floatlabel" data-t="newsletter.name">Full name</label>
                       <input type="text" class="dac-form-input" name="entry.1357890476" id="newsletter-full-name" required>
                       <span class="dac-form-required">*</span>
                     </div>
                     <div class="dac-form-input-group">
-                      <label for="newsletter-email" class="dac-form-floatlabel">Email address</label>
+                      <label for="newsletter-email" class="dac-form-floatlabel" data-t="newsletter.email">Email address</label>
                       <input type="email" class="dac-form-input" name="entry.472100832" id="newsletter-email" required>
                       <span class="dac-form-required">*</span>
                     </div>
                   </div>
                   <div class="col-1of2 newsletter-rightCol">
                     <div class="dac-form-input-group">
-                      <label for="newsletter-company" class="dac-form-floatlabel">Company / developer name</label>
+                      <label for="newsletter-company" class="dac-form-floatlabel" data-t="newsletter.company">Company / developer name</label>
                       <input type="text" class="dac-form-input" name="entry.1664780309" id="newsletter-company">
                     </div>
                     <div class="dac-form-input-group">
-                      <label for="newsletter-play-store" class="dac-form-floatlabel">One of your Play Store app URLs</label>
+                      <label for="newsletter-play-store" class="dac-form-floatlabel" data-t="newsletter.appUrl">One of your Play Store app URLs</label>
                       <input type="url" class="dac-form-input" name="entry.47013838" id="newsletter-play-store" required>
                       <span class="dac-form-required">*</span>
                     </div>
@@ -2915,22 +3617,22 @@ Summary:
               <fieldset class="dac-form-fieldset">
                 <div class="cols">
                   <div class="col-1of2 newsletter-leftCol">
-                    <legend class="dac-form-legend">Which best describes your business:<span class="dac-form-required">*</span>
+                    <legend class="dac-form-legend"><span data-t="newsletter.business.label">Which best describes your business:</span><span class="dac-form-required">*</span>
                     </legend>
                     <div class="dac-form-radio-group">
                       <input type="radio" value="Apps" class="dac-form-radio" name="entry.1796324055" id="newsletter-business-type-app" required>
                       <label for="newsletter-business-type-app" class="dac-form-radio-button"></label>
-                      <label for="newsletter-business-type-app" class="dac-form-label">Apps</label>
+                      <label for="newsletter-business-type-app" class="dac-form-label" data-t="newsletter.business.apps">Apps</label>
                     </div>
                     <div class="dac-form-radio-group">
                       <input type="radio" value="Games" class="dac-form-radio" name="entry.1796324055" id="newsletter-business-type-games" required>
                       <label for="newsletter-business-type-games" class="dac-form-radio-button"></label>
-                      <label for="newsletter-business-type-games" class="dac-form-label">Games</label>
+                      <label for="newsletter-business-type-games" class="dac-form-label" data-t="newsletter.business.games">Games</label>
                     </div>
                     <div class="dac-form-radio-group">
                       <input type="radio" value="Apps and Games" class="dac-form-radio" name="entry.1796324055" id="newsletter-business-type-appsgames" required>
                       <label for="newsletter-business-type-appsgames" class="dac-form-radio-button"></label>
-                      <label for="newsletter-business-type-appsgames" class="dac-form-label">Apps &amp; Games</label>
+                      <label for="newsletter-business-type-appsgames" class="dac-form-label" data-t="newsletter.business.both">Apps &amp; Games</label>
                     </div>
                   </div>
                   <div class="col-1of2 newsletter-rightCol newsletter-checkboxes">
@@ -2941,7 +3643,7 @@ Summary:
                           <label for="newsletter-add" class="dac-form-checkbox-button"></label>
                         </div>
                         <div class="dac-media-body">
-                          <label for="newsletter-add" class="dac-form-label dac-form-aside">Add me to the mailing list for the monthly newsletter and occasional emails about development and Google Play opportunities.<span class="dac-form-required">*</span></label>
+                          <label for="newsletter-add" class="dac-form-label dac-form-aside"><span data-t="newsletter.confirmMailingList"></span><span class="dac-form-required">*</span></label>
                         </div>
                       </div>
                     </div>
@@ -2952,7 +3654,7 @@ Summary:
                           <label for="newsletter-terms" class="dac-form-checkbox-button"></label>
                         </div>
                         <div class="dac-media-body">
-                          <label for="newsletter-terms" class="dac-form-label dac-form-aside">I acknowledge that the information provided in this form will be subject to <a href="https://www.google.com/policies/privacy/">Google's privacy policy</a>.<span class="dac-form-required">*</span></label>
+                          <label for="newsletter-terms" class="dac-form-label dac-form-aside"><span data-t="newsletter.privacyPolicy" data-t-html></span><span class="dac-form-required">*</span></label>
                         </div>
                       </div>
                     </div>
@@ -2971,24 +3673,74 @@ Summary:
         </section>
         <section class="dac-swap-section dac-right">
           <div class="dac-modal-content">
-            <p class="newsletter-success-message">
-              You have successfully signed up for the latest Android developer news and tips.
-            </p>
+            <p class="newsletter-success-message" data-t="newsletter.successDetails"></p>
           </div>
         </section>
       </div>
     </div>
   </div>
-</div> <!-- end footer -->
+</div>
+<!-- end newsletter modal -->
 
-</div><!-- end doc-content -->
+<!-- start reset language header modal -->
+<div data-modal="langform" class="dac-modal" id="langform">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title"></h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <fieldset class="dac-form-fieldset">
+              <div class="cols">
+                <div class="col-2of2 langform-leftCol">
+                  <p id="resetLangText"></p>
+                  <p id="resetLangCta"></p>
+                </div>
+              </div>
+            </fieldset>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+              <button class="button dac-primary dac-modal-action lang yes" data-t="newsletter.resetLangButtonYes" data-modal-toggle></button>
+              <button class="button dac-primary dac-modal-action lang no" data-t="newsletter.resetLangButtonNo" data-modal-toggle></button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div>
+<!-- end langreset modal -->
 
-</div> <!-- end .cols --> 
+
 </div> <!-- end body-content --> 
 
 
 
 
+<script src="https://developer.android.com/ytblogger_lists_unified.js" defer></script>
+<script src="/jd_lists_unified_en.js?v=17" defer></script>
+<script src="/reference/lists.js?v=17" defer></script>
+<script src="/reference/gcm_lists.js?v=17" defer></script>
+<script src="/reference/gms_lists.js?v=17" defer></script>
+<script>
+  // Load localized metadata.
+  (function(lang) {
+    if (lang === 'en') { return; }
+
+    // Write it to the document so it gets evaluated before DOMContentReady.
+    document.write('<script src="/jd_lists_unified_' + lang + '.js?v=14" defer></' + 'script>');
+  })(getLangPref())
+</script>
 
 
 </body>

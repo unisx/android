@@ -87,22 +87,31 @@
 
 
 
-
-
-
-
-
 <html>
 <head>
 
+  
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <meta content="IE=edge" http-equiv="X-UA-Compatible">
-
-<meta name="Description" content="Declares a single hardware or software feature that is used by the application. The purpose of a &lt;uses-feature&gt; declaration is to inform any external entity of the set of hardware and software features on which your application depends. The element…">
 <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.ico" />
-<title>&lt;uses-feature&gt; | Android Developers</title>
+<link rel="alternate" href="http://developer.android.com/guide/topics/manifest/uses-feature-element.html" hreflang="en" />
+<link rel="alternate" href="http://developer.android.com/intl/es/guide/topics/manifest/uses-feature-element.html" hreflang="es" />
+<link rel="alternate" href="http://developer.android.com/intl/id/guide/topics/manifest/uses-feature-element.html" hreflang="id" />
+<link rel="alternate" href="http://developer.android.com/intl/ja/guide/topics/manifest/uses-feature-element.html" hreflang="ja" />
+<link rel="alternate" href="http://developer.android.com/intl/ko/guide/topics/manifest/uses-feature-element.html" hreflang="ko" />
+<link rel="alternate" href="http://developer.android.com/intl/pt-br/guide/topics/manifest/uses-feature-element.html" hreflang="pt-br" />
+<link rel="alternate" href="http://developer.android.com/intl/ru/guide/topics/manifest/uses-feature-element.html" hreflang="ru" />
+<link rel="alternate" href="http://developer.android.com/intl/vi/guide/topics/manifest/uses-feature-element.html" hreflang="vi" />
+<link rel="alternate" href="http://developer.android.com/intl/zh-cn/guide/topics/manifest/uses-feature-element.html" hreflang="zh-cn" />
+<link rel="alternate" href="http://developer.android.com/intl/zh-tw/guide/topics/manifest/uses-feature-element.html" hreflang="zh-tw" />
+
+
+<title>&lt;uses-feature&gt; | Android Developers
+</title>
+
+<meta name="description" content="Declares a single hardware or software feature that is used by the application. The purpose of a &lt;uses-feature&gt; declaration is to inform any external entity of the set of hardware and software features on which your application depends. The element…">
 
 <!-- STYLESHEETS -->
 <link rel="stylesheet"
@@ -110,9 +119,7 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold"
   title="roboto">
 
-<link href="../../../assets/css/default.css?v=7" rel="stylesheet" type="text/css">
-
-
+<link href="../../../assets/css/default.css?v=16" rel="stylesheet" type="text/css">
 
 <!-- JAVASCRIPT -->
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
@@ -121,10 +128,9 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
   var toRoot = "../../../";
   var metaTags = ["filtering","features","googleplayfilters","permissions"];
   var devsite = false;
+  var useUpdatedTemplates = false;
 </script>
-<script src="../../../assets/js/docs.js?v=6" type="text/javascript"></script>
-
-
+<script src="../../../assets/js/docs.js?v=17" type="text/javascript"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -144,61 +150,11 @@ href="http://fonts.googleapis.com/css?family=Roboto+Condensed">
 
 
 develop guide" itemscope itemtype="http://schema.org/Article">
-<a name="top"></a>
-
-<!-- dialog to prompt lang pref change when loaded from hardcoded URL
-<div id="langMessage" style="display:none">
-  <div>
-    <div class="lang en">
-      <p>You requested a page in English, would you like to proceed with this language setting?</p>
-    </div>
-    <div class="lang es">
-      <p>You requested a page in Spanish (Español), would you like to proceed with this language setting?</p>
-    </div>
-    <div class="lang ja">
-      <p>You requested a page in Japanese (日本語), would you like to proceed with this language setting?</p>
-    </div>
-    <div class="lang ko">
-      <p>You requested a page in Korean (한국어), would you like to proceed with this language setting?</p>
-    </div>
-    <div class="lang ru">
-      <p>You requested a page in Russian (Русский), would you like to proceed with this language setting?</p>
-    </div>
-    <div class="lang zh-cn">
-      <p>You requested a page in Simplified Chinese (简体中文), would you like to proceed with this language setting?</p>
-    </div>
-    <div class="lang zh-tw">
-      <p>You requested a page in Traditional Chinese (繁體中文), would you like to proceed with this language setting?</p>
-    </div>
-    <a href="#" class="button yes" onclick="return false;">
-      <span class="lang en">Yes</span>
-      <span class="lang es">Sí</span>
-      <span class="lang ja">Yes</span>
-      <span class="lang ko">Yes</span>
-      <span class="lang ru">Yes</span>
-      <span class="lang zh-cn">是的</span>
-      <span class="lang zh-tw">没有</span>
-    </a>
-    <a href="#" class="button" onclick="$('#langMessage').hide();return false;">
-      <span class="lang en">No</span>
-      <span class="lang es">No</span>
-      <span class="lang ja">No</span>
-      <span class="lang ko">No</span>
-      <span class="lang ru">No</span>
-      <span class="lang zh-cn">没有</span>
-      <span class="lang zh-tw">没有</span>
-    </a>
-  </div>
-</div> -->
-
-
+  
+  <a name="top"></a>
   <!-- Header -->
   <div id="header-wrapper">
-    <div class="dac-header" id="header">
-
-
-
-
+    <div class="dac-header " id="header">
       <div class="dac-header-inner">
         <a class="dac-nav-toggle" data-dac-toggle-nav href="javascript:;" title="Open navigation">
           <span class="dac-nav-hamburger">
@@ -213,54 +169,35 @@ develop guide" itemscope itemtype="http://schema.org/Article">
               width="32" height="36" alt="Android" /> Developers
           </a>
 
-        <ul class="dac-header-crumbs">
-          
-          <li class="dac-header-crumbs-item"><span class="dac-header-crumbs-link current ">&lt;uses-feature&gt;</a></li>
+        <ul class="dac-header-tabs">
+          <li>
+          <a class="dac-header-tab" href="../../../design/index.html"
+             zh-tw-lang="設計"
+             zh-cn-lang="设计"
+             ru-lang="Проектирование"
+             ko-lang="디자인"
+             ja-lang="設計"
+             es-lang="Diseñar">Design</a>
+          </li>
+          <li>
+          <a class="dac-header-tab" href="../../../develop/index.html"
+             zh-tw-lang="開發"
+             zh-cn-lang="开发"
+             ru-lang="Разработка"
+             ko-lang="개발"
+             ja-lang="開発"
+             es-lang="Desarrollar">Develop</a>
+          </li>
+          <li>
+          <a class="dac-header-tab" href="../../../distribute/index.html"
+             zh-tw-lang="發佈"
+             zh-cn-lang="分发"
+             ru-lang="Распространение"
+             ko-lang="배포"
+             ja-lang="配布"
+             es-lang="Distribuir">Distribute</a>
+          </li>
         </ul>
-
-        
-        
-        
-  <div class="dac-header-search" id="search-container">
-    <div class="dac-header-search-inner">
-      <div class="dac-sprite dac-search dac-header-search-btn" id="search-btn"></div>
-      <form class="dac-header-search-form" onsubmit="return submit_search()">
-        <input id="search_autocomplete" type="text" value="" autocomplete="off" name="q"
-          onfocus="search_focus_changed(this, true)" onblur="search_focus_changed(this, false)"
-          onkeydown="return search_changed(event, true, '../../../')"
-          onkeyup="return search_changed(event, false, '../../../')"
-          class="dac-header-search-input" placeholder="Search" />
-          <a class="dac-header-search-close hide" id="search-close">close</a>
-      </form>
-    </div><!-- end dac-header-search-inner -->
-  </div><!-- end dac-header-search -->
-
-  <div class="search_filtered_wrapper">
-    <div class="suggest-card reference no-display">
-      <ul class="search_filtered">
-      </ul>
-    </div>
-    <div class="suggest-card develop no-display">
-      <ul class="search_filtered">
-      </ul>
-      <div class="child-card guides no-display">
-      </div>
-      <div class="child-card training no-display">
-      </div>
-      <div class="child-card samples no-display">
-      </div>
-    </div>
-    <div class="suggest-card design no-display">
-      <ul class="search_filtered">
-      </ul>
-    </div>
-    <div class="suggest-card distribute no-display">
-      <ul class="search_filtered">
-      </ul>
-    </div>
-  </div>
-
-        
 
         <a class="dac-header-console-btn" href="https://play.google.com/apps/publish/">
           <span class="dac-sprite dac-google-play"></span>
@@ -268,13 +205,26 @@ develop guide" itemscope itemtype="http://schema.org/Article">
           Console
         </a>
 
+        
+        
+        
+  <form data-search class="dac-header-search">
+    <button class="dac-header-search-close" data-search-close>
+      <i class="dac-sprite dac-back-arrow"></i>
+    </button>
+
+    <div class="dac-header-search-inner">
+      <i class="dac-sprite dac-search-white dac-header-search-icon"></i>
+      <input id="search_autocomplete" type="text" value="" autocomplete="off" name="q" class="dac-header-search-input" placeholder="Search" />
+      <button class="dac-header-search-clear dac-hidden" data-search-clear>
+        <i class="dac-sprite dac-close-black"></i>
+      </button>
+    </div>
+  </form>
+
+        
       </div><!-- end header-wrap.wrap -->
     </div><!-- end header -->
-
-    <div id="searchResults" class="wrap" style="display:none;">
-      <h2 id="searchTitle">Results</h2>
-      <div id="leftSearchControl" class="search-control">Loading...</div>
-    </div>
   </div> <!--end header-wrapper -->
 
   
@@ -282,140 +232,16 @@ develop guide" itemscope itemtype="http://schema.org/Article">
   <nav class="dac-nav">
     <div class="dac-nav-dimmer" data-dac-toggle-nav></div>
 
-    <ul class="dac-nav-list" data-dac-nav>
-      <li class="dac-nav-item dac-nav-head">
-        <a class="dac-nav-link dac-nav-logo" data-dac-toggle-nav href="javascript:;" title="Close navigation">
-          <img class="dac-logo-image" src="../../../assets/images/android_logo.png"
-               srcset="../../../assets/images/android_logo@2x.png 2x"
-               width="32" height="36" alt="Android" /> Developers
-        </a>
-      </li>
-      <li class="dac-nav-item home">
-        <a class="dac-nav-link dac-visible-mobile-block" href="../../../index.html">Home</a>
-        <ul class="dac-nav-secondary about">
-          <li class="dac-nav-item about">
-            <a class="dac-nav-link" href="../../../about/index.html">Android</a>
-          </li>
-          <li class="dac-nav-item wear">
-            <a class="dac-nav-link" href="../../../wear/index.html">Wear</a>
-          </li>
-          <li class="dac-nav-item tv">
-            <a class="dac-nav-link" href="../../../tv/index.html">TV</a>
-          </li>
-          <li class="dac-nav-item auto">
-            <a class="dac-nav-link" href="../../../auto/index.html">Auto</a>
-          </li>
-        </ul>
-      </li>
-      <li class="dac-nav-item design">
-        <a class="dac-nav-link" href="../../../design/index.html"
-           zh-tw-lang="設計"
-           zh-cn-lang="设计"
-           ru-lang="Проектирование"
-           ko-lang="디자인"
-           ja-lang="設計"
-           es-lang="Diseñar">Design</a>
-      </li>
-      <li class="dac-nav-item develop">
-        <a class="dac-nav-link" href="../../../develop/index.html"
-           zh-tw-lang="開發"
-           zh-cn-lang="开发"
-           ru-lang="Разработка"
-           ko-lang="개발"
-           ja-lang="開発"
-           es-lang="Desarrollar">Develop</a>
-        <ul class="dac-nav-secondary develop">
-          <li class="dac-nav-item training">
-            <a class="dac-nav-link" href="../../../training/index.html"
-               zh-tw-lang="訓練課程"
-               zh-cn-lang="培训"
-               ru-lang="Курсы"
-               ko-lang="교육"
-               ja-lang="トレーニング"
-               es-lang="Capacitación">Training</a>
-          </li>
-          <li class="dac-nav-item guide">
-            <a class="dac-nav-link" href="../../../guide/index.html"
-               zh-tw-lang="API 指南"
-               zh-cn-lang="API 指南"
-               ru-lang="Руководства по API"
-               ko-lang="API 가이드"
-               ja-lang="API ガイド"
-               es-lang="Guías de la API">API Guides</a>
-          </li>
-          <li class="dac-nav-item reference">
-            <a class="dac-nav-link" href="../../../reference/packages.html"
-               zh-tw-lang="參考資源"
-               zh-cn-lang="参考"
-               ru-lang="Справочник"
-               ko-lang="참조문서"
-               ja-lang="リファレンス"
-               es-lang="Referencia">Reference</a>
-          </li>
-          <li class="dac-nav-item tools">
-            <a class="dac-nav-link" href="../../../sdk/index.html"
-               zh-tw-lang="相關工具"
-               zh-cn-lang="工具"
-               ru-lang="Инструменты"
-               ko-lang="도구"
-               ja-lang="ツール"
-               es-lang="Herramientas">Tools</a></li>
-          <li class="dac-nav-item google">
-            <a class="dac-nav-link" href="../../../google/index.html">Google Services</a>
-          </li>
-          
-          <li class="dac-nav-item preview">
-            <a class="dac-nav-link" href="../../../preview/index.html">Preview</a>
-          </li>
-        </ul>
-      </li>
-      <li class="dac-nav-item distribute">
-        <a class="dac-nav-link" href="../../../distribute/googleplay/index.html"
-           zh-tw-lang="發佈"
-           zh-cn-lang="分发"
-           ru-lang="Распространение"
-           ko-lang="배포"
-           ja-lang="配布"
-           es-lang="Distribuir">Distribute</a>
-        <ul class="dac-nav-secondary distribute">
-          <li class="dac-nav-item googleplay">
-            <a class="dac-nav-link" href="../../../distribute/googleplay/index.html">Google Play</a></li>
-          <li class="dac-nav-item essentials">
-            <a class="dac-nav-link" href="../../../distribute/essentials/index.html">Essentials</a></li>
-          <li class="dac-nav-item users">
-            <a class="dac-nav-link" href="../../../distribute/users/index.html">Get Users</a></li>
-          <li class="dac-nav-item engage">
-            <a class="dac-nav-link" href="../../../distribute/engage/index.html">Engage &amp; Retain</a></li>
-          <li class="dac-nav-item monetize">
-            <a class="dac-nav-link" href="../../../distribute/monetize/index.html">Earn</a>
-          </li>
-          <li class="dac-nav-item analyze">
-            <a class="dac-nav-link" href="../../../distribute/analyze/index.html">Analyze</a>
-          </li>
-          <li class="dac-nav-item stories">
-            <a class="dac-nav-link" href="../../../distribute/stories/index.html">Stories</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-  <!-- end navigation-->
+    <div class="dac-nav-sidebar" data-swap data-dynamic="false" data-transition-speed="300" data-dac-nav>
+      <div data-swap-container>
+        
   
-
-
-
-
-  <div class="wrap clearfix" id="body-content"><div class="cols">
-    <div class="col-4 dac-toggle dac-mobile" id="side-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <a class="dac-nav-back-button dac-swap-section dac-up dac-no-anim" data-swap-button href="javascript:;">
+      <i class="dac-sprite dac-nav-back"></i> <span class="dac-nav-back-title">Back</span>
+    </a>
+    <div class="dac-nav-sub dac-swap-section dac-right dac-active" itemscope itemtype="http://schema.org/SiteNavigationElement">
       
-  <div class="dac-visible-mobile-block" data-toggle="section">
-    <span class="dac-toggle-expand dac-devdoc-toggle"><i class="dac-sprite dac-expand-more-black"></i> Show navigation</span>
-    <span class="dac-toggle-collapse dac-devdoc-toggle" data-toggle-section><i class="dac-sprite dac-expand-less-black"></i> Hide navigation</span>
-  </div>
-
-      <div class="dac-toggle-content" id="devdoc-nav">
-        <div class="scroll-pane">
-
+        
 <ul id="nav">
 
   <li class="nav-section">
@@ -532,7 +358,7 @@ develop guide" itemscope itemtype="http://schema.org/Article">
       <li><a href="../../../guide/topics/resources/overview.html">
           <span class="en">Overview</span>
         </a></li>
-        <li><a href="../../../guide/topics/resources/providing-resources.html">
+      <li><a href="../../../guide/topics/resources/providing-resources.html">
           <span class="en">Providing Resources</span>
         </a></li>
       <li><a href="../../../guide/topics/resources/accessing-resources.html">
@@ -540,9 +366,12 @@ develop guide" itemscope itemtype="http://schema.org/Article">
         </a></li>
       <li><a href="../../../guide/topics/resources/runtime-changes.html">
             <span class="en">Handling Runtime Changes</span>
-          </a></li>
+        </a></li>
       <li><a href="../../../guide/topics/resources/localization.html">
           <span class="en">Localization</span>
+        </a></li>
+      <li><a href="../../../guide/topics/resources/complex-xml-resources.html">
+          <span class="en">Complex XML Resources</span>
         </a></li>
       <li class="nav-section">
         <div class="nav-section-header"><a href="../../../guide/topics/resources/available-resources.html">
@@ -594,6 +423,7 @@ develop guide" itemscope itemtype="http://schema.org/Article">
       <li><a href="../../../guide/topics/manifest/uses-feature-element.html">&lt;uses-feature&gt;</a></li> <!-- ##api level 4## -->
       <li><a href="../../../guide/topics/manifest/uses-library-element.html">&lt;uses-library&gt;</a></li>
       <li><a href="../../../guide/topics/manifest/uses-permission-element.html">&lt;uses-permission&gt;</a></li>
+      <li><a href="../../../guide/topics/manifest/uses-permission-sdk-23-element.html">&lt;uses-permission-sdk-23&gt;</a></li>
       <li><a href="../../../guide/topics/manifest/uses-sdk-element.html">&lt;uses-sdk&gt;</a></li>
     </ul>
   </li><!-- end of the manifest file -->
@@ -671,9 +501,6 @@ develop guide" itemscope itemtype="http://schema.org/Article">
         </a></li>
       <li><a href="../../../guide/topics/ui/menus.html">
           <span class="en">Menus</span></span>
-          </a></li>
-      <li><a href="../../../guide/topics/ui/actionbar.html">
-           <span class="en">Action Bar</span>
           </a></li>
       <li><a href="../../../guide/topics/ui/settings.html">
             <span class="en">Settings</span>
@@ -1042,6 +869,16 @@ develop guide" itemscope itemtype="http://schema.org/Article">
     </ul>
   </li>
 
+  <li class="nav-section">
+    <div class="nav-section-header"><a href="../../../guide/topics/security/index.html">
+        <span class="en">Security</span>
+    </a></div>
+    <ul>
+        <li><a href="../../../guide/topics/security/security-config.html">
+        <span class="en">Network Security Config</span>
+        </a></li>
+    </ul>
+  </li>
 
 </ul>
 
@@ -1053,26 +890,193 @@ develop guide" itemscope itemtype="http://schema.org/Article">
 //-->
 </script>
 
-        </div>
+      
+    </div>
+  
+
+        <ul id="dac-main-navigation" class="dac-nav-list dac-swap-section dac-left dac-no-anim">
+        <li class="dac-nav-item home">
+          <a class="dac-nav-link" href="../../../index.html">Home</a>
+          <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider"></i>
+          <ul class="dac-nav-secondary about">
+            <li class="dac-nav-item versions">
+              <a class="dac-nav-link" href="../../../about/versions/marshmallow/index.html">Android</a>
+            </li>
+            <li class="dac-nav-item wear">
+              <a class="dac-nav-link" href="../../../wear/index.html">Wear</a>
+            </li>
+            <li class="dac-nav-item tv">
+              <a class="dac-nav-link" href="../../../tv/index.html">TV</a>
+            </li>
+            <li class="dac-nav-item auto">
+              <a class="dac-nav-link" href="../../../auto/index.html">Auto</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dac-nav-item design">
+          <a class="dac-nav-link" href="../../../design/index.html"
+             zh-tw-lang="設計"
+             zh-cn-lang="设计"
+             ru-lang="Проектирование"
+             ko-lang="디자인"
+             ja-lang="設計"
+             es-lang="Diseñar">Design</a>
+        </li>
+        <li class="dac-nav-item develop">
+          <a class="dac-nav-link" href="../../../develop/index.html"
+             zh-tw-lang="開發"
+             zh-cn-lang="开发"
+             ru-lang="Разработка"
+             ko-lang="개발"
+             ja-lang="開発"
+             es-lang="Desarrollar">Develop</a>
+          <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider"></i>
+          <ul class="dac-nav-secondary develop">
+            <li class="dac-nav-item training">
+              <a class="dac-nav-link" href="../../../training/index.html"
+                 zh-tw-lang="訓練課程"
+                 zh-cn-lang="培训"
+                 ru-lang="Курсы"
+                 ko-lang="교육"
+                 ja-lang="トレーニング"
+                 es-lang="Capacitación">Training</a>
+            </li>
+            <li class="dac-nav-item guide">
+              <a class="dac-nav-link" href="../../../guide/index.html"
+                 zh-tw-lang="API 指南"
+                 zh-cn-lang="API 指南"
+                 ru-lang="Руководства по API"
+                 ko-lang="API 가이드"
+                 ja-lang="API ガイド"
+                 es-lang="Guías de la API">API Guides</a>
+            </li>
+            <li class="dac-nav-item reference">
+              <a class="dac-nav-link" href="../../../reference/packages.html"
+                 zh-tw-lang="參考資源"
+                 zh-cn-lang="参考"
+                 ru-lang="Справочник"
+                 ko-lang="참조문서"
+                 ja-lang="リファレンス"
+                 es-lang="Referencia">Reference</a>
+            </li>
+            <li class="dac-nav-item tools">
+              <a class="dac-nav-link" href="../../../sdk/index.html"
+                 zh-tw-lang="相關工具"
+                 zh-cn-lang="工具"
+                 ru-lang="Инструменты"
+                 ko-lang="도구"
+                 ja-lang="ツール"
+                 es-lang="Herramientas">Tools</a></li>
+            <li class="dac-nav-item google">
+              <a class="dac-nav-link" href="../../../google/index.html">Google Services</a>
+            </li>
+            
+          </ul>
+        </li>
+        <li class="dac-nav-item distribute">
+          <a class="dac-nav-link" href="../../../distribute/googleplay/index.html"
+             zh-tw-lang="發佈"
+             zh-cn-lang="分发"
+             ru-lang="Распространение"
+             ko-lang="배포"
+             ja-lang="配布"
+             es-lang="Distribuir">Distribute</a>
+          <i class="dac-sprite dac-expand-more-black dac-nav-sub-slider"></i>
+          <ul class="dac-nav-secondary distribute">
+            <li class="dac-nav-item googleplay">
+              <a class="dac-nav-link" href="../../../distribute/googleplay/index.html">Google Play</a></li>
+            <li class="dac-nav-item essentials">
+              <a class="dac-nav-link" href="../../../distribute/essentials/index.html">Essentials</a></li>
+            <li class="dac-nav-item users">
+              <a class="dac-nav-link" href="../../../distribute/users/index.html">Get Users</a></li>
+            <li class="dac-nav-item engage">
+              <a class="dac-nav-link" href="../../../distribute/engage/index.html">Engage &amp; Retain</a></li>
+            <li class="dac-nav-item monetize">
+              <a class="dac-nav-link" href="../../../distribute/monetize/index.html">Earn</a>
+            </li>
+            <li class="dac-nav-item analyze">
+              <a class="dac-nav-link" href="../../../distribute/analyze/index.html">Analyze</a>
+            </li>
+            <li class="dac-nav-item stories">
+              <a class="dac-nav-link" href="../../../distribute/stories/index.html">Stories</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dac-nav-item preview">
+          <a class="dac-nav-link" href="../../../preview/index.html">Preview</a>
+        </li>
+        </ul>
       </div>
-    </div> <!-- end side-nav -->
-    <script>
-      $(document).ready(function() {
-        scrollIntoView("devdoc-nav");
-        });
-    </script>
+    </div>
+  </nav>
+  <!-- end navigation-->
+  
 
+<!-- Nav Setup -->
+<script>$('[data-dac-nav]').dacNav();</script>
 
-
-
-<div class="col-12" id="doc-col" >
 
 
   
+    
+  <div class="wrap clearfix" id="body-content">
+
+  
+
+  
+  <div id="search-results" class="dac-search-results">
+    <div id="dac-search-results-history" class="dac-search-results-history">
+      <div class="wrap dac-search-results-history-wrap">
+        <div class="cols">
+          <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+            <h2>Most visited</h2>
+            <div class="resource-flow-layout" data-history-query="history:most/visited" data-maxresults="3" data-cardsizes="18x2"></div>
+          </div>
+
+          <div class="col-1of2 col-tablet-1of2 col-mobile-1of1">
+            <h2>Recently visited</h2>
+            <div class="resource-flow-layout cols" data-history-query="history:recent" data-allow-duplicates="true" data-maxresults="3" data-cardsizes="18x2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="dac-search-results-content" class="dac-search-results-content">
+      <div class="dac-search-results-metadata wrap">
+        <div class="dac-search-results-for">
+          <h2>Results for <span id="search-results-for"></span></h2>
+        </div>
+
+        <div id="dac-search-results-hero"></div>
+
+        <div class="dac-search-results-hero cols">
+          <div id="dac-search-results-reference" class="col-3of6 col-tablet-1of2 col-mobile-1of1">
+            <div class="suggest-card reference no-display">
+              <ul class="dac-search-results-reference">
+              </ul>
+            </div>
+          </div>
+          <div id="dac-custom-search-results"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
 
   
     
       
+        <ul class="dac-header-crumbs">
+          
+        </ul>
+
+        <!-- Breadcrumb Setup -->
+        <p><script>$('.dac-nav-list').dacCurrentPage().dacCrumbs();</script></p>
+
         <h1 itemprop="name" >&lt;uses-feature&gt;</h1>
       
     
@@ -1080,10 +1084,12 @@ develop guide" itemscope itemtype="http://schema.org/Article">
 
 
   
+
+  
   <div id="jd-content">
-
-
     <div class="jd-descr" itemprop="articleBody">
+    
+
     <div id="qv-wrapper">
 <div id="qv">
 
@@ -1115,7 +1121,7 @@ develop guide" itemscope itemtype="http://schema.org/Article">
     <p style="color:#669999;padding-top:1em;">Google Play Filtering</p>
     <p style="padding-top:1em;">Google Play uses the <code>&lt;uses-feature&gt;</code>
     elements declared in your app manifest to filter your app from devices
-    that do not meet it's hardware and software feature requirements. </p>
+    that do not meet its hardware and software feature requirements. </p>
 
 <p style="margin-top:1em;">By specifying the features that your application requires,
 you enable Google Play to present your application only to users whose
@@ -1158,7 +1164,7 @@ application describe the device-variable features that it uses.</p>
 
 <p>The set of available features that your application declares corresponds to
 the set of feature constants made available by the Android <code><a href="../../../reference/android/content/pm/PackageManager.html">PackageManager</a></code>, which are listed for
-convenience in the <a href="#features-reference">Features Reference</a> tables
+convenience in the <a href="#features-reference">Features Reference</a> sections
 at the bottom of this document.
 
 <p>You must specify each feature in a separate <code>&lt;uses-feature&gt;</code>
@@ -1212,39 +1218,47 @@ device compatibility.</p>
 
 <dd>
 <dl class="attr">
+  <dt>
+    <a name="name"></a><code>android:name</code>
+  </dt>
 
-  <dt><a name="name"></a><code>android:name</code></dt>
-  <dd>Specifies a single hardware or software feature used by the application,
-as a descriptor string. Valid descriptor values are listed in the <a
-href="#hw-features">Hardware features</a> and <a href="#sw-features">Software
-features</a> tables, below. Descriptor string values are case-sensitive.</dd>
+  <dd>
+    Specifies a single hardware or software feature used by the application, as
+    a descriptor string. Valid attribute values are listed in the <a href=
+    "#hw-features">Hardware features</a> and <a href="#sw-features">Software
+    features</a> sections. These attribute values are case-sensitive.
+  </dd>
 
-  <dt><a name="required"></a><code>android:required</code></dt>  <!-- added in api level 5 -->
-  <dd>Boolean value that indicates whether the application requires
-  the feature specified in <code>android:name</code>.
+  <dt>
+    <a name="required"></a><code>android:required</code>
+  </dt>
+  <!-- added in api level 5 -->
 
-<ul>
-<li>When you declare <code>android:required="true"</code> for a feature,
-you are specifying that the application <em>cannot function, or is not
-designed to function</em>, when the specified feature is not present on the
-device. </li>
+  <dd>
+    Boolean value that indicates whether the application requires the feature
+    specified in <code>android:name</code>.
+    <ul>
+    <li>When you declare <code>android:required="true"</code> for a feature,
+    you are specifying that the application <em>cannot function, or is not
+    designed to function</em>, when the specified feature is not present on the
+    device. </li>
 
-<li>When you declare <code>android:required="false"</code> for a feature, it
-means that the application <em>prefers to use the feature</em> if present on
-the device, but that it <em>is designed to function without the specified
-feature</em>, if necessary. </li>
+    <li>When you declare <code>android:required="false"</code> for a feature, it
+    means that the application <em>prefers to use the feature</em> if present on
+    the device, but that it <em>is designed to function without the specified
+    feature</em>, if necessary. </li>
 
-</ul>
+    </ul>
 
-<p>The default value for <code>android:required</code> if not declared is
-<code>"true"</code>.</p>
+    <p>The default value for <code>android:required</code> if not declared is
+    <code>"true"</code>.</p>
   </dd>
 
   <dt><a name="glEsVersion"></a><code>android:glEsVersion</code></dt>
   <dd>The OpenGL ES version required by the application. The higher 16 bits
 represent the major number and the lower 16 bits represent the minor number. For
 example, to specify OpenGL ES version 2.0, you would set the value as
-"0x00020000", or to specify OpenGL ES 3.0, you would set the value as "0x00030000".
+"0x00020000", or to specify OpenGL ES 3.2, you would set the value as "0x00030002".
 
   <p>An application should specify at most one <code>android:glEsVersion</code>
 attribute in its manifest. If it specifies more than one, the
@@ -1265,8 +1279,8 @@ only specify the numerically lowest version of OpenGL ES that it requires. (It
 can check at run-time whether a higher level of OpenGL ES is available.)</p>
 
   <p>For more information about using OpenGL ES, including how to check the supported OpenGL ES
-version at runtime, see the <a href="../../../guide/topics/graphics/opengl.html">OpenGL ES</a>
-API guide.</p>
+version at runtime, see the <a href="../../../guide/topics/graphics/opengl.html">OpenGL ES
+API guide</a>.</p>
   </dd>
 
 </dl>
@@ -1310,7 +1324,7 @@ a device reports the features it supports as read-only system properties.</li>
 <p>To ensure an accurate comparison of features, the Android Package Manager
 provides a shared set of feature constants that both applications and devices
 use to declare feature requirements and support. The available feature constants
-are listed in the <a href="#features-reference">Features Reference</a> tables at
+are listed in the <a href="#features-reference">Features Reference</a> sections at
 the bottom of this document, and in the class documentation for <code><a href="../../../reference/android/content/pm/PackageManager.html">PackageManager</a></code>.</p>
 
 <p>When the user launches Google Play, the application queries the
@@ -1442,8 +1456,8 @@ the feature as shown below.</p>
 <p class="caution">It's important to understand that the permissions that you
 request in <code>&lt;uses-permission&gt;</code> elements can directly affect how
 Google Play filters your application. The reference section <a
-href="#permissions">Permissions that Imply Feature Requirements</a>,
-below, lists the full set of permissions that imply feature requirements and
+href="#permissions">Permissions that Imply Feature Requirements</a> lists the
+full set of permissions that imply feature requirements and
 therefore trigger filtering.</p>
 
 <h3 id="bt-permission-handling">Special handling for Bluetooth feature</h3>
@@ -1566,17 +1580,29 @@ determine the features that your application requires. </p>
 
 <ol>
 <li>First, build and export your application as an unsigned <code>.apk</code>.
-If you are developing in Eclipse with ADT, right-click the project and select
-<strong>Android Tools</strong> &gt; <strong>Export Unsigned Application
-Package</strong>. Select a destination filename and path and click
-<strong>OK</strong>. </li>
+If you are developing in Android Studio, build your application with Gradle:
+<ol TYPE=a>
+<li>Open the project and select <strong>Run > Edit Configurations</strong>.
+<li>Select the plus sign near the top-left corner of the <strong>Run/Debug
+Configurations</strong> window.
+<li>Select <strong>Gradle.</strong>
+<li>Enter <code>Unsigned APK</code> in <strong>Name</strong>.
+<li>Choose your module from the <strong>Gradle project</strong> section.
+<li>Enter <code>assemble</code> in <strong>Tasks</strong>.
+<li>Select <strong>OK</strong> to complete the new configuration.
+<li>Make sure the <strong>Unsigned APK</strong> run configuration is selected
+in the toolbar and select <strong>Run > Run 'Unsigned APK'</strong>.</li>
+</ol>
+You can find your unsigned <code>.apk</code> in the
+<code>&lt;<em>ProjectName</em>&gt;/app/build/outputs/apk/</code> directory.
+
 <li>Next, locate the <code>aapt</code> tool, if it is not already in your PATH.
 If you are using SDK Tools r8 or higher, you can find <code>aapt</code> in the
 <code>&lt;<em>SDK</em>&gt;/platform-tools/</code> directory.
 <p class="note"><strong>Note:</strong> You must use the version of
 <code>aapt</code> that is provided for the latest Platform-Tools component available. If
 you do not have the latest Platform-Tools component, download it using the <a
-href="../../../sdk/exploring.html">Android SDK Manager</a>.
+href="../../../studio/intro/update.html">Android SDK Manager</a>.
 </p></li>
 <li>Run <code>aapt</code> using this syntax: </li>
 </ol>
@@ -1600,465 +1626,1150 @@ locales: '--_--'
 densities: '160'
 </pre>
 
+<h2 id="features-reference">
+  Features Reference
+</h2>
 
-<h2 id=features-reference>Features Reference</h2>
+<p>
+  The following sections provide reference information about hardware features,
+  software features, and sets of permissions that imply specific feature
+  requirements.
+</p>
 
-<p>The tables below provide reference information about hardware and software
-features and the permissions that can imply them on Google Play. </p>
+<h3 id="hw-features">
+  Hardware features
+</h3>
 
-<h3 id="hw-features">Hardware features</h3>
+<p>
+  This section presents the hardware features supported by the most current
+  platform release. To indicate that your app uses or requires a hardware
+  feature, declare the corresponding value (beginning with
+  <code>"android.hardware"</code>) in an <code>android:name</code> attribute.
+  Each time you declare a hardware feature, use a separate
+  <code>&lt;uses-feature&gt;</code> element.
+</p>
 
-<p>The table below describes the hardware feature descriptors supported by the
-most current platform release. To signal that your application uses or requires
-a hardware feature, declare each value in a <code>android:name</code> attribute
-in a separate <code>&lt;uses-feature&gt;</code> element. </p>
+<h4 id="audio-hw-features">
+  Audio hardware features
+</h4>
 
-  <table>
-    <tr>
-       <th>Feature Type</th>
-       <th>Feature Descriptor</th>
-       <th style="min-width:170px">Description</th>
-       <th>Comments</th>
-    </tr>
-    <tr>
-       <td>Audio</td>
-       <td><code>android.hardware.audio.low_latency</td>
-       <td>The application uses a low-latency audio pipeline on the device and
-is sensitive to delays or lag in sound input or output.</td>
-<td>
-</td>
-    </tr>
-    <tr>
-       <td rowspan="2">Bluetooth</td>
-       <td><code>android.hardware.bluetooth</code></td>
-       <td>The application uses Bluetooth radio features in the device.</td>
-       <td></td>
-    </tr>
-    <tr>
-       <td><code>android.hardware.bluetooth_le</code></td>
-       <td>The application uses Bluetooth Low Energy radio features in the device.</td>
-       <td></td>
-    </tr>
-    <tr>
-       <td rowspan="6">Camera</td>
-       <td><code>android.hardware.camera</code></td>
-       <td>The application uses the device's camera. If the device supports
-           multiple cameras, the application uses the camera that facing
-           away from the screen.</td>
-       <td></td>
-    </tr>
-<tr>
-  <td><code>android.hardware.camera.autofocus</code></td>
-  <td>Subfeature. The application uses the device camera's autofocus capability.</td>
-  <td rowspan="3">These subfeatures implicitly declare the
-<code>android.hardware.camera</code> parent feature, unless declared with
-<code>android:required="false"</code>.</td>
-</tr>
-<tr>
-  <td><code>android.hardware.camera.flash</code></td>
-  <td>Subfeature. The application uses the device camera's flash.</td>
-</tr>
-<tr>
-  <td><code>android.hardware.camera.front</code></td>
-  <td>Subfeature. The application uses a front-facing camera on the device.</td>
-</tr>
-<tr>
-  <td><code>android.hardware.camera.any</code></td>
-  <td>The application uses at least one camera facing in any direction, or an
-external camera device if one is connected. Use this in preference to
-<code>android.hardware.camera</code> if a back-facing camera is not required.
-  </td>
-</tr>
-<tr>
-  <td><code>android.hardware.camera.external</code></td>
-  <td>The application uses an external camera device if one is connected.</td>
-</tr>
-<tr>
-  <td><code>android.hardware.camera.level.full</code></td>
-  <td>The application uses a camera device with <code>FULL</code>-level support.</td>
-</tr>
-<tr>
-  <td><code>android.hardware.camera.capability.manual_sensor</code></td>
-  <td>The application uses a a camera device with the <code>MANUAL_SENSOR</code> capability.</td>
-</tr>
-<tr>
-  <td><code>android.hardware.camera.capability.manual_post_processing</code></td>
-  <td>The application uses a a camera device with the <code>MANUAL_POST_PROCESSING</code> capability.</td>
-</tr>
-<tr>
-  <td><code>android.hardware.camera.capability.raw</code></td>
-  <td>The application uses a a camera device with the <code>RAW</code> capability.</td>
-</tr>
+<dl>
+  <dt>
+    <code>android.hardware.audio.low_latency</code>
+  </dt>
 
-<tr>
-  <td>Infrared</td>
-  <td><code>android.hardware.consumerir</code></td>
-  <td>The application uses the consumer IR capabilities on the device.</td>
-  <td></td>
-</tr>
+  <dd>
+    The app uses the device's low-latency audio pipeline, which reduces lag and
+    delays when processing sound input or output.
+  </dd>
 
-<tr>
-  <td rowspan="3">Location</td>
-  <td><code>android.hardware.location</code></td>
-  <td>The application uses one or more features on the device for determining
-location, such as GPS location, network location, or cell location.</td>
-  <td></td>
-</tr>
-<tr>
-  <td><code>android.hardware.location.network</code></td>
-  <td>Subfeature. The application uses coarse location coordinates obtained from
-a network-based geolocation system supported on the device.</td>
-  <td rowspan="2">These subfeatures implicitly declare the
-<code>android.hardware.location</code> parent feature, unless declared with
-<code>android:required="false"</code>. </td>
-</tr>
-<tr>
-  <td><code>android.hardware.location.gps</code></td>
-  <td>Subfeature. The application uses precise location coordinates obtained
-from a Global Positioning System receiver on the device. </td>
-</tr>
-<tr>
-  <td>Microphone</td>
-  <td><code>android.hardware.microphone</code></td>
-  <td>The application uses a microphone on the device.
-  </td>
-  <td></td>
-</tr>
-<tr>
-  <td rowspan="2">NFC</td>
-  <td><code>android.hardware.nfc</td>
-  <td>The application uses Near Field Communications radio features in the device.</td>
-  <td></td>
-</tr>
-<tr>
-  <td><code>android.hardware.nfc.hce</code></td>
-  <td>The application uses the NFC card emulation feature in the device.</td>
-  <td></td>
-</tr>
-<tr>
-  <td rowspan="8">Sensors</td>
-  <td><code>android.hardware.sensor.accelerometer</code></td>
-  <td>The application uses motion readings from an accelerometer on the
-device.</td>
-  <td></td>
-</tr>
-<tr>
-  <td><code>android.hardware.sensor.barometer</code></td>
-  <td>The application uses the device's barometer.</td>
-  <td></td>
-</tr>
-<tr>
-  <td><code>android.hardware.sensor.compass</code></td>
-  <td>The application uses directional readings from a magnetometer (compass) on
-the device.</td>
-  <td></td>
-</tr>
-<tr>
-  <td><code>android.hardware.sensor.gyroscope</code></td>
-  <td>The application uses the device's gyroscope sensor.</td>
-  <td></td>
-</tr>
-<tr>
-  <td><code>android.hardware.sensor.light</code></td>
-  <td>The application uses the device's light sensor.</td>
-  <td></td>
-</tr>
-<tr>
-  <td><code>android.hardware.sensor.proximity</code></td>
-  <td>The application uses the device's proximity sensor.</td>
-  <td></td>
-</tr>
-<tr>
-  <td><code>android.hardware.sensor.stepcounter</code></td>
-  <td>The application uses the device's step counter.</td>
-  <td></td>
-</tr>
-<tr>
-  <td><code>android.hardware.sensor.stepdetector</code></td>
-  <td>The application uses the device's step detector.</td>
-  <td></td>
-</tr>
+  <dt>
+    <code>android.hardware.audio.output</code>
+  </dt>
 
-<tr>
-  <td rowspan="2">Screen</td>
-  <td><code>android.hardware.screen.landscape</code></td>
-  <td>The application requires landscape orientation.</td>
-  <td rowspan="2">
-     <p>For example, if your app requires portrait orientation, you should declare
-<code>&lt;uses-feature android:name="android.hardware.screen.portrait"/&gt;</code> so that only devices
-that support portrait orientation (whether always or by user choice) can install your app. If your
-application <em>supports</em> both orientations, then you don't need to declare either.</p>
-    <p>Both orientations are assumed <em>not required</em>, by default, so your app may be installed
-on devices that support one or both orientations. However, if any of your activities request that
-they run in a specific orientation, using the <a
-href="../../../guide/topics/manifest/activity-element.html#screen"><code>android:screenOrientation</code></a> attribute, then this also declares that the application requires that
-orientation. For example, if you declare <a
-href="../../../guide/topics/manifest/activity-element.html#screen"><code>android:screenOrientation</code></a> with either <code>"landscape"</code>, <code>"reverseLandscape"</code>, or
-<code>"sensorLandscape"</code>, then your application will be available only to devices that support
-landscape orientation. As a best practice, you should still declare your requirement for this
-orientation using a <code>&lt;uses-feature&gt;</code> element. If you declare an orientation for your
-activity using <a href="../../../guide/topics/manifest/activity-element.html#screen"><code>android:screenOrientation</code></a>, but don't actually <em>require</em> it, you can disable the
-requirement by declaring the orientation with a <code>&lt;uses-feature&gt;</code> element and include
-<code>android:required="false"</code>.</p>
-    <p>For backwards compatibility, any device running a platform version that supports only API
-level 12 or lower is assumed to support both landscape and portrait.</p>
-  </td>
-</tr>
-<tr>
-  <td><code>android.hardware.screen.portrait</code></td>
-  <td>The application requires portrait orientation.</td>
-</tr>
+  <dd>
+    The app transmits sound using the device's speakers, audio jack, Bluetooth
+    streaming capabilities, or a similar mechanism.
+  </dd>
 
-<tr>
-  <td rowspan="3">Telephony</td>
-  <td><code>android.hardware.telephony</code></td>
-  <td>The application uses telephony features on the device, such as telephony
-radio with data communication services.</td>
-  <td></td>
-</tr>
-<tr>
-  <td><code>android.hardware.telephony.cdma</code></td>
-  <td>Subfeature. The application uses CDMA telephony radio features on the
-device. </td>
-  <td rowspan="2">These subfeatures implicitly declare the
-<code>android.hardware.telephony</code> parent feature, unless declared with
-<code>android:required="false"</code>. </td>
-</tr>
-<tr>
-  <td><code>android.hardware.telephony.gsm</code></td>
-  <td>Subfeature. The application uses GSM telephony radio features on the
-device.</td>
-</tr>
+  <dt>
+    <code>android.hardware.audio.pro</code>
+  </dt>
 
-<tr>
-  <td>Television</td>
-  <td><code>android.hardware.type.television</code></td>
-  <td>The application is designed for a television user experience.</td>
-  <td>This feature defines "television" to be a typical living room television experience:
-  displayed on a big screen, where the user is sitting far away and the dominant form of
-  input is something like a d-pad, and generally not through touch or a
-  mouse/pointer-device.</td>
-</tr>
+  <dd>
+    The app uses the device's high-end audio functionality and performance
+    capabilities.
+  </dd>
 
-<tr>
-  <td rowspan="7">Touchscreen</td>
-  <td><code>android.hardware.faketouch</code></td>
-  <td>The application uses basic touch interaction events, such as "click down", "click
-up", and drag.</td>
-  <td><p>When declared as required, this indicates that the application is compatible with a device
-only if it offers an emulated touchscreen ("fake touch" interface), or better. A device that offers
-a fake touch interface provides a user input system that emulates a subset of touchscreen
-capabilities. For example, a mouse or remote control that drives an on-screen cursor provides a fake
-touch interface. If your application requires basic point and click interaction (in other
-words, it won't work with <em>only</em> a d-pad controller), you should declare this feature.
-Because this is the minimum level of touch interaction, your app will also be compatible with
-devices that offer more complex touch interfaces.</p>
-  <p class="note"><strong>Note:</strong> Because applications require the <code>android.hardware.touchscreen</code> feature by default, if you want your application to be available to
-devices that provide a fake touch interface, you must also explicitly declare that a touch screen is
-<em>not</em> required by declaring <code>&lt;uses-feature
-android:name="android.hardware.touchscreen" <strong>android:required="false"</strong>
-/&gt;</code></p></td>
-</tr>
+  <dt>
+    <code>android.hardware.microphone</code>
+  </dt>
 
-<tr>
-  <td><code>android.hardware.faketouch.multitouch.distinct</code></td>
-  <td>The application performs distinct tracking of two or more "fingers" on a fake touch
-interface. This is a superset of the faketouch feature.</td>
-  <td><p>When declared as required, this indicates that the application is compatible with a device
-only if it supports touch emulation for events that supports distinct tracking of two or more
-fingers, or better.</p>
-  <p>Unlike the distinct multitouch defined by <code>android.hardware.touchscreen.multitouch.distinct</code>, input devices that support distinct multi-touch
-with a fake touch interface will not support all two-finger gestures, because the input is
-being transformed to cursor movement on the screen. That is, single finger gestures on such a device
-move a cursor; two-finger swipes will result in single-finger touch events; other two-finger
-gestures will result in the corresponding two-finger touch event. An example device that supports
-distinct multi-touch with a fake touch interface is one that provides a trackpad for cursor movement
-which also supports two or more fingers.</p></td>
-</tr>
+  <dd>
+    The app records audio using the device's microphone.
+  </dd>
+</dl>
 
-<tr>
-  <td><code>android.hardware.faketouch.multitouch.jazzhand</code></td>
-  <td>The application performs distinct tracking of five or more "fingers" on a fake touch
-interface. This is a superset of the faketouch feature.</td>
-  <td><p>When declared as required, this indicates that the application is compatible with a device
-only if it supports touch emulation for events that supports distinct tracking of five or more
-fingers.</p>
-  <p>Unlike the distinct multitouch defined by <code>android.hardware.touchscreen.multitouch.jazzhand</code>, input devices that support jazzhand multi-touch
-with a fake touch interface will not support all five-finger gestures, because the input is being
-transformed to cursor movement on the screen. That is, single finger gestures on such a device move
-a cursor; multi-finger gestures will result in single-finger touch events; other multi-finger
-gestures will result in the corresponding multi-finger touch event. An example device that supports
-distinct multi-touch with a fake touch interface is one that provides a trackpad for cursor movement
-which also supports five or more fingers.</p></td>
-</tr>
+<h4 id="bluetooth-hw-features">
+  Bluetooth hardware features
+</h4>
 
-<tr>
-  <td><code>android.hardware.touchscreen</code></td>
-  <td>The application uses touchscreen capabilities for gestures that are more interactive
-than basic touch events, such as a fling. This is a superset of the basic faketouch feature.</td>
-  <td><p>By default, your application requires this. As such, your application is <em>not</em>
-available to devices that provide only an emulated touch interface ("fake touch"), by default. If
-you want your application available to devices that provide a fake touch interface (or even devices
-that provide only a d-pad controller), you must explicitly declare that a touch screen is not
-required, by declaring <code>android.hardware.touchscreen</code> with <code>android:required="false"</code>.
-You should do so even if your application uses&mdash;but does not <em>require</em>&mdash;a real
-touch screen interface.</p>
-<p>If your application <em>does require</em> a touch interface (in order to perform touch
-gestures such as a fling), then you don't need to do anything, because this is required by default.
-However, it's best if you explicitly declare all features used by your application, so you should
-still declare this if your app uses it.</p>
-  <p>If you require more complex touch interaction, such as multi-finger gestures, you
-should declare the advanced touch screen features below.</p></td>
-</tr>
-<tr>
-  <td><code>android.hardware.touchscreen.multitouch</code></td>
-  <td>The application uses basic two-point multitouch capabilities on the device
-screen, such as for pinch gestures, but does not need to track touches independently. This
-is a superset of touchscreen feature.</td>
-  <td>This implicitly declares the <code>android.hardware.touchscreen</code> parent feature, unless
-declared with <code>android:required="false"</code>. </td>
-</tr>
-<tr>
-  <td><code>android.hardware.touchscreen.multitouch.distinct</code></td>
-  <td>Subfeature. The application uses advanced multipoint multitouch
-capabilities on the device screen, such as for tracking two or more points fully
-independently. This is a superset of multitouch feature.</td>
-  <td rowspan="2">This implicitly declares the <code>android.hardware.touchscreen.multitouch</code>
-parent feature, unless declared with <code>android:required="false"</code>. </td>
-</tr>
-<tr>
-  <td><code>android.hardware.touchscreen.multitouch.jazzhand</code></td>
-  <td>The application uses advanced multipoint multitouch
-capabilities on the device screen, for tracking up to five points fully
-independently. This is a superset of distinct multitouch feature.</td>
-</tr>
+<dl>
+  <dt>
+    <code>android.hardware.bluetooth</code>
+  </dt>
 
-<tr>
-  <td rowspan="2">USB</td>
-  <td><code>android.hardware.usb.host</code></td>
-  <td>The application uses USB host mode features (behaves as the host and connects to USB
-devices).</td>
-  <td></td>
-</tr>
+  <dd>
+    The app uses the device's Bluetooth features, usually to communicate with
+    other Bluetooth-enabled devices.
+  </dd>
 
-<tr>
-  <td><code>android.hardware.usb.accessory</code></td>
-  <td>The application uses USB accessory features (behaves as the USB device and connects to USB
-hosts).</td>
-  <td></td>
-</tr>
+  <dt>
+    <code>android.hardware.bluetooth_le</code>
+  </dt>
 
-<tr>
-  <td rowspan="2">Wi-Fi</td>
-  <td><code>android.hardware.wifi</code></td>
-  <td>The application uses 802.11 networking (Wi-Fi) features on the device.</td>
-  <td></td>
-</tr>
-<tr>
-  <td><code>android.hardware.wifi.direct</code></td>
-  <td>The application uses the Wi-Fi Direct networking features on the device.</td>
-</tr>
+  <dd>
+    The app uses the device's Bluetooth Low Energy radio features.
+  </dd>
+</dl>
 
-  </table>
+<h4 id="camera-hw-features">
+  Camera hardware features
+</h4>
 
-<h3 id="sw-features">Software features</h3>
+<dl>
+  <dt>
+    <code>android.hardware.camera</code>
+  </dt>
 
-<p>The table below describes the software feature descriptors supported by the
-most current platform release. To signal that your application uses or requires
-a software feature, declare each value in a <code>android:name</code> attribute
-in a separate <code>&lt;uses-feature&gt;</code> element. </p>
+  <dd>
+    The app uses the device's back-facing camera. Devices with only a
+    front-facing camera do not list this feature, so use the
+    <code>android.hardware.camera.any</code> feature instead if your app can
+    communicate with any camera, regardless of which direction the camera
+    faces.
+  </dd>
 
+  <dt>
+    <code>android.hardware.camera.any</code>
+  </dt>
 
-  <table>
-<tr>
-  <th>Feature</th>
-  <th>Attribute Value</th>
-  <th>Description</th>
-</tr>
-<tr>
-  <td>App Widgets</td>
-  <td><code>android.software.app_widgets</code></td>
-  <td>The application uses or provides App Widgets and should be installed only on devices
-  that include a Home screen or similar location where users can embed App Widgets.</td>
-</tr>
-<tr>
-  <td>Device Management</td>
-  <td><code>android.software.device_admin</code></td>
-  <td>The application uses device policy enforcement via device administrators.</td>
-</tr>
-<tr>
-  <td>Home Screen</td>
-  <td><code>android.software.home_screen</code></td>
-  <td>The application behaves as a Home screen replacement and should be installed only on
-  devices that support third-party Home screen apps.</td>
-</tr>
-<tr>
-  <td>Input Method</td>
-  <td><code>android.software.input_methods</code></td>
-  <td>The application provides a custom input method and should be installed only on devices that
-  support third-party input methods.</td>
-</tr>
-<tr>
-  <td>Live Wallpaper</td>
-  <td><code>android.software.live_wallpaper</code></td>
-  <td>The application uses or provides Live Wallpapers and should be installed only on devices that
-  support Live Wallpapers.</td>
-</tr>
-<tr>
-  <td rowspan="2">SIP/VOIP</td>
-  <td><code>android.software.sip</code></td>
-  <td>The application uses SIP service on the device and should be installed only on devices that
-  support SIP.
-  </td>
-</tr>
-<tr>
-  <td><code>android.software.sip.voip</code></td>
-  <td><p>Subfeature. The application uses SIP-based VOIP service on the device.
-  <p>This subfeature implicitly declares the <code>android.software.sip</code> parent feature,
-unless declared with <code>android:required="false"</code>.</td>
-</tr>
-  </table>
+  <dd>
+    The app uses one of the device's cameras, or an external camera that the
+    user connects to the device. Use this value instead of
+    <code>android.hardware.camera</code> if your app does not require the
+    camera to be a back-facing one.
+  </dd>
 
+  <dt>
+    <code>android.hardware.camera.autofocus</code>
+  </dt>
 
-<h3 id="permissions">Permissions that Imply Feature Requirements</h3>
+  <dd>
+    <p>
+      The app uses the autofocus feature that the device's camera supports.
+    </p>
 
-<p>Some feature constants listed in the tables above were made available to
-applications <em>after</em> the corresponding API; for example, the
-<code>android.hardware.bluetooth</code> feature was added in Android 2.2 (API
-level 8), but the bluetooth API that it refers to was added in Android 2.0 (API
-level 5). Because of this, some apps were able to use the API before they had
-the ability to declare that they require the API via the
-<code>&lt;uses-feature&gt;</code> system. </p>
+    <p>
+      By using this feature, an app implies that it also uses the
+      <code>android.hardware.camera</code> feature, unless this parent feature
+      is declared with <code>android:required="false"</code>.
+    </p>
+  </dd>
 
-<p>To prevent those apps from being made available unintentionally,  Google
-Play assumes that certain hardware-related permissions indicate that the
-underlying hardware features are required by default. For instance, applications
-that use Bluetooth must request the <code>BLUETOOTH</code> permission in a
-<code>&lt;uses-permission&gt;</code> element &mdash; for legacy apps, Google
-Play assumes that the permission declaration means that the underlying
-<code>android.hardware.bluetooth</code> feature is required by the application
-and sets up filtering based on that feature. </p>
+  <dt>
+    <code>android.hardware.camera.capability.manual_post_processing</code>
+  </dt>
 
-<p>The table below lists permissions that imply feature requirements
-equivalent to those declared in <code>&lt;uses-feature&gt;</code> elements. Note
-that <code>&lt;uses-feature&gt;</code> declarations, including any declared
-<code>android:required</code> attribute, always take precedence over features
-implied by the permissions below. </p>
+  <dd>
+    <p>
+      The app uses the <code>MANUAL_POST_PROCESSING</code> feature that the
+      device's camera supports.
+    </p>
 
-<p>For any of the permissions below, you can disable filtering based on the
-implied feature by explicitly declaring the implied feature explicitly, in a
-<code>&lt;uses-feature&gt;</code> element, with an
-<code>android:required="false"</code> attribute. For example, to disable any
-filtering based on the <code>CAMERA</code> permission, you would add this
-<code>&lt;uses-feature&gt;</code> declaration to the manifest file:</p>
+    <p>
+      This feature allows your app to override the camera's auto white balance
+      functionality. Use <code>android.colorCorrection.transform</code>,
+      <code>android.colorCorrection.gains</code>, and an
+      <code>android.colorCorrection.mode</code> of
+      <code>TRANSFORM_MATRIX</code>.
+    </p>
+  </dd>
+
+  <dt>
+    <code>android.hardware.camera.capability.manual_sensor</code>
+  </dt>
+
+  <dd>
+    <p>
+      The app uses the <code>MANUAL_SENSOR</code> feature that the device's
+      camera supports.
+    </p>
+
+    <p>
+      This feature implies support for auto-exposure locking
+      (<code>android.control.aeLock</code>), which allows the camera's exposure
+      time and sensitivity to remain fixed at specific values.
+    </p>
+  </dd>
+
+  <dt>
+    <code>android.hardware.camera.capability.raw</code>
+  </dt>
+
+  <dd>
+    <p>
+      The app uses the <code>RAW</code> feature that the device's camera
+      supports.
+    </p>
+
+    <p>
+      This feature implies that the device can save DNG (raw) files and that
+      the device's camera provides the DNG-related metadata necessary for your
+      app to process these raw images directly.
+    </p>
+  </dd>
+
+  <dt>
+    <code>android.hardware.camera.external</code>
+  </dt>
+
+  <dd>
+    The app communicates with an external camera that the user connects to the
+    device. This feature does not guarantee, however, that the external camera
+    is available for your app to use.
+  </dd>
+
+  <dt>
+    <code>android.hardware.camera.flash</code>
+  </dt>
+
+  <dd>
+    <p>
+      The app uses the flash feature that the device's camera supports.
+    </p>
+
+    <p>
+      By using this feature, an app implies that it also uses the
+      <code>android.hardware.camera</code> feature, unless this parent feature
+      is declared with <code>android:required="false"</code>.
+    </p>
+  </dd>
+
+  <dt>
+    <code>android.hardware.camera.front</code>
+  </dt>
+
+  <dd>
+    <p>
+      The app uses the device's front-facing camera.
+    </p>
+
+    <p>
+      By using this feature, an app implies that it also uses the
+      <code>android.hardware.camera</code> feature, unless this parent feature
+      is declared with <code>android:required="false"</code>.
+    </p>
+  </dd>
+
+  <dt>
+    <code>android.hardware.camera.level.full</code>
+  </dt>
+
+  <dd>
+    The app uses the <code>FULL</code>-level image-capturing support that at
+    least one of the device's cameras provides. Cameras with <code>FULL</code>
+    support provide burst-capture capabilities, per-frame control, and manual
+    post-processing control.
+  </dd>
+</dl>
+
+<h4 id="device-ui-hw-features">
+  Device UI hardware features
+</h4>
+
+<dl>
+  <dt>
+    <code>android.hardware.type.automotive</code>
+  </dt>
+
+  <dd>
+    <p>
+      The app is designed to show its UI on a set of screens inside a vehicle.
+      The user interacts with the app using hard buttons, touch, rotary
+      controllers, and mouse-like interfaces. The vehicle's screens usually
+      appear in the center console or the instrument cluster of a vehicle. These
+      screens usually have limited size and resolution.
+    </p>
+
+    <p class="note">
+      <strong>Note: </strong>It's important to keep in mind that, since the user
+      is driving while using this type of app UI, the app must minimize driver
+      distraction.
+    </p>
+  </dd>
+
+  <dt>
+    <code>android.hardware.type.television</code>
+  </dt>
+
+  <dd>
+    <p>
+      (Deprecated; use <a href="#media-sw-features">
+      <code>android.software.leanback</code></a> instead.)
+    </p>
+
+    <p>
+      The app is designed to show its UI on a television. This feature defines
+      "television" to be a typical living room television experience: displayed
+      on a big screen, where the user is sitting far away and the dominant form
+      of input is something like a d-pad, and generally not using a mouse,
+      pointer, or touch device.
+    </p>
+  </dd>
+
+  <dt>
+    <code>android.hardware.type.watch</code>
+  </dt>
+
+  <dd>
+    The app is designed to show its UI on a watch. A watch is worn on the body,
+    such as on the wrist. The user is very close to the device while
+    interacting with it.
+  </dd>
+</dl>
+
+<h4 id="fingerprint-hw-features">
+  Fingerprint hardware features
+</h4>
+
+<dl>
+  <dt>
+    <code>android.hardware.fingerprint</code>
+  </dt>
+
+  <dd>
+    The app reads fingerprints using the device's biometric hardware.
+  </dd>
+</dl>
+
+<h4 id="gamepad-hw-features">
+  Gamepad hardware features
+</h4>
+
+<dl>
+  <dt>
+    <code>android.hardware.gamepad</code>
+  </dt>
+
+  <dd>
+    The app captures game controller input, either from the device itself or
+    from a connected gamepad.
+  </dd>
+</dl>
+
+<h4 id="infrared-hw-features">
+  Infrared hardware features
+</h4>
+
+<dl>
+  <dt>
+    <code>android.hardware.consumerir</code>
+  </dt>
+
+  <dd>
+    The app uses the device's infrared (IR) capabilities, usually to
+    communicate with other consumer IR devices.
+  </dd>
+</dl>
+
+<h4 id="location-hw-features">
+  Location hardware features
+</h4>
+
+<dl>
+  <dt>
+    <code>android.hardware.location</code>
+  </dt>
+
+  <dd>
+    The app uses one or more features on the device for determining location,
+    such as GPS location, network location, or cell location.
+  </dd>
+
+  <dt>
+    <code>android.hardware.location.gps</code>
+  </dt>
+
+  <dd>
+    <p>
+      The app uses precise location coordinates obtained from a Global
+      Positioning System (GPS) receiver on the device.
+    </p>
+
+    <p>
+      By using this feature, an app implies that it also uses the
+      <code>android.hardware.location</code> feature, unless this parent
+      feature is declared with the attribute
+      <code>android:required="false"</code>.
+    </p>
+  </dd>
+
+  <dt>
+    <code>android.hardware.location.network</code>
+  </dt>
+
+  <dd>
+    <p>
+      The app uses coarse location coordinates obtained from a network-based
+      geolocation system supported on the device.
+    </p>
+
+    <p>
+      By using this feature, an app implies that it also uses the
+      <code>android.hardware.location</code> feature, unless this parent
+      feature is declared with the attribute
+      <code>android:required="false"</code>.
+    </p>
+  </dd>
+</dl>
+
+<h4 id="nfc-hw-features">
+  NFC hardware features
+</h4>
+
+<dl>
+  <dt>
+    <code>android.hardware.nfc</code>
+  </dt>
+
+  <dd>
+    The app uses the device's Near-Field Communication (NFC) radio features.
+  </dd>
+
+  <dt>
+    <code>android.hardware.nfc.hce</code>
+  </dt>
+
+  <dd>
+    <p>
+      (Deprecated.)
+    </p>
+
+    <p>
+      The app uses NFC card emulation that is hosted on the device.
+    </p>
+  </dd>
+</dl>
+
+<h4 id="opengl-es-hw-features">
+  OpenGL ES hardware features
+</h4>
+
+<dl>
+  <dt>
+    <code>android.hardware.opengles.aep</code>
+  </dt>
+
+  <dd>
+    The app uses the <a href=
+    "http://www.khronos.org/registry/gles/extensions/ANDROID/ANDROID_extension_pack_es31a.txt"
+    class="external-link">OpenGL ES Android Extension Pack</a>that is installed
+    on the device.
+  </dd>
+</dl>
+
+<h4 id="sensor-hw-features">
+  Sensor hardware features
+</h4>
+
+<dl>
+  <dt>
+    <code>android.hardware.sensor.accelerometer</code>
+  </dt>
+
+  <dd>
+    The app uses motion readings from the device's accelerometer to detect
+    the device's current orientation. For example, an app could use
+    accelerometer readings to determine when to switch between portrait and
+    landscape orientations.
+  </dd>
+
+  <dt>
+    <code>android.hardware.sensor.ambient_temperature</code>
+  </dt>
+
+  <dd>
+    The app uses the device's ambient (environmental) temperature sensor. For
+    example, a weather app could report indoor or outdoor temperature.
+  </dd>
+
+  <dt>
+    <code>android.hardware.sensor.barometer</code>
+  </dt>
+
+  <dd>
+    The app uses the device's barometer. For example, a weather app could
+    report air pressure.
+  </dd>
+
+  <dt>
+    <code>android.hardware.sensor.compass</code>
+  </dt>
+
+  <dd>
+    The app uses the device's magnetometer (compass). For example, a navigation
+    app could show the current direction a user faces.
+  </dd>
+
+  <dt>
+    <code>android.hardware.sensor.gyroscope</code>
+  </dt>
+
+  <dd>
+    The app uses the device's gyroscope to detect rotation and twist, creating
+    a six-axis orientation system. By using this sensor, an app can detect more
+    smoothly whether it needs to switch between portrait and landscape
+    orientations.
+  </dd>
+
+  <dt>
+    <code>android.hardware.sensor.hifi_sensors</code>
+  </dt>
+
+  <dd>
+    The app uses the device's high fidelity (Hi-Fi) sensors. For example, a
+    gaming app could detect the user's high-precision movements.
+  </dd>
+
+  <dt>
+    <code>android.hardware.sensor.heartrate</code>
+  </dt>
+
+  <dd>
+    The app uses the device's heart rate monitor. For example, a fitness app
+    could report trends in a user's heart rate over time.
+  </dd>
+
+  <dt>
+    <code>android.hardware.sensor.heartrate.ecg</code>
+  </dt>
+
+  <dd>
+    The app uses the device's elcardiogram (ECG) heart rate sensor. For
+    example, a fitness app could report more detailed information about a
+    user's heart rate.
+  </dd>
+
+  <dt>
+    <code>android.hardware.sensor.light</code>
+  </dt>
+
+  <dd>
+    The app uses the device's light sensor. For example, an app could display
+    one of two different color schemes based on the ambient lighting
+    conditions.
+  </dd>
+
+  <dt>
+    <code>android.hardware.sensor.proximity</code>
+  </dt>
+
+  <dd>
+    The app uses the device's proximity sensor. For example, a telephony app
+    could turn off the device's screen when the app detects that the user is
+    holding the device close to their body.
+  </dd>
+
+  <dt>
+    <code>android.hardware.sensor.relative_humidity</code>
+  </dt>
+
+  <dd>
+    The app uses the device's relative humidity sensor. For example, a weather
+    app could use the humidity to calculate and report the current dewpoint.
+  </dd>
+
+  <dt>
+    <code>android.hardware.sensor.stepcounter</code>
+  </dt>
+
+  <dd>
+    The app uses the device's step counter. For example, a fitness app could
+    report the number of steps a user needs to take to achieve their daily step
+    count goal.
+  </dd>
+
+  <dt>
+    <code>android.hardware.sensor.stepdetector</code>
+  </dt>
+
+  <dd>
+    The app uses the device's step detector. For example, a fitness app could
+    use the time interval between steps to infer the type of exercise that the
+    user is doing.
+  </dd>
+</dl>
+
+<h4 id="screen-hw-features">
+  Screen hardware features
+</h4>
+
+<dl>
+  <dt>
+    <code>android.hardware.screen.landscape</code>
+  </dt>
+
+  <dt>
+    <code>android.hardware.screen.portrait</code>
+  </dt>
+
+  <dd>
+    <p>
+      The app requires the device to use the portrait or landscape orientation.
+      If your app supports both orientations, then you don't need to declare
+      either feature.
+    </p>
+
+    <p>
+      For example, if your app requires portrait orientation, you should
+      declare the following feature so that only the devices that support
+      portrait orientation (always or by user choice) can run your app:
+    </p>
+    <pre>&lt;uses-feature android:name="android.hardware.screen.portrait" /&gt;</pre>
+
+    <p>
+      Both orientations are assumed not required by default, so your app may be
+      installed on devices that support one or both orientations. However, if
+      any of your activities request that they run in a specific orientation,
+      using the <a href=
+      "../../../guide/topics/manifest/activity-element.html#screen"><code>android:screenOrientation</code></a> attribute, then this declaration implies
+      that your app requires that orientation. For example, if you declare
+      <a href=
+      "../../../guide/topics/manifest/activity-element.html#screen"><code>android:screenOrientation</code></a> with either <code>"landscape"</code>, <code>"reverseLandscape"</code>, or <code>"sensorLandscape"</code>, then your app will be
+      available only on devices that support landscape orientation.
+    </p>
+
+    <p>
+      As a best practice, you should still declare your requirement for this
+      orientation using a <code>&lt;uses-feature&gt;</code> element. If you declare
+      an orientation for your activity using <a href=
+      "../../../guide/topics/manifest/activity-element.html#screen"><code>android:screenOrientation</code></a>, but don't actually require it, you can
+      disable the requirement by declaring the orientation with a <code>&lt;uses-feature&gt;</code> element and include <code>android:required="false"</code>.
+    </p>
+
+    <p>
+      For backward compatibility, any device running Android 3.1 (API level 12)
+      or lower supports both landscape and portrait orientations.
+    </p>
+  </dd>
+</dl>
+
+<h4 id="telephony-hw-features">
+  Telephony hardware features
+</h4>
+
+<dl>
+  <dt>
+    <code>android.hardware.telephony</code>
+  </dt>
+
+  <dd>
+    The app uses the device's telephony features, such as telephony radio with
+    data communication services.
+  </dd>
+
+  <dt>
+    <code>android.hardware.telephony.cdma</code>
+  </dt>
+
+  <dd>
+    <p>
+      The app uses the Code Division Multiple Access (CDMA) telephony radio
+      system.
+    </p>
+
+    <p>
+      By using this feature, an app implies that it also uses the
+      <code>android.hardware.telephony</code> feature, unless this parent
+      feature is declared with <code>android:required="false"</code>.
+    </p>
+  </dd>
+
+  <dt>
+    <code>android.hardware.telephony.gsm</code>
+  </dt>
+
+  <dd>
+    <p>
+      The app uses the Global System for Mobile Communications (GSM) telephony
+      radio system.
+    </p>
+
+    <p>
+      By using this feature, an app implies that it also uses the
+      <code>android.hardware.telephony</code> feature, unless this parent
+      feature is declared with <code>android:required="false"</code>.
+    </p>
+  </dd>
+</dl>
+
+<h4 id="touchscreen-hw-features">
+  Touchscreen hardware features
+</h4>
+
+<dl>
+  <dt>
+    <code>android.hardware.faketouch</code>
+  </dt>
+
+  <dd>
+    <p>
+      The app uses basic touch interaction events, such as tapping and
+      dragging.
+    </p>
+
+    <p>
+      When declared as required, this feature indicates that the app is
+      compatible with a device only if that device emulates a touchscreen
+      ("fake touch" interface) or has an actual touchscreen.
+    </p>
+
+    <p>
+      A device that offers a fake touch interface provides a user input system
+      that emulates a subset of a touchscreen's capabilities. For example, a
+      mouse or remote control could drive an on-screen cursor. If your app
+      requires basic point and click interaction (in other words, it won't work
+      with only a d-pad controller), you should declare this feature. Because
+      this is the minimum level of touch interaction, you can also use an app
+      that declares this feature on devices that offer more complex touch
+      interfaces.
+    </p>
+
+    <p class="note">
+      <strong>Note:</strong> Apps require the <code>android.hardware.touchscreen</code>
+      feature by default. If you want your app to be available to devices that
+      provide a fake touch interface, you must also explicitly declare that a
+      touchscreen is not required as follows:
+    </p>
+    <pre>&lt;uses-feature android:name="android.hardware.touchscreen" <strong>android:required="false"</strong> /&gt;</pre>
+  </dd>
+
+  <dt>
+    <code>android.hardware.faketouch.multitouch.distinct</code>
+  </dt>
+
+  <dd>
+    <p>
+      The app tracks two or more distinct "fingers" on a fake touch interface.
+      This is a superset of the <code>android.hardware.faketouch</code>
+      feature. When declared as required, this feature indicates that the app
+      is compatible with a device only if that device emulates distinct
+      tracking of two or more fingers or has an actual touchscreen.
+    </p>
+
+    <p>
+      Unlike the distinct multitouch defined by <code>android.hardware.touchscreen.multitouch.distinct</code>, input devices that
+      support distinct multitouch with a fake touch interface don't support all
+      two-finger gestures because the input in transformed to cursor movement
+      on the screen. That is, single-finger gestures on such a device move a
+      cursor, two-finger swipes cause single-finger touch events to occur, and
+      other two-finger gestures trigger the corresponding two-finger touch
+      events.
+    </p>
+
+    <p>
+      A device that provides a two-finger touch trackpad for cursor movement
+      can support this feature.
+    </p>
+  </dd>
+
+  <dt>
+    <code>android.hardware.faketouch.multitouch.jazzhand</code>
+  </dt>
+
+  <dd>
+    <p>
+      The app tracks five or more distinct "fingers" on a fake touch interface.
+      This is a superset of the <code>android.hardware.faketouch</code>
+      feature. When declared as required, this feature indicates that the app
+      is compatible with a device only if that device emulates distinct
+      tracking of five or more fingers or has an actual touchscreen.
+    </p>
+
+    <p>
+      Unlike the distinct multitouch defined by <code>android.hardware.touchscreen.multitouch.jazzhand</code>, input devices that
+      support jazzhand multitouch with a fake touch interface don't support all
+      five-finger gestures because the input in transformed to cursor movement
+      on the screen. That is, single-finger gestures on such a device move a
+      cursor, multi-finger gestures cause single-finger touch events to occur,
+      and other multi-finger gestures trigger the corresponding multi-finger
+      touch events.
+    </p>
+
+    <p>
+      A device that provides a five-finger touch trackpad for cursor movement
+      can support this feature.
+    </p>
+  </dd>
+
+  <dt>
+    <code>android.hardware.touchscreen</code>
+  </dt>
+
+  <dd>
+    <p>
+      The app uses the device's touchscreen capabilities for gestures that are
+      more interactive than basic touch events, such as a fling. This is a
+      superset of the <code>android.hardware.faketouch</code> feature.
+    </p>
+
+    <p>
+      By default, your app requires this feature. As such, your app is not
+      available to devices that provide only an emulated touch interface ("fake
+      touch") by default. If you want to make your app available on devices
+      that provide a fake touch interface (or even on devices that provide only
+      a d-pad controller), you must explicitly declare that a touchscreen is
+      not required by declaring <code>android.hardware.touchscreen</code> with
+      <code>android:required="false"</code>. You should add this declaration if your
+      app uses—but does not require—a real touchscreen interface.
+    </p>
+
+    <p>
+      If your app in fact requires a touch interface (to perform more advanced
+      touch gestures such as fling), then you don't need to declare any touch
+      interface features because they're required by default. However, it's
+      best if you explicitly declare all features that your app uses.
+    </p>
+
+    <p>
+      If you require more complex touch interaction, such as multi-finger
+      gestures, you should declare that your app uses advanced touchscreen
+      features.
+    </p>
+  </dd>
+
+  <dt>
+    <code>android.hardware.touchscreen.multitouch</code>
+  </dt>
+
+  <dd>
+    <p>
+      The app uses the device's basic two-point multitouch capabilities, such
+      as for pinch gestures, but the app does not need to track touches
+      independently. This is a superset of the
+      <code>android.hardware.touchscreen</code> feature.
+    </p>
+
+    <p>
+      By using this feature, an app implies that it also uses the
+      <code>android.hardware.touchscreen</code> feature, unless this parent
+      feature is declared with <code>android:required="false"</code>.
+    </p>
+  </dd>
+
+  <dt>
+    <code>android.hardware.touchscreen.multitouch.distinct</code>
+  </dt>
+
+  <dd>
+    <p>
+      The app uses the device's advanced multitouch capabilities for tracking
+      two or more points independently. This feature is a superset of the
+      <code>android.hardware.touchscreen.multitouch</code> feature.
+    </p>
+
+    <p>
+      By using this feature, an app implies that it also uses the
+      <code>android.hardware.touchscreen.multitouch</code> feature, unless this
+      parent feature is declared with <code>android:required="false"</code>.
+    </p>
+  </dd>
+
+  <dt>
+    <code>android.hardware.touchscreen.multitouch.jazzhand</code>
+  </dt>
+
+  <dd>
+    <p>
+      The app uses the device's advanced multitouch capabilities for tracking
+      five or more points independently. This feature is a superset of the
+      <code>android.hardware.touchscreen.multitouch</code> feature.
+    </p>
+
+    <p>
+      By using this feature, an app implies that it also uses the
+      <code>android.hardware.touchscreen.multitouch</code> feature, unless this
+      parent feature is declared with <code>android:required="false"</code>.
+    </p>
+  </dd>
+</dl>
+
+<h4 id="usb-hw-features">
+  USB hardware features
+</h4>
+
+<dl>
+  <dt>
+    <code>android.hardware.usb.accessory</code>
+  </dt>
+
+  <dd>
+    The app behaves as the USB device and connects to USB hosts.
+  </dd>
+
+  <dt>
+    <code>android.hardware.usb.host</code>
+  </dt>
+
+  <dd>
+    The app uses the USB accessories that are connected to the device. The
+    device serves as the USB host.
+  </dd>
+</dl>
+
+<h4 id="wi-fi-hw-features">
+  Wi-Fi hardware features
+</h4>
+
+<dl>
+  <dt>
+    <code>android.hardware.wifi</code>
+  </dt>
+
+  <dd>
+    The app uses 802.11 networking (Wi-Fi) features on the device.
+  </dd>
+
+  <dt>
+    <code>android.hardware.wifi.direct</code>
+  </dt>
+
+  <dd>
+    The app uses the Wi-Fi Direct networking features on the device.
+  </dd>
+</dl>
+
+<h3 id="sw-features">
+  Software features
+</h3>
+
+<p>
+  This section presents the software features supported by the most current
+  platform release. To indicate that your app uses or requires a software
+  feature, declare the corresponding value (beginning with
+  <code>"android.software"</code>) in an <code>android:name</code> attribute.
+  Each time you declare a software feature, use a separate
+  <code>&lt;uses-feature&gt;</code> element.
+</p>
+
+<h4 id="communication-sw-features">
+  Communication software features
+</h4>
+
+<dl>
+  <dt>
+    <code>android.software.sip</code>
+  </dt>
+
+  <dd>
+    The app uses Session Initiation Protocol (SIP) services. By using SIP, the
+    app can support internet telephony operations, such as video conferencing
+    and instant messaging.
+  </dd>
+
+  <dt>
+    <code>android.software.sip.voip</code>
+  </dt>
+
+  <dd>
+    <p>
+      The app uses SIP-based Voice Over Internet Protocol (VoIP) services. By
+      using VoIP, the app can support real-time internet telephony operations,
+      such as two-way video conferencing.
+    </p>
+
+    <p>
+      By using this feature, an app implies that it also uses the
+      <code>android.software.sip</code> feature, unless this parent feature is
+      declared with <code>android:required="false"</code>.
+    </p>
+  </dd>
+
+  <dt>
+    <code>android.software.webview</code>
+  </dt>
+
+  <dd>
+    The app displays content from the internet.
+  </dd>
+</dl>
+
+<h4 id="custom-input-sw-features">
+  Custom input software features
+</h4>
+
+<dl>
+  <dt>
+    <code>android.software.input_methods</code>
+  </dt>
+
+  <dd>
+    The app uses a new input method, which the developer defines in an <a href=
+    "../../../reference/android/inputmethodservice/InputMethodService.html"><code>InputMethodService</code></a>.
+  </dd>
+</dl>
+
+<h4 id="device-management-sw-features">
+  Device management software features
+</h4>
+
+<dl>
+  <dt>
+    <code>android.software.backup</code>
+  </dt>
+
+  <dd>
+    The app includes logic to handle a backup and restore operation.
+  </dd>
+
+  <dt>
+    <code>android.software.device_admin</code>
+  </dt>
+
+  <dd>
+    The app uses device administrators to enforce a device policy.
+  </dd>
+
+  <dt>
+    <code>android.software.managed_users</code>
+  </dt>
+
+  <dd>
+    The app supports secondary users and managed profiles.
+  </dd>
+
+  <dt>
+    <code>android.software.securely_removes_users</code>
+  </dt>
+
+  <dd>
+    The app can <strong>permanently</strong> remove users and their associated
+    data.
+  </dd>
+
+  <dt>
+    <code>android.software.verified_boot</code>
+  </dt>
+
+  <dd>
+    The app includes logic to handle results from the device's verified boot
+    feature, which detects whether the device's configuration changes during a
+    restart operation.
+  </dd>
+</dl>
+
+<h4 id="media-sw-features">
+  Media software features
+</h4>
+
+<dl>
+  <dt>
+    <code>android.software.midi</code>
+  </dt>
+
+  <dd>
+    The app connects to musical instruments or outputs sound using the Musical
+    Instrument Digital Interface (MIDI) protocol.
+  </dd>
+
+  <dt>
+    <code>android.software.print</code>
+  </dt>
+
+  <dd>
+    The app includes commands for printing documents displayed on the device.
+  </dd>
+
+  <dt>
+    <code>android.software.leanback</code>
+  </dt>
+
+  <dd>
+    The app presents a UI that is designed for viewing on a large screen, such
+    as a television.
+  </dd>
+
+  <dt>
+    <code>android.software.live_tv</code>
+  </dt>
+
+  <dd>
+    The app streams live television programs.
+  </dd>
+</dl>
+
+<h4 id="screen-interface-sw-features">
+  Screen interface software features
+</h4>
+
+<dl>
+  <dt>
+    <code>android.software.app_widgets</code>
+  </dt>
+
+  <dd>
+    The app uses or provides App Widgets and should be installed only on
+    devices that include a Home screen or similar location where users can
+    embed App Widgets.
+  </dd>
+
+  <dt>
+    <code>android.software.home_screen</code>
+  </dt>
+
+  <dd>
+    The app behaves as a replacement to the device's Home screen.
+  </dd>
+
+  <dt>
+    <code>android.software.live_wallpaper</code>
+  </dt>
+
+  <dd>
+    The app uses or provides wallpapers that include animation.
+  </dd>
+</dl>
+
+<h3 id="permissions">
+  Permissions that Imply Feature Requirements
+</h3>
+
+<p>
+  Some of the hardware and software feature constants were made available to
+  applications after the corresponding API; for example, the
+  <code>android.hardware.bluetooth</code> feature was added in Android 2.2 (API
+  level 8), but the Bluetooth API that it refers to was added in Android 2.0
+  (API level 5). Because of this, some apps were able to use the API before
+  they had the ability to declare that they require the API using the
+  <code>&lt;uses-feature&gt;</code> system.
+</p>
+
+<p>
+  To prevent those apps from being made available unintentionally, Google Play
+  assumes that certain hardware-related permissions indicate that the
+  underlying hardware features are required by default. For instance,
+  applications that use Bluetooth must request the <code>BLUETOOTH</code>
+  permission in a <code>&lt;uses-permission&gt;</code> element — for legacy
+  apps, Google Play assumes that the permission declaration means that the
+  underlying <code>android.hardware.bluetooth</code> feature is required by the
+  application and sets up filtering based on that feature. Table 2 lists
+  permissions that imply feature requirements equivalent to those declared in
+  <code>&lt;uses-feature&gt;</code> elements.
+</p>
+
+<p>
+  Note that <code>&lt;uses-feature&gt;</code> declarations, including any
+  declared <code>android:required</code> attribute, always take precedence over
+  features implied by the permissions in table 2. For any of these permissions,
+  you can disable filtering based on the implied feature by explicitly
+  declaring the implied feature explicitly, in a
+  <code>&lt;uses-feature&gt;</code> element, with an
+  <code>android:required="false"</code> attribute. For example, to disable any
+  filtering based on the <code>CAMERA</code> permission, you would add this
+  <code>&lt;uses-feature&gt;</code> declaration to the manifest file:
+</p>
 
 <pre>&lt;uses-feature android:name="android.hardware.camera" android:required="false" /&gt;</pre>
 
-<table id="permissions-features" >
+<p class="table-caption" id="permissions-features">
+  <strong>Table 2. </strong>Device permissions that imply device hardware use.
+</p>
+<table>
   <tr>
     <th>Category</th>
     <th>This Permission...</th>
-    <th>Implies This Feature Requirement</th>
+    <th>...Implies This Feature Requirement</th>
     <!-- <th>Comments</th> -->
   </tr>
 
@@ -2202,11 +2913,13 @@ filtering based on the <code>CAMERA</code> permission, you would add this
 
   </div> <!-- end jd-content -->
 
+
+
 <div class="wrap">
   <div class="dac-footer">
     <div class="cols dac-footer-main">
       <div class="col-1of2">
-        <a class="dac-footer-getnews" data-modal-toggle="newsletter" href="javascript:;">Get news &amp; tips <span
+        <a class="dac-footer-getnews" id="newsletter" data-modal-toggle="newsletter" href="javascript:;">Get news &amp; tips <span
           class="dac-fab dac-primary"><i class="dac-sprite dac-mail"></i></span></a>
       </div>
       <div class="col-1of2 dac-footer-reachout">
@@ -2215,9 +2928,9 @@ filtering based on the <code>CAMERA</code> permission, you would add this
           <a class="dac-footer-contact-link" href="/support.html">Support</a>
         </div>
         <div class="dac-footer-social">
-          <a class="dac-fab dac-footer-social-link" href="https://www.youtube.com/user/androiddevelopers"><i class="dac-sprite dac-youtube"></i></a>
-          <a class="dac-fab dac-footer-social-link" href="https://plus.google.com/+AndroidDevelopers"><i class="dac-sprite dac-gplus"></i></a>
-          <a class="dac-fab dac-footer-social-link" href="https://twitter.com/AndroidDev"><i class="dac-sprite dac-twitter"></i></a>
+          <a class="dac-button-social dac-youtube dac-footer-social-link" href="https://www.youtube.com/user/androiddevelopers"><i class="dac-sprite dac-youtube"></i></a>
+          <a class="dac-button-social dac-gplus dac-footer-social-link" href="https://plus.google.com/+AndroidDevelopers"><i class="dac-sprite dac-gplus"></i></a>
+          <a class="dac-button-social dac-twitter dac-footer-social-link" href="https://twitter.com/AndroidDev"><i class="dac-sprite dac-twitter"></i></a>
         </div>
       </div>
     </div>
@@ -2232,11 +2945,12 @@ filtering based on the <code>CAMERA</code> permission, you would add this
   Creative Commons Attribution 2.5</a>. For details and
   restrictions, see the <a href="../../../license.html">Content
   License</a>.
+
       </p>
     
 
     <p class="dac-footer-links">
-      <a href="/about/index.html">About Android</a>
+      <a href="/about/android.html">About Android</a>
       <a href="/auto/index.html">Auto</a>
       <a href="/tv/index.html">TV</a>
       <a href="/wear/index.html">Wear</a>
@@ -2246,58 +2960,70 @@ filtering based on the <code>CAMERA</code> permission, you would add this
         <select name="language" onchange="changeLangPref(this.value, true)">
           <option value="en" selected="selected">English</option>
           <option value="es">Español</option>
+          <option value="in">Bahasa Indonesia</option>
           <option value="ja">日本語</option>
           <option value="ko">한국어</option>
           <option value="pt-br">Português Brasileiro</option>
           <option value="ru">Русский</option>
+          <option value="vi">tiếng Việt</option>
           <option value="zh-cn">中文（简体)</option>
           <option value="zh-tw">中文（繁體)</option>
         </select>
       </span>
     </p>
   </div>
-</div> <!-- end footer -->
+</div>
+<!-- end footer -->
+
+
+
+  
+
+
 
 <div data-modal="newsletter" data-newsletter data-swap class="dac-modal newsletter">
   <div class="dac-modal-container">
     <div class="dac-modal-window">
       <header class="dac-modal-header">
-        <button class="dac-modal-header-close" data-modal-toggle><i class="dac-sprite dac-close"></i></button>
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
         <div class="dac-swap" data-swap-container>
           <section class="dac-swap-section dac-active dac-down">
-            <h2 class="norule dac-modal-header-title">Get the latest Android developer news and tips that will help you find success on Google Play.</h2>
-            <p class="dac-modal-header-subtitle">&#42; Required Fields</p>
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.title"></h2>
+            <p class="dac-modal-header-subtitle" data-t="newsletter.requiredHint"></p>
           </section>
           <section class="dac-swap-section dac-up">
-            <h2 class="norule dac-modal-header-title">Hooray!</h2>
+            <h2 class="norule dac-modal-header-title" data-t="newsletter.successTitle">Hooray!</h2>
           </section>
         </div>
       </header>
       <div class="dac-swap" data-swap-container>
         <section class="dac-swap-section dac-active dac-left">
           <form action="https://docs.google.com/forms/d/1QgnkzbEJIDu9lMEea0mxqWrXUJu0oBCLD7ar23V0Yys/formResponse" class="dac-form" method="post" target="dac-newsletter-iframe">
+            <input type="hidden" name="entry.935454734" data-newsletter-language>
             <section class="dac-modal-content">
               <fieldset class="dac-form-fieldset">
                 <div class="cols">
                   <div class="col-1of2 newsletter-leftCol">
                     <div class="dac-form-input-group">
-                      <label for="newsletter-full-name" class="dac-form-floatlabel">Full name</label>
+                      <label for="newsletter-full-name" class="dac-form-floatlabel" data-t="newsletter.name">Full name</label>
                       <input type="text" class="dac-form-input" name="entry.1357890476" id="newsletter-full-name" required>
                       <span class="dac-form-required">*</span>
                     </div>
                     <div class="dac-form-input-group">
-                      <label for="newsletter-email" class="dac-form-floatlabel">Email address</label>
+                      <label for="newsletter-email" class="dac-form-floatlabel" data-t="newsletter.email">Email address</label>
                       <input type="email" class="dac-form-input" name="entry.472100832" id="newsletter-email" required>
                       <span class="dac-form-required">*</span>
                     </div>
                   </div>
                   <div class="col-1of2 newsletter-rightCol">
                     <div class="dac-form-input-group">
-                      <label for="newsletter-company" class="dac-form-floatlabel">Company / developer name</label>
+                      <label for="newsletter-company" class="dac-form-floatlabel" data-t="newsletter.company">Company / developer name</label>
                       <input type="text" class="dac-form-input" name="entry.1664780309" id="newsletter-company">
                     </div>
                     <div class="dac-form-input-group">
-                      <label for="newsletter-play-store" class="dac-form-floatlabel">One of your Play Store app URLs</label>
+                      <label for="newsletter-play-store" class="dac-form-floatlabel" data-t="newsletter.appUrl">One of your Play Store app URLs</label>
                       <input type="url" class="dac-form-input" name="entry.47013838" id="newsletter-play-store" required>
                       <span class="dac-form-required">*</span>
                     </div>
@@ -2307,22 +3033,22 @@ filtering based on the <code>CAMERA</code> permission, you would add this
               <fieldset class="dac-form-fieldset">
                 <div class="cols">
                   <div class="col-1of2 newsletter-leftCol">
-                    <legend class="dac-form-legend">Which best describes your business:<span class="dac-form-required">*</span>
+                    <legend class="dac-form-legend"><span data-t="newsletter.business.label">Which best describes your business:</span><span class="dac-form-required">*</span>
                     </legend>
                     <div class="dac-form-radio-group">
                       <input type="radio" value="Apps" class="dac-form-radio" name="entry.1796324055" id="newsletter-business-type-app" required>
                       <label for="newsletter-business-type-app" class="dac-form-radio-button"></label>
-                      <label for="newsletter-business-type-app" class="dac-form-label">Apps</label>
+                      <label for="newsletter-business-type-app" class="dac-form-label" data-t="newsletter.business.apps">Apps</label>
                     </div>
                     <div class="dac-form-radio-group">
                       <input type="radio" value="Games" class="dac-form-radio" name="entry.1796324055" id="newsletter-business-type-games" required>
                       <label for="newsletter-business-type-games" class="dac-form-radio-button"></label>
-                      <label for="newsletter-business-type-games" class="dac-form-label">Games</label>
+                      <label for="newsletter-business-type-games" class="dac-form-label" data-t="newsletter.business.games">Games</label>
                     </div>
                     <div class="dac-form-radio-group">
                       <input type="radio" value="Apps and Games" class="dac-form-radio" name="entry.1796324055" id="newsletter-business-type-appsgames" required>
                       <label for="newsletter-business-type-appsgames" class="dac-form-radio-button"></label>
-                      <label for="newsletter-business-type-appsgames" class="dac-form-label">Apps &amp; Games</label>
+                      <label for="newsletter-business-type-appsgames" class="dac-form-label" data-t="newsletter.business.both">Apps &amp; Games</label>
                     </div>
                   </div>
                   <div class="col-1of2 newsletter-rightCol newsletter-checkboxes">
@@ -2333,7 +3059,7 @@ filtering based on the <code>CAMERA</code> permission, you would add this
                           <label for="newsletter-add" class="dac-form-checkbox-button"></label>
                         </div>
                         <div class="dac-media-body">
-                          <label for="newsletter-add" class="dac-form-label dac-form-aside">Add me to the mailing list for the monthly newsletter and occasional emails about development and Google Play opportunities.<span class="dac-form-required">*</span></label>
+                          <label for="newsletter-add" class="dac-form-label dac-form-aside"><span data-t="newsletter.confirmMailingList"></span><span class="dac-form-required">*</span></label>
                         </div>
                       </div>
                     </div>
@@ -2344,7 +3070,7 @@ filtering based on the <code>CAMERA</code> permission, you would add this
                           <label for="newsletter-terms" class="dac-form-checkbox-button"></label>
                         </div>
                         <div class="dac-media-body">
-                          <label for="newsletter-terms" class="dac-form-label dac-form-aside">I acknowledge that the information provided in this form will be subject to <a href="https://www.google.com/policies/privacy/">Google's privacy policy</a>.<span class="dac-form-required">*</span></label>
+                          <label for="newsletter-terms" class="dac-form-label dac-form-aside"><span data-t="newsletter.privacyPolicy" data-t-html></span><span class="dac-form-required">*</span></label>
                         </div>
                       </div>
                     </div>
@@ -2363,30 +3089,75 @@ filtering based on the <code>CAMERA</code> permission, you would add this
         </section>
         <section class="dac-swap-section dac-right">
           <div class="dac-modal-content">
-            <p class="newsletter-success-message">
-              You have successfully signed up for the latest Android developer news and tips.
-            </p>
+            <p class="newsletter-success-message" data-t="newsletter.successDetails"></p>
           </div>
         </section>
       </div>
     </div>
   </div>
-</div> <!-- end footer -->
+</div>
+<!-- end newsletter modal -->
 
-</div><!-- end doc-content -->
+<!-- start reset language header modal -->
+<div data-modal="langform" class="dac-modal" id="langform">
+  <div class="dac-modal-container">
+    <div class="dac-modal-window">
+      <header class="dac-modal-header">
+        <div class="dac-modal-header-actions">
+          <button class="dac-modal-header-close" data-modal-toggle></button>
+        </div>
+        <section class="dac-swap-section dac-active dac-down">
+          <h2 class="norule dac-modal-header-title"></h2>
+        </section>
+      </header>
+      <section class="dac-swap-section dac-active dac-left">
+          <section class="dac-modal-content">
+            <fieldset class="dac-form-fieldset">
+              <div class="cols">
+                <div class="col-2of2 langform-leftCol">
+                  <p id="resetLangText"></p>
+                  <p id="resetLangCta"></p>
+                </div>
+              </div>
+            </fieldset>
+          </section>
+          <footer class="dac-modal-footer" id="langfooter">
+            <div class="cols">
+              <div class="col-2of5">
+              </div>
+            </div>
+              <button class="button dac-primary dac-modal-action lang yes" data-t="newsletter.resetLangButtonYes" data-modal-toggle></button>
+              <button class="button dac-primary dac-modal-action lang no" data-t="newsletter.resetLangButtonNo" data-modal-toggle></button>
+            </a>
+          </footer>
+        </form>
+      </section>
+    </div>
+  </div>
+</div>
+<!-- end langreset modal -->
 
-</div> <!-- end .cols --> 
+
 </div> <!-- end body-content --> 
 
 
 
 
+<script src="https://developer.android.com/ytblogger_lists_unified.js" defer></script>
+<script src="/jd_lists_unified_en.js?v=17" defer></script>
+<script src="/reference/lists.js?v=17" defer></script>
+<script src="/reference/gcm_lists.js?v=17" defer></script>
+<script src="/reference/gms_lists.js?v=17" defer></script>
+<script>
+  // Load localized metadata.
+  (function(lang) {
+    if (lang === 'en') { return; }
 
-  <script src="https://developer.android.com/ytblogger_lists_unified.js" type="text/javascript"></script>
-  <script src="../../../jd_lists_unified.js?v=15" type="text/javascript"></script>
-  <script src="../../../jd_extras.js?v=15" type="text/javascript"></script>
-  <script src="../../../jd_collections.js?v=15" type="text/javascript"></script>
-  <script src="../../../jd_tag_helpers.js?v=15" type="text/javascript"></script>
+    // Write it to the document so it gets evaluated before DOMContentReady.
+    document.write('<script src="/jd_lists_unified_' + lang + '.js?v=14" defer></' + 'script>');
+  })(getLangPref())
+</script>
+
 
 </body>
 </html>
